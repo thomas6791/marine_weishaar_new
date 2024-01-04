@@ -10,9 +10,13 @@ Rails.application.routes.draw do
 
   resources :agences do
     collection do
+      get "agence-immobiliere-strasbourg", to: "agences#orangerie", as: "strasbourg"
       get "agence-immobiliere-strasbourg-neudorf", to: "agences#neudorf", as: "neudorf"
       get "agence-immobiliere-strasbourg-krutenau", to: "agences#krutenau", as: "krutenau"
       get "agence-immobiliere-strasbourg-orangerie", to: "agences#orangerie", as: "orangerie"
+      get "agence-immobiliere-wissembourg", to: "agences#wissembourg", as: "wissembourg"
+      get "agence-immobiliere-molsheim", to: "agences#molsheim", as: "molsheim"
+      get "agence-immobiliere-colmar", to: "agences#colmar", as: "colmar"
     end
   end
   scope "achat" do
