@@ -1,2 +1,7 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+<ul>
+<% AchatsController.action_methods.to_a.each do |lieu| %>
+    <li><a href="/achat/strasbourg/<%= lieu %>"><%=lieu %></a></li>
+<% end %>
+</ul>
