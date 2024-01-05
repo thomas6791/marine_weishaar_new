@@ -1,0 +1,13 @@
+annonce:
+  type_bien:
+    - maison
+    - appartement
+    - terrain
+  status:
+    - exclusivité
+    - nouveau
+    - sous compromis
+    - vendu
+  type_projet:
+    - neuf
+    - ancien
