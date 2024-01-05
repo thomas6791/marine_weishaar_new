@@ -28,6 +28,8 @@ Rails.application.routes.draw do
       get "agence-immobiliere-colmar", to: "agences#colmar", as: "colmar"
     end
   end
+  get "annonces-immobilieres", to: "achats#index", as: :annonces
+  get "annonces-immobilieres/:id", to: "achats#show", as: :achat_show
   scope "achat" do
     get "/alsace", to: "achats#alsace"
     get "/bas-rhin", to: "achats#bas_rhin"
