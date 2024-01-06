@@ -17,6 +17,9 @@ Rails.application.routes.draw do
       #get "annonces", to: "admins#annonces"
     end
   end
+  get 'locations', to: "locations#index"
+  get 'locations/appartements', to: "locations#appartements"
+  get 'locations/maisons', to: "locations#maisons"
 
   resources :agences do
     collection do
