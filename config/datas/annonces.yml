@@ -1,0 +1,46 @@
+annonce:
+  type_bien:
+    - maison
+    - appartement
+    - terrain
+  sous_type_bien:
+    - studio
+    - duplex
+  status:
+    - exclusivité
+    - nouveau
+    - sous compromis
+    - vendu
+  type_projet:
+    - neuf
+    - ancien
+  DPE:
+    - A
+      - "<50"
+    - B
+      - "51 à 90"
+    - C
+      - "91 à 150"
+    - D
+      - "151 à 230"
+    - E
+      - "231 à 330"
+    - F
+      - "331 à 450"
+    - G
+      - ">450"
+  GES:
+    - A
+      - "<50
+    - B
+      - "6 à 10"
+    - C
+      - "11 à 20"
+    - D
+      - "21 à 35"
+    - E
+      - "36 à 55"
+    - F
+      - "56 à 80"
+    - G
+      - ">80"

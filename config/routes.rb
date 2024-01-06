@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :admins
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -10,8 +11,9 @@ Rails.application.routes.draw do
   get '/gestion-locative', to:  "pages#gestion_locative"
 
   resources :admins, path: "admin" do
+    resources :annonces
     collection do
-      get "annonces", to: "admins#annonces"
+      #get "annonces", to: "admins#annonces"
     end
   end
 
@@ -26,6 +28,8 @@ Rails.application.routes.draw do
       get "agence-immobiliere-colmar", to: "agences#colmar", as: "colmar"
     end
   end
+  get "annonces-immobilieres", to: "achats#index", as: :annonces
+  get "annonces-immobilieres/:id", to: "achats#show", as: :achat_show
   scope "achat" do
     get "/alsace", to: "achats#alsace"
     get "/bas-rhin", to: "achats#bas_rhin"
