@@ -1,0 +1,17 @@
+.nav_mobile {
+    border: solid 1px red;
+    position: relative;
+    z-index:1;
+    height: 100vh;
+    width: 60%;
+    background-color: white;
+    padding: 1.5rem;
+    .nav__mobile_volet {
+        position: absolute;
+        z-index: -1;
+        visibility: hidden;
+        &.first {
+            visibility: visible;
+        }
+    }
+}
