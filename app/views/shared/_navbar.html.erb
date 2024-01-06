@@ -1,3 +1,108 @@
-<div id="nav">
-    <p class="inside">navbar</p>
-</div>
+
+    <div id="nav" data-controller="navbar">
+        <div class="colorized-nav">
+            <div class="inside">
+                <% if params[:action] == "home" %>
+                    <div class="logo">
+                        <%= link_to root_path do %>
+                        <h1>
+                            <%= image_tag "logo-mw.png",alt:"Marine Weishaar Immobilier" %>
+                        </h1>
+                        <% end %>
+                    </div>
+                <% else %>
+                    <div class="logo">
+                        <%= link_to root_path do %>
+                            <%= image_tag "logo-mw.png",alt:"logo Marine Weishaar" %>
+                        <% end %>
+                    </div>
+                <% end %>
+                <div class="header_cta">
+                    <%= link_to "Mon espace pro",admins_path, class:"btn black" %>
+                    <%= link_to "Nous contacter", contact_path, class:"btn black" %>
+                </div>
+                <div id="burger_menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+                </div>
+            </div>
+            
+        </div>
+        <nav class="nav__primary">
+            <ul class="inside relat">
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Acheter", annonces_path %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "Appartements", appartements_path %></li>
+                        <li><%= link_to "Maisons", maisons_path %></li>
+                        <li><%= link_to "Terrains", terrains_path %></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Vendre" %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Louer", locations_path %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "Appartements", locations_appartements_path %></li>
+                        <li><%= link_to "Maisons", locations_maisons_path %></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Gestion locative" %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Investir" %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Acheter" %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
+                    <%= link_to "Bureaux & commerces" %>
+                    <ul class="nav__secondary" data-navbar-target="volets">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li>
+                    <%= link_to "Blog" %>
+                </li>
+            </ul>
+            <div id="bg_grey" data-navbar-target="grey"></div>
+        </nav>
+    </div>

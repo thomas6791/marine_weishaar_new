@@ -5,13 +5,25 @@
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
-@media all and (min-width: 1024px) and (max-width: 1280px) { }
+@media all and (min-width: 1280px) {
+  #burger_menu {display: none;}
+}
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  #burger_menu {display: none;}
+}
  
-@media all and (min-width: 768px) and (max-width: 1024px) { }
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  #burger_menu {display: none;}
+}
  
-@media all and (min-width: 480px) and (max-width: 768px) { }
+@media all and (min-width: 480px) and (max-width: 768px) {
+  #burger_menu {display: none;}
+  .nav__primary {display: none;}
+}
  
-@media all and (max-width: 480px) { }
+@media all and (max-width: 480px) {
+  .nav__primary {display: none;}
+}
  
 /*------------------------------------------
   Foundation Media Queries 
@@ -21,7 +33,10 @@
 /* Small screens - MOBILE */
 @media only screen { } /* Define mobile styles - Mobile First */
  
-@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+  .header_cta {display: none;}
+  #burger_menu {display: initial;}
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
  
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */

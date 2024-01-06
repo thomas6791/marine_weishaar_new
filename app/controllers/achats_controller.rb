@@ -7,6 +7,13 @@ class AchatsController < ApplicationController
     @annonce = Annonce.find(params[:id])
   end
 
+  def appartements
+  end
+  def maisons
+  end
+  def terrains
+  end
+
   def alsace
   end
 
