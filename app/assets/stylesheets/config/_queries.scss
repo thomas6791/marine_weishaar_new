@@ -61,27 +61,20 @@
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-}
+only screen and (min-device-pixel-ratio: 1.5) {}
  
 /* iPhone Portrait */
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-} 
+@media screen and (max-device-width: 480px) and (orientation:portrait) {} 
  
 /* iPhone Landscape */
-@media screen and (max-device-width: 480px) and (orientation:landscape) {
-}
+@media screen and (max-device-width: 480px) and (orientation:landscape) {}
  
 /* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
-}
+@media screen and (min-device-width: 481px) and (orientation:portrait) {}
  
 /* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
-}
+@media screen and (min-device-width: 481px) and (orientation:landscape) {}
  
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-
 
 /*------------------------------------------
   Live demo samples
