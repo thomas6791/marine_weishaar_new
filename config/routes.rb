@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'pages/home'
   get 'pages/about'
+  get '/contact', to: "pages#contact"
   get '/gestion-locative', to:  "pages#gestion_locative"
 
   resources :admins, path: "admin" do

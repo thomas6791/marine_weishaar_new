@@ -1,3 +1,45 @@
-<div id="nav" data-controller="navbar">
-    <p class="inside">navbar</p>
-</div>
+
+    <div id="nav" data-controller="navbar">
+        <div class="colorized-nav">
+            <div class="inside">
+                <div class="logo"></div>
+                <div class="">
+                    <%= link_to "Mon espace pro" %>
+                    <%= link_to "Nous contacter", contact_path %>
+                </div>
+            </div>
+        </div>
+        <nav class="nav__primary">
+            <ul class="inside">
+                <li>
+                    <%= link_to "Acheter" %>
+                    <ul class="nav__secondary">
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "lien #"%></li>
+                    </ul>
+                </li>
+                <li>
+                    <%= link_to "Vendre" %>
+                </li>
+                <li>
+                    <%= link_to "Gestion locative" %>
+                </li>
+                <li>
+                    <%= link_to "Investir" %>
+                </li>
+                <li>
+                    <%= link_to "Acheter" %>
+                </li>
+                <li>
+                    <%= link_to "Bureaux & commerces" %>
+                </li>
+                <li>
+                    <%= link_to "Blog" %>
+                </li>
+            </ul>
+            <div id="bg_grey"></div>
+        </nav>
+    </div>
