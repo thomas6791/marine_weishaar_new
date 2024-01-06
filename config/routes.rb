@@ -31,6 +31,10 @@ Rails.application.routes.draw do
   end
   get "annonces-immobilieres", to: "achats#index", as: :annonces
   get "annonces-immobilieres/:id", to: "achats#show", as: :achat_show
+  get "annonces-appartements", to: "achats#appartements", as: :appartements
+  get "annonces-maisons", to: "achats#maisons", as: :maisons
+  get "annonces-terrains", to: "achats#terrains", as: :terrains
+
   scope "achat" do
     get "/alsace", to: "achats#alsace"
     get "/bas-rhin", to: "achats#bas_rhin"

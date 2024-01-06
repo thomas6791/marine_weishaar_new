@@ -18,7 +18,7 @@
                     </div>
                 <% end %>
                 <div class="header_cta">
-                    <%= link_to "Mon espace pro" %>
+                    <%= link_to "Mon espace pro",admins_path %>
                     <%= link_to "Nous contacter", contact_path %>
                 </div>
                 <div id="burger_menu">
@@ -32,9 +32,9 @@
                 <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
                     <%= link_to "Acheter", annonces_path %>
                     <ul class="nav__secondary" data-navbar-target="volets">
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
+                        <li><%= link_to "Appartements", appartements_path %></li>
+                        <li><%= link_to "Maisons", maisons_path %></li>
+                        <li><%= link_to "Terrains", terrains_path %></li>
                         <li><%= link_to "lien #"%></li>
                         <li><%= link_to "lien #"%></li>
                     </ul>
