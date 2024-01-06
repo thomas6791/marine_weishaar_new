@@ -15,3 +15,13 @@ h1 { color: $blue;}
 body {
     font-family: $body-font;
 }
+ul,li {
+    list-style-position: inside;
+}
+.inside {
+    width: 100%;
+    max-width: 1116px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+}
