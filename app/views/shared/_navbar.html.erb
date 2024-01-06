@@ -2,7 +2,21 @@
     <div id="nav" data-controller="navbar">
         <div class="colorized-nav">
             <div class="inside">
-                <div class="logo"></div>
+                <% if params[:action] == "home" %>
+                    <div class="logo">
+                        <%= link_to root_path do %>
+                        <h1>
+                            <%= image_tag "logo-mw.png",alt:"Marine Weishaar Immobilier" %>
+                        </h1>
+                        <% end %>
+                    </div>
+                <% else %>
+                    <div class="logo">
+                        <%= link_to root_path do %>
+                            <%= image_tag "logo-mw.png",alt:"logo Marine Weishaar" %>
+                        <% end %>
+                    </div>
+                <% end %>
                 <div class="">
                     <%= link_to "Mon espace pro" %>
                     <%= link_to "Nous contacter", contact_path %>
@@ -12,7 +26,7 @@
         <nav class="nav__primary">
             <ul class="inside relat">
                 <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
-                    <%= link_to "Acheter" %>
+                    <%= link_to "Acheter", annonces_path %>
                     <ul class="nav__secondary" data-navbar-target="volets">
                         <li><%= link_to "lien #"%></li>
                         <li><%= link_to "lien #"%></li>

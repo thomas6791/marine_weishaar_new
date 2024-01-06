@@ -6,8 +6,13 @@
     li {list-style: none;}
     a {text-decoration: none; color: $dark;}
     .colorized-nav {
-        height: 3rem;
+        height: auto;
         background-color: $green;
+        .inside {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
     .nav__primary {
         background-color: white;
