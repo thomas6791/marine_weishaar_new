@@ -13,7 +13,11 @@
             align-items: center;
             justify-content: space-between;
         }
-        .header_cta {}
+        .header_cta {
+            .btn:first-of-type {
+                margin-right: 10px;
+            }
+        }
     }
     .nav__primary {
         background-color: white;
