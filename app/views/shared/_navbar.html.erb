@@ -11,9 +11,9 @@
         </div>
         <nav class="nav__primary">
             <ul class="inside">
-                <li>
+                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
                     <%= link_to "Acheter" %>
-                    <ul class="nav__secondary">
+                    <ul class="nav__secondary" data-navbar-target="volets">
                         <li><%= link_to "lien #"%></li>
                         <li><%= link_to "lien #"%></li>
                         <li><%= link_to "lien #"%></li>
@@ -40,6 +40,6 @@
                     <%= link_to "Blog" %>
                 </li>
             </ul>
-            <div id="bg_grey"></div>
+            <div id="bg_grey" data-navbar-target="grey"></div>
         </nav>
     </div>
