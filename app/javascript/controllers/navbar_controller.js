@@ -31,12 +31,14 @@ export default class extends Controller {
     this.mobileVoletTargets[0].classList.toggle("visible")
   }
   voletPrev(event){
-    let indexLink = Array.from(event.currentTarget.parentElement.children).indexOf(event.currentTarget)
+    //let indexLink = Array.from(event.currentTarget.parentElement.children).indexOf(event.currentTarget)
+    let indexLink = this.mobileVoletTargets.indexOf(event.currentTarget.parentElement.parentElement)
+
     console.log(indexLink)
-    let prevLink = indexLink -1
-    debugger;
+    //let prevLink = indexLink -1
+    //debugger;
     this.mobileVoletTargets[indexLink].classList.remove("visible")
-    this.mobileVoletTargets[prevLink].classList.add("visible")
+    this.mobileVoletTargets[0].classList.add("visible")
   }
   voletNext(event){
     let indexLink = Array.from(event.currentTarget.parentElement.children).indexOf(event.currentTarget)

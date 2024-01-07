@@ -12,5 +12,8 @@
     &.visible {
         display: block;
         background-color: white;
+        div:first-of-type {
+            padding: 2rem;
+        }
     }
 }
