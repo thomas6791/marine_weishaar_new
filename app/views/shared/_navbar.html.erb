@@ -97,46 +97,21 @@
             <div id="bg_grey" data-navbar-target="grey"></div>
         </nav>
 
-        <nav class="nav_mobile" data-navbar-target="mainMobile">
-            <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-                <ul>
-                    <li data-action="click->navbar#voletNext">Acheter</li>
-                    <li data-action="click->navbar#voletNext">Vendre</li>
-                    <li data-action="click->navbar#voletNext">Louer</li>
-                    <li data-action="click->navbar#voletNext">Gestion locative</li>
-                    <li data-action="click->navbar#voletNext">Investir</li>
-                    <li data-action="click->navbar#voletNext">Bureaux & commerces</li>
-                    <li data-action="click->navbar#voletNext">Blog</li>
-                    <div class="cta">
-                            <%= link_to "Nous contacter",contact_path, class: "btn black" %>
-                            <%= link_to "Mon espace pro", admins_path, class: "btn black" %>
-                    </div>
-                </ul>
-            </div>
-            <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-            <h2>Acheter</h2>
-                <ul>
-                    <li data-action="click->navbar#voletPrev">< Acheter</li>
-                    <li><a href="">Appartements</a></li>
-                    <li><a href="">Maisons</a></li>
-                    <li><a href="">Terrain</a></li>
-                </ul>
-            </div>
-            <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-                <h2>Vendre</h2>
-                <ul>
-                    <li><a href="">aaa</a></li>
-                    <li><a href="">aaa</a></li>
-                    <li><a href="">aaa</a></li>
-                </ul>
-            </div>
-            <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-            <h2>Louer</h2>
-                <ul>
-                    <li><a href="">ccc</a></li>
-                    <li><a href="">ccc</a></li>
-                    <li><a href="">ccc</a></li>
-                </ul>
-            </div>
-        </nav>
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <h2>1er Volet</h2>
+            <p data-action="click->navbar#voletNext">Lien vers 2</p>
+            <p data-action="click->navbar#voletNext">Lien vers 3</p>
+        </div>
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <h2>2nd Volet</h2>
+            <p data-action="click->navbar#voletPrev">Lien vers 1</p>
+            <p data-action="click->navbar#voletNext">Lien vers 3</p>
+        </div>
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <h2>3eme Volet</h2>
+            <p data-action="click->navbar#voletPrev">Lien vers 1</p>
+            <p data-action="click->navbar#voletNext">Lien vers 3</p>
+        </div>
+
     </div>
+
