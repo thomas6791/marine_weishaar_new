@@ -1,0 +1,35 @@
+#burger_menu {
+    cursor: pointer;
+}
+.nav_mobile_volet {
+    //border: solid 1px red;
+    //padding: 1.5rem;
+    background-color: white;
+    position: fixed;
+    width: 90%;
+        height: 100%;
+    display: none;
+    &.visible {
+        display: block;
+        background-color: white;
+        ul:first-of-type {
+            padding: 2rem;
+            li {
+                line-height: 2rem;
+                margin-bottom: 0.8rem;
+                text-decoration: none;
+                display: flex;
+                a { display: flex;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .ctas {
+            padding: 0 !important;
+            display: flex;
+            flex-direction: column;
+            a {width: fit-content; margin-bottom: 0.8rem;}
+        }
+    }
+}

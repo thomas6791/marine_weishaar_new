@@ -21,12 +21,13 @@
                     <%= link_to "Mon espace pro",admins_path, class:"btn black" %>
                     <%= link_to "Nous contacter", contact_path, class:"btn black" %>
                 </div>
-                <div id="burger_menu">
+                <div id="burger_menu" data-action="click->navbar#mobileMenu">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
                 </div>
             </div>
             
         </div>
+        
         <nav class="nav__primary">
             <ul class="inside relat">
                 <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
@@ -80,16 +81,6 @@
                     </ul>
                 </li>
                 <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
-                    <%= link_to "Acheter" %>
-                    <ul class="nav__secondary" data-navbar-target="volets">
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
-                        <li><%= link_to "lien #"%></li>
-                    </ul>
-                </li>
-                <li data-action="mouseover->navbar#mouseOver mouseout->navbar#mouseOut">
                     <%= link_to "Bureaux & commerces" %>
                     <ul class="nav__secondary" data-navbar-target="volets">
                         <li><%= link_to "lien #"%></li>
@@ -105,4 +96,37 @@
             </ul>
             <div id="bg_grey" data-navbar-target="grey"></div>
         </nav>
+
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <ul>
+                <li data-action="click->navbar#voletNext">Acheter</li>
+                <li data-action="click->navbar#voletNext">Louer</li>
+                <li>Vendre</li>
+                <li><%= link_to "Gestion locative",gestion_locative_path %></li>
+                <li>Bureaux & commerces</li>
+                <div class="ctas">
+                    <%= link_to "Nous contacter", contact_path, class:"btn black" %>
+                    <%= link_to "Mon espace pro",admins_path, class:"btn black" %>
+                </div>
+            </ul>
+        </div>
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <ul>
+                <li data-action="click->navbar#voletPrev">Retour</li>
+                <li><%= link_to "Appartements",appartements_path %></li>
+                <li><%= link_to "Maisons",maisons_path %></li>
+                <li><%= link_to "Terrains",terrains_path %></li>
+                <li><%= link_to "Toutes les annonces",annonces_path %></li>
+            </ul>
+        </div>
+        <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
+            <ul>
+                <li data-action="click->navbar#voletPrev">Retour</li>
+                <li><%= link_to "Appartements",locations_appartements_path %></li>
+                <li><%= link_to "Maisons",locations_maisons_path %></li>
+                <li><%= link_to "Toutes les locations",locations_path %></li>
+            </ul>
+        </div>
+
     </div>
+
