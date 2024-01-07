@@ -98,25 +98,34 @@
         </nav>
 
         <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-            <div>
-            <h2>1er Volet</h2>
-            <p data-action="click->navbar#voletNext">Lien vers 2</p>
-            <p data-action="click->navbar#voletNext">Lien vers 3</p>
-            </div>
+            <ul>
+                <li data-action="click->navbar#voletNext">Acheter</li>
+                <li data-action="click->navbar#voletNext">Louer</li>
+                <li>Vendre</li>
+                <li><%= link_to "Gestion locative",gestion_locative_path %></li>
+                <li>Bureaux & commerces</li>
+                <div class="ctas">
+                    <%= link_to "Nous contacter", contact_path, class:"btn black" %>
+                    <%= link_to "Mon espace pro",admins_path, class:"btn black" %>
+                </div>
+            </ul>
         </div>
         <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-            <div>
-            <h2>2nd Volet</h2>
-            <p data-action="click->navbar#voletPrev">Lien vers 1</p>
-            <p data-action="click->navbar#voletNext">Lien vers 3</p>
-            </div>
+            <ul>
+                <li data-action="click->navbar#voletPrev">Retour</li>
+                <li><%= link_to "Appartements",appartements_path %></li>
+                <li><%= link_to "Maisons",maisons_path %></li>
+                <li><%= link_to "Terrains",terrains_path %></li>
+                <li><%= link_to "Toutes les annonces",annonces_path %></li>
+            </ul>
         </div>
         <div class="nav_mobile_volet" data-navbar-target="mobileVolet">
-            <div>
-            <h2>3eme Volet</h2>
-            <p data-action="click->navbar#voletPrev">Lien vers 1</p>
-            <p data-action="click->navbar#voletNext">Lien vers 3</p>
-            </div>
+            <ul>
+                <li data-action="click->navbar#voletPrev">Retour</li>
+                <li><%= link_to "Appartements",locations_appartements_path %></li>
+                <li><%= link_to "Maisons",locations_maisons_path %></li>
+                <li><%= link_to "Toutes les locations",locations_path %></li>
+            </ul>
         </div>
 
     </div>

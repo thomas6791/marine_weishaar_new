@@ -43,6 +43,7 @@ export default class extends Controller {
   voletNext(event){
     let indexLink = Array.from(event.currentTarget.parentElement.children).indexOf(event.currentTarget)
     console.log(indexLink)
+    indexLink = indexLink +1
     this.mobileVoletTargets[0].classList.remove("visible")
     this.mobileVoletTargets[indexLink].classList.add("visible")
 
