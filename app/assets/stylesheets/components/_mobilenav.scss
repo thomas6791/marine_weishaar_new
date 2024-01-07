@@ -4,17 +4,33 @@
 .nav_mobile {
     border: solid 1px red;
     position: relative;
-    z-index:1;
+    z-index:-2;
     height: 100vh;
     width: 60%;
+    //width: 40%;
     background-color: white;
     padding: 1.5rem;
-    .nav__mobile_volet {
-        position: absolute;
-        z-index: -1;
+    visibility: hidden;
+    &.visible {
+        visibility: visible;
+        z-index:2;
+    }
+    .nav_mobile_volet {
+        position: sticky;
+        z-index: -3;
+        border: solid 1px blue;
+
         visibility: hidden;
-        &.first {
+        height: 100vh;
+        width: 100%;
+        background-color: white;
+        
+        &.visible {
             visibility: visible;
+            top: 0;
+            height: 100vh;
+            color: black;
+            z-index:3;
         }
     }
 }

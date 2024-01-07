@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="navbar"
 export default class extends Controller {
-  static targets = ["grey","volets", "mainMobile","mobileVolets"]
+  static targets = ["grey","volets", "mainMobile","mobileVolet"]
   connect() {
     console.log("hello from navbar")
   }
@@ -26,6 +26,21 @@ export default class extends Controller {
     //event.currentTarget.querySelector(".dropdown-nav").style.visibility = "hidden";
     //this.menugreenTarget.classList.remove("visible");
   }
-  mobileMenu(){
+  mobileMenu(event){
+    event.currentTarget.classList.toggle("active")
+    this.mainMobileTarget.classList.toggle("visible")
+    this.mobileVoletTargets[0].classList.add("visible")
+  }
+  voletPrev(event){
+
+  }
+  voletNext(event){
+    let indexLink = Array.from(event.currentTarget.parentElement.children).indexOf(event.currentTarget)
+    console.log(indexLink)
+    debugger;
+    indexLink = indexLink +=1
+    this.mobileVoletTargets[0].classList.remove("visible")
+    this.mobileVoletTargets[indexLink].classList.add("visible")
+
   }
 }
