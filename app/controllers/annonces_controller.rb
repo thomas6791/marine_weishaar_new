@@ -6,6 +6,7 @@ class AnnoncesController < ApplicationController
   end
 
   def new
+    @annonce = Annonce.new
   end
 
   def edit
@@ -18,5 +19,9 @@ class AnnoncesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def article_params
+    params.require(:annonce).permit(:titre, :city, photos:[])
   end
 end
