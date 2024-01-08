@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @annonces = Annonce.all
   end
 
   def about
