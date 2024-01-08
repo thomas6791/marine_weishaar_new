@@ -13,9 +13,9 @@ Rails.application.routes.draw do
 
   resources :admins, path: "admin" do
     resources :annonces
-    collection do
+    #collection do
       #get "annonces", to: "admins#annonces"
-    end
+    #end
   end
   get 'locations', to: "locations#index"
   get 'locations/appartements', to: "locations#appartements"

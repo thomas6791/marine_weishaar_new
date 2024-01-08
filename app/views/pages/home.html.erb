@@ -10,3 +10,11 @@
 <section class="inside">
 <h2>ça vaut le coupe d'oeil</h2>
 </section>
+
+<section>
+<ul>
+<% @annonces.each do |annonce| %>
+    <li><%= link_to "annonce", achat_show_path(annonce) %></li>
+<% end %>
+</ul>
+</section>

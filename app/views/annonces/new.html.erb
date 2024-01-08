@@ -1,2 +1,9 @@
 <h1>Annonces#new</h1>
 <p>Find me in app/views/annonces/new.html.erb</p>
+<%= simple_form_for @annonce, :url => url_for(:action => 'create', :controller => 'annonces'), :method => 'post' do |f| %>
+    <%= f.input :titre %>
+    <%= f.input :city %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <!-- [...] -->
+    <%= f.submit %>
+  <% end %>
