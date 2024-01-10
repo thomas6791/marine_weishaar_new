@@ -5,6 +5,7 @@ class AchatsController < ApplicationController
 
   def show
     @annonce = Annonce.find(params[:id])
+    fail
   end
 
   def appartements

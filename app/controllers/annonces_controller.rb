@@ -2,9 +2,6 @@ class AnnoncesController < ApplicationController
   def index
   end
 
-  def show
-  end
-
   def new
     @admin = Admin.find(current_admin.id)
     @annonce = Annonce.new
@@ -19,6 +16,10 @@ class AnnoncesController < ApplicationController
     if @annonce.save
       redirect_to root_path
     end
+  end
+
+  def show
+    fail
   end
 
   def update
