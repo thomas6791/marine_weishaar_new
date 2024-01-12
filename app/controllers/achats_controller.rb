@@ -1,6 +1,13 @@
 class AchatsController < ApplicationController
   def index
     @annonces = Annonce.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @annonces.geocoded.map do |bien|
+      {
+        lat: bien.latitude,
+        lng: bien.longitude
+      }
+    end
   end
 
   def show
