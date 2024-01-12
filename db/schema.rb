@@ -69,6 +69,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_12_195513) do
     t.float "surface"
     t.string "dpe"
     t.string "ges"
+    t.string "country"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

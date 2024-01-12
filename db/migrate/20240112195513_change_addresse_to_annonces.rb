@@ -6,5 +6,6 @@ class ChangeAddresseToAnnonces < ActiveRecord::Migration[7.0]
     add_column :annonces, :surface, :float
     add_column :annonces, :dpe, :string
     add_column :annonces, :ges, :string
+    add_column :annonces, :country, :string
   end
 end
