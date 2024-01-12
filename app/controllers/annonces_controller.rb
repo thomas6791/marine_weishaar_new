@@ -2,9 +2,6 @@ class AnnoncesController < ApplicationController
   def index
   end
 
-  def show
-  end
-
   def new
     @admin = Admin.find(current_admin.id)
     @annonce = Annonce.new
@@ -21,6 +18,10 @@ class AnnoncesController < ApplicationController
     end
   end
 
+  def show
+    fail
+  end
+
   def update
   end
 
@@ -28,6 +29,6 @@ class AnnoncesController < ApplicationController
   end
 
   def annonce_params
-    params.require(:annonce).permit(:titre, :city, photos:[])
+    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:type_bien,:surface,:dpe,:ges, photos:[])
   end
 end

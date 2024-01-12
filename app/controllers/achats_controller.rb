@@ -1,10 +1,20 @@
 class AchatsController < ApplicationController
   def index
     @annonces = Annonce.all
+    # The `geocoded` scope filters only flats with coordinates
+    @markers = @annonces.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {flat: flat}),
+        marker_html: render_to_string(partial: "marker")
+      }
+    end
   end
 
   def show
     @annonce = Annonce.find(params[:id])
+    fail
   end
 
   def appartements

@@ -2,7 +2,16 @@
 <p>Find me in app/views/annonces/new.html.erb</p>
 <%= simple_form_for @annonce, :url => url_for(:action => 'create', :controller => 'annonces'), :method => 'post' do |f| %>
     <%= f.input :titre %>
+    <%= f.input :address %>
+    <%= f.input :zipcode %>
     <%= f.input :city %>
+    <%= f.input :country %>
+    <%= f.input :quartier %>
+    <%= f.input :surface %>
+    <%= f.input :type_bien %>
+    <%= f.input :dpe %>
+    <%= f.input :ges %>
+    <%= f.input :description %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <!-- [...] -->
     <%= f.submit %>
