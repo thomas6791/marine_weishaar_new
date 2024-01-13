@@ -1,0 +1,21 @@
+.map { border: solid red 2px; z-index: 0;}
+.list_annonces {
+    border: solid 1px green;
+    width: 100%;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    list-style: none;
+}
+.annonce {
+    border: solid 1px;
+}
+.all_annonces {
+    height: 100vh;
+    //position: relative;
+    display: flex;
+    width: 100%;
+    border: solid 3px blue;
+    .map {width: 50%; height: 100%;}
+}

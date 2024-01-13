@@ -2,10 +2,20 @@
 <h1>Achats#index</h1>
 <p>Find me in app/views/achats/index.html.erb</p>
 </section>
-
-<section class="inside">
-    <div style="width: 100%; height: 600px;"
+<section class="all_annonces inside">
+    <ul class="list_annonces">
+        <% @annonces.each do |annonce| %>
+            <li class="annonce">
+                <%= annonce %>
+            </li>
+        <% end %>
+    </ul>
+ <div style="width: 100%; height: 600px;" class="map"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+</section>
+<section class="">
 </section>
