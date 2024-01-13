@@ -1,11 +1,43 @@
-<section class="inside">
-<h1>Achats#index</h1>
-<p>Find me in app/views/achats/index.html.erb</p>
+<section class="inside cover_landing">
+    <%= image_tag @cover %>
+    <h1>Toutes nosAnnonces immobilières</h1>
 </section>
-
 <section class="inside">
-    <div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    <div class="filtres_annonces">
+        <h2>Filtre annonces</h2>
+        <ul>
+            <li>Maisons</li>
+            <li>Appartements</li>
+            <li>Haut-Rhin</li>
+            <li>Strasbourg</li>
+        </ul>
+    </div>
+</section>
+<section class="inside all_annonces">
+    <ul class="list_annonces">
+        <% 10.times do %>
+            <% @annonces.each do |annonce| %>
+                <%= link_to achat_show_path(annonce) do %>
+                <li>
+
+                    <%= annonce.titre %>
+                </li>
+                <% end %>
+            <% end %>
+        <% end %> 
+    </ul>
+
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</section>
+<section class="inside">
+    <ul>
+        <li>Alsace</li>
+        <li>Bas-Rhin</li>
+        <li>Haut-Rhin</li>
+        <li>Strasbourg</li>
+    </ul>
 </section>

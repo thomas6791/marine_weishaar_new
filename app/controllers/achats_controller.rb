@@ -1,5 +1,6 @@
 class AchatsController < ApplicationController
   def index
+    @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
     @annonces = Annonce.all
     # The `geocoded` scope filters only flats with coordinates
     @markers = @annonces.geocoded.map do |flat|
@@ -14,7 +15,6 @@ class AchatsController < ApplicationController
 
   def show
     @annonce = Annonce.find(params[:id])
-    fail
   end
 
   def appartements
@@ -40,9 +40,11 @@ class AchatsController < ApplicationController
   end
 
   def esplanade
+    @cover = "https://as2.ftcdn.net/v2/jpg/00/84/97/39/1000_F_84973930_D32qRKKtikoNtjODkRbksAWd1SWQY7Wb.jpg"
   end
 
   def krutenau
+    @cover = "https://as2.ftcdn.net/v2/jpg/00/04/82/59/1000_F_4825925_lCoYYhc5vgqepg3xVZPaGchAC6jHX0k8.jpg"
   end
 
   def centre_ville
@@ -83,6 +85,7 @@ class AchatsController < ApplicationController
   end
 
   def neudorf
+    @cover = "https://as2.ftcdn.net/v2/jpg/04/70/29/27/1000_F_470292724_8yBwI8tgTnku1ISwbxXJQmmj4PX0mHJu.jpg"
   end
 
   def musau
