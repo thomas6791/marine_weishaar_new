@@ -1,21 +1,32 @@
 <section class="inside">
-<h1>Achats#index</h1>
-<p>Find me in app/views/achats/index.html.erb</p>
+    <h1>Annonces </h1>
+    <div class="filtres_annonces">
+        <h2>Filtre annonces</h2>
+        <ul>
+            <li>Maisons</li>
+            <li>Appartements</li>
+            <li>Haut-Rhin</li>
+            <li>Strasbourg</li>
+        </ul>
+    </div>
 </section>
-<section class="all_annonces inside">
+<section class="inside all_annonces">
     <ul class="list_annonces">
-        <% @annonces.each do |annonce| %>
-            <li class="annonce">
-                <%= annonce %>
-            </li>
-        <% end %>
-    </ul>
- <div style="width: 100%;" class="map"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+        <% 10.times do %>
+            <% @annonces.each do |annonce| %>
+                <%= link_to achat_show_path(annonce) do %>
+                <li>
 
-</section>
-<section class="">
+                    <%= annonce.titre %>
+                </li>
+                <% end %>
+            <% end %>
+        <% end %> 
+    </ul>
+
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 </section>
