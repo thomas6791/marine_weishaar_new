@@ -13,7 +13,7 @@
     <ul class="list_annonces three">
         <% 10.times do %>
             <% @annonces.each do |annonce| %>
-                <li class="annonce_card bis">
+                <li class="annonce_card">
                     <%= link_to achat_show_path(annonce) do %>
                         <div class="annonce_card_photo">
                             <%= image_tag annonce.photos[0] if !annonce.photos[0].nil?  %>
