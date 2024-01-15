@@ -96,6 +96,7 @@ class AchatsController < ApplicationController
 
   def petite_france
     @annonces = Annonce.all
+    @autres_quartiers = YAML.load_file('config/locales/quartiers.yml')
   end
 
   def neuhof

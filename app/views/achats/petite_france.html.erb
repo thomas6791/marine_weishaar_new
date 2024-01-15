@@ -34,3 +34,13 @@
         <% end %> 
     </ul>
 </section>
+<section class="inside map_quartier">
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</section>
+<section class="inside">
+    <%= render "autres_quartiers", locals: { quartiers: @autres_quartiers} %>
+</section>
