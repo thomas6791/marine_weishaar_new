@@ -95,7 +95,7 @@ class AchatsController < ApplicationController
   end
 
   def petite_france
-    
+    @annonces = Annonce.all
   end
 
   def neuhof

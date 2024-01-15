@@ -67,7 +67,6 @@
         }
         .annonce_card__statut {position: absolute;top: 0;left:0;}
     }
-    
 }
 .annonce_card_composants {
     list-style: none;
@@ -87,3 +86,11 @@
     h3,h4 {font-weight: 100;}
 }
 
+
+.annonce_card.bis {
+    border: solid 3px red;
+    .annonce_card_composants {
+        border: solid red 2px;
+        li {background-color: #F0ECEC;}
+    }
+}

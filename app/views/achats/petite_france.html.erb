@@ -3,7 +3,7 @@
     <h1>Petite France</h1>
     <div class="quartier_intro_text">
         <p>
-            Ce quartier offre un véritable voyage dans le temps, où chaque bâtisse raconte une histoire riche et fascinante. Les façades romantiques reflètent l'empreinte des siècles passés, tandis que les petits ponts enjambant les canaux ajoutent une touche de poésie à l'ensemble. La Petite France est un tableau vivant, une symphonie d'architecture et de nature, imprégnée de l'essence même de Strasbourg.
+            Le quartier de la <strong>Petite France</strong> offre un véritable voyage dans le temps, où chaque bâtisse raconte une histoire riche et fascinante. Les façades romantiques reflètent l'empreinte des siècles passés, tandis que les petits ponts enjambant les canaux ajoutent une touche de poésie à l'ensemble. La <strong>Petite France</strong> est un tableau vivant, une symphonie d'architecture et de nature, imprégnée de l'essence même de <strong>Strasbourg</strong>.
             <br><br>
             Les restaurants authentiques, les cafés pittoresques et les boutiques d'artisans locaux contribuent à l'ambiance conviviale de ce quartier, créant un véritable art de vivre.
         </p>
@@ -11,11 +11,26 @@
 </section>
 <section class="inside">
     <ul class="list_annonces three">
-        <li class="annonce_card bis">ddd</li>
-        <li>ddd</li>
-        <li>ddd</li>
-        <li>ddd</li>
-        <li>ddd</li>
-        <li>ddd</li>
+        <% 10.times do %>
+            <% @annonces.each do |annonce| %>
+                <li class="annonce_card bis">
+                    <%= link_to achat_show_path(annonce) do %>
+                        <div class="annonce_card_photo">
+                            <%= image_tag annonce.photos[0] if !annonce.photos[0].nil?  %>
+                            <span class="annonce_card_status">Exclusivité</span>
+                            <span class="annonce_card__nbr_photos">1/<%= annonce.photos.size%></span>
+                        </div>
+                        <div class="annonce_card_desc">
+                            <h3><%= annonce.titre %></h3>
+                            <h4><%= annonce.city %> - <%= annonce.zipcode %></h4>
+                            <ul class="annonce_card_composants">
+                                <li><%= annonce.type_bien %></li>
+                                <li><%= annonce.surface %>m<sup>2</sup></li>
+                            </ul>    
+                        <div>    
+                    <% end %>
+                </li>
+            <% end %>
+        <% end %> 
     </ul>
 </section>
