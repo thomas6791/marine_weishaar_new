@@ -1,10 +1,9 @@
 .map { border: solid red 2px; z-index: 0;}
 .list_annonces {
-    border: solid 1px green;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     list-style: none;
 }
@@ -32,5 +31,56 @@
 .cover_landing {
     display: flex;
     img {width: 450px;}
+}
+.annonce_card {
+    width: 100%;min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 3px 3px;
+    a {text-decoration: none; color: black;}
+    .annonce_card_photo { 
+        position: relative;
+        display: flex;
+        height: 250px;
+        //box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        img {width: 100%;border-radius: 3px; object-fit: cover;}
+        .annonce_card_status {
+            background: rgba(219,151,22,0.7);
+            position: absolute;
+            top: 0;
+            left:0;
+            padding: 7px;
+            border-radius: 0 0 10px 0;
+            font-size: 0.8em;
+            color: white;
+        }
+        .annonce_card__nbr_photos {position: absolute;bottom: 5px;right:5px;
+            padding: 0.3em 1.2em;
+            border-radius: 5px;
+            background: rgba(46,51,48,.8);
+            color: white;
+            font-size: 0.8em;
+        }
+        .annonce_card__statut {position: absolute;top: 0;left:0;}
+    }
+    
+}
+.annonce_card_composants {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    li {
+        padding: 5px 20px; border: solid 1.5px $green; background: rgba(111,155,132,.7);
+        border-radius: 25px;
+        color: white;
+        font-size: 0.8em;
+    }
+}
+.annonce_card_desc {
+    padding: 10px;
+    h3,h4 {font-weight: 100;}
 }
 

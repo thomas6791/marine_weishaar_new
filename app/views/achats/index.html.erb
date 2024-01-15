@@ -17,12 +17,23 @@
     <ul class="list_annonces">
         <% 10.times do %>
             <% @annonces.each do |annonce| %>
-                <%= link_to achat_show_path(annonce) do %>
-                <li>
-
-                    <%= annonce.titre %>
+                <li class="annonce_card">
+                    <%= link_to achat_show_path(annonce) do %>
+                        <div class="annonce_card_photo">
+                            <%= image_tag annonce.photos[0] if !annonce.photos[0].nil?  %>
+                            <span class="annonce_card_status">Exclusivité</span>
+                            <span class="annonce_card__nbr_photos">1/<%= annonce.photos.size%></span>
+                        </div>
+                        <div class="annonce_card_desc">
+                            <h3><%= annonce.titre %></h3>
+                            <h4><%= annonce.city %> - <%= annonce.zipcode %></h4>
+                            <ul class="annonce_card_composants">
+                                <li><%= annonce.type_bien %></li>
+                                <li><%= annonce.surface %>m<sup>2</sup></li>
+                            </ul>    
+                        <div>    
+                    <% end %>
                 </li>
-                <% end %>
             <% end %>
         <% end %> 
     </ul>
