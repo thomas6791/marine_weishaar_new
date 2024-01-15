@@ -6,6 +6,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     list-style: none;
+    &.three {
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
 .annonce {

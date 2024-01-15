@@ -1,0 +1,25 @@
+.quartier_intro {
+    position: relative;
+    display: flex;
+    img {}
+    h1 {
+        font-family: "Inter", sans-serif;
+        color: white;
+        text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        font-size: 6rem;
+        position: absolute;
+    }
+    &.krutenau, &.petite_france {
+        h1 {left: 130px;bottom: 60px;}
+    }
+    .quartier_intro_text {
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+        p {margin-left: 5rem; font-size: 1rem;
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+}
+

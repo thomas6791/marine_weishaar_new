@@ -94,6 +94,10 @@ class AchatsController < ApplicationController
   def port_rhin
   end
 
+  def petite_france
+    
+  end
+
   def neuhof
   end
 
