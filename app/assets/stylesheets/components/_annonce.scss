@@ -6,6 +6,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     list-style: none;
+    &.three {
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
 .annonce {
@@ -20,10 +23,13 @@
     p {width: 100%;}
 }
 #map {
-    width: 50%;
+    width: 100%;
     height: 100vh;
     position: sticky;
     top:0;
+}
+.all_annonces {
+    #map {width: 50%;}
 }
 .filtres_annonces {
     border: solid 3px purple;
@@ -64,7 +70,6 @@
         }
         .annonce_card__statut {position: absolute;top: 0;left:0;}
     }
-    
 }
 .annonce_card_composants {
     list-style: none;
@@ -83,4 +88,5 @@
     padding: 10px;
     h3,h4 {font-weight: 100;}
 }
+
 

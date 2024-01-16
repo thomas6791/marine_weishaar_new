@@ -62,6 +62,7 @@ Rails.application.routes.draw do
       get '/neudorf',to: "achats#neudorf"
       get '/musau',to: "achats#musau"
       get '/port-rhin',to: "achats#port_rhin"
+      get '/petite-france',to: "achats#petite_france"
       get '/neuhof',to: "achats#neuhof"
       get '/stockfeld',to: "achats#stockfeld"
       get '/ganzau',to: "achats#ganzau"

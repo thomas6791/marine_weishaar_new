@@ -1,0 +1,58 @@
+.quartier_intro {
+    position: relative;
+    display: flex;
+    img {}
+    h1 {
+        font-family: "Inter", sans-serif;
+        color: white;
+        text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
+        display: inline-block;
+        font-size: 6rem;
+        position: absolute;
+    }
+    &.krutenau, &.petite_france {
+        h1 {left: 130px;bottom: 60px;}
+    }
+    .quartier_intro_text {
+        display: flex;
+        align-items: center;
+        max-width: 50%;
+        p {margin-left: 5rem; font-size: 1rem;
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+}
+
+.autres_quartiers {
+    margin: 2rem 0;
+    h2 {font-family: "Nothing You Could Do", "cursive"; text-align: center;margin-bottom: 1.5rem; font-size: 2rem;}
+    ul {
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        list-style: none;
+        li {
+            min-width: 25%;
+            height: 250px;
+            border: solid 1px #F0ECEC;
+            border-radius: 5px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+            img {width: 100%; object-fit: cover;}
+            .autres_quartiers_text {
+                position: relative;
+            }
+            h3 {text-align: center; font-family: "Inter", sans-serif;
+                text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
+                color:white;
+                position: absolute;
+                top: -1.5em;
+                font-size: 2rem;
+                width: 100%;
+            }
+        }
+    }
+}
+.map_quartier {height: 300px; #map {height: 100%;}}
+

@@ -1,0 +1,14 @@
+<div class="autres_quartiers">
+    <h2>Les autres quartiers de Strasbourg</h2>
+    <ul class="">
+        <% locals[:quartiers].each do |quartier| %>
+            <li>
+                <%= image_tag quartier[1]["cover"],width: 200, height:200; %>
+                <div class="autres_quartiers_text">
+                    <h3><%= quartier[0] %></h3>
+                </div>
+            </li>
+        <% end %>
+    </ul>
+</div>
+
