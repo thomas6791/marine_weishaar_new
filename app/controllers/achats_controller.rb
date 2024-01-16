@@ -1,5 +1,6 @@
 class AchatsController < ApplicationController
   def index
+    fail
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
     @annonces = Annonce.all
     # The `geocoded` scope filters only flats with coordinates
