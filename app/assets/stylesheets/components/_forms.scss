@@ -16,6 +16,9 @@
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
           cursor: pointer;
+          //display: inline-block;
+          //width: 100%;
+          //min-width: 120px;
         }
         label {display: none;}
         .query_action {grid-area: "action";}
