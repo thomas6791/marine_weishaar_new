@@ -15,17 +15,18 @@
         <% end %>
     </div>
 </section>
+<section class="inside">
 <ul>
 <% AchatsController.action_methods.to_a.each do |lieu| %>
     <li><a href="/achat/strasbourg/<%= lieu %>"><%=lieu %></a></li>
 <% end %>
 </ul>
-
+</section>
 <section class="inside">
 <h2>ça vaut le coupe d'oeil</h2>
 </section>
 
-<section>
+<section class="inside">
 <ul>
 <% @annonces.each do |annonce| %>
     <li><%= link_to "annonce", achat_show_path(annonce) %></li>
