@@ -25,7 +25,7 @@
         .query_surface {grid-area: "surface";}
         .query_budget_min {grid-area: "min";}
         .query_budget_max {grid-area: "max";}
-        .btn {grid-area: "btn"; background-color: rgba(239, 204, 83, 0.59); font-weight:400;}
+        .btn {grid-area: "btn"; background-color: rgba(239, 204, 83, 0.59); font-weight:400; margin-right: 0;}
         #query_budget_max,#query_budget_min {}
 
         option,select,input, ::placeholder {color: black;}
