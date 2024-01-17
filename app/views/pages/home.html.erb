@@ -3,26 +3,17 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 <h2>SEARCH</h2>
 <div>
-    <%= form_with url: annonces_path, method: :get, class: "" do %>
-      <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Type a keyword"
-        %>
-
-        
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-    <% end %>
-    
-    <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
-        <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"] %>
-        <%= f.input :type_bien, collection:["Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"] %>
-        <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"] %>
-        <%= f.input :surface %>
-        <%= f.input :budget_max %>
-        <%= f.input :city %>
-        <%= f.submit "Rechercher", name: "", class: "btn btn-primary" %>
-    <% end %>
+    <div class="search_form inline">
+        <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+            <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
+            <%= f.input :city,class:"city", placeholder:"Localisation" %>
+            <%= f.input :type_bien, collection:["Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
+            <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
+            <%= f.input :surface, placeholder:"m2",class:"surface" %>
+            <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
+            <%= f.submit "Rechercher", class: "btn btn-primary" %>
+        <% end %>
+    </div>
 </div>
 <ul>
 <% AchatsController.action_methods.to_a.each do |lieu| %>
