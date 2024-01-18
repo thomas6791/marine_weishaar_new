@@ -7,8 +7,9 @@ class AchatsController < ApplicationController
     end
 
     if action_switch == "Acheter"
+      #bien = params[:query][:type_bien].downcase
     elsif action_switch == "Louer"
-      redirect_to locations_path
+      redirect_to locations_path()
     elsif action_switch == "Location Professionnelle"
     elsif action_switch == "Achat Neuf"
     elsif action_switch == "Achat Ancien"
