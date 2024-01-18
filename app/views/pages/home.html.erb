@@ -1,6 +1,6 @@
 <section class="search_home inside">
     <div class="search_home_intro">
-        <%= image_tag "home/canape-yellow.png", width: 650;%>
+        <%= image_tag "home/canape-yellow copy.png", width: 650;%>
         <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
     </div>
     <div class="search_form inline">
@@ -15,28 +15,35 @@
         <% end %>
     </div>
 </section>
-<section class="inside">
-<section class="inside">
-    <h2>Nouveau formulaire</h2>
-    <div class="search_form new">
-        <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
-            <div class="inline_input">
-                <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
-                <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
-            </div>
-            <%= f.input :city,class:"city", placeholder:"Localisation" %>
-            <div class="inline_input">
-                <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
-                <%= f.input :surface, placeholder:"m2",class:"surface" %>
-            </div>
-            <div class="inline_input">
-                <%= f.input :budget_min,class:"max_budg",placeholder:"Budget min" %>
-                <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
-            </div>
-            <%= f.submit "Rechercher", class: "btn btn-primary" %>
-        <% end %>
+
+<section class="search_home new inside">
+    <div class="search_home_intro">
+        <%= image_tag "home/canape-yellow copy.png", width: 650;%>
+        <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
+    </div>
+    <div class="form_carre">
+        <div class="search_form new">
+            <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+                <div class="inline_input">
+                    <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
+                    <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
+                </div>
+                <%= f.input :city,class:"city", placeholder:"Localisation" %>
+                <div class="inline_input">
+                    <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
+                    <%= f.input :surface, placeholder:"m2",class:"surface" %>
+                </div>
+                <div class="inline_input">
+                    <%= f.input :budget_min,class:"max_budg",placeholder:"Budget min" %>
+                    <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
+                </div>
+                <%= f.submit "Rechercher", class: "btn btn-primary" %>
+            <% end %>
+        </div>
     </div>
 </section>
+
+<section class="inside">
 <ul>
 <% AchatsController.action_methods.to_a.each do |lieu| %>
     <li><a href="/achat/strasbourg/<%= lieu %>"><%=lieu %></a></li>

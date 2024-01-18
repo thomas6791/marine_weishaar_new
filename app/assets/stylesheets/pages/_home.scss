@@ -23,4 +23,14 @@
         left: 0;
         bottom: 10%;
     }
+    &.new {
+        display: flex;
+        .search_home_intro {width: 70%;
+            .titre_search {bottom: 10%;}
+        }
+        .form_carre {position: initial;width:50%;
+            display: flex;justify-content:center; align-items: center;
+            .search_form.new {position: initial; width: fit-content;height: fit-content;}
+        }
+    }
 }
