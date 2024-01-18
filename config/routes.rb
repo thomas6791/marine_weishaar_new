@@ -30,6 +30,13 @@ Rails.application.routes.draw do
       get "agence-immobiliere-wissembourg", to: "agences#wissembourg", as: "wissembourg"
       get "agence-immobiliere-molsheim", to: "agences#molsheim", as: "molsheim"
       get "agence-immobiliere-colmar", to: "agences#colmar", as: "colmar"
+      get "agence-immobiliere-haguenau", to: "agences#haguenau", as: "haguenau"
+      get "agence-immobiliere-schiltigheim", to: "agences#schiltigheim", as: "schiltigheim"
+      get "agence-immobiliere-altkirch", to: "agences#altkirch", as: "altkirch"
+      get "agence-immobiliere-brumath", to: "agences#brumath", as: "brumath"
+      get "agence-immobiliere-barr", to: "agences#barr", as: "barr"
+      get "agence-immobiliere-erstein", to: "agences#erstein", as: "erstein"
+      get "agence-immobiliere-cernay", to: "agences#cernay", as: "cernay"
     end
   end
   get "annonces-immobilieres", to: "achats#index", as: :annonces

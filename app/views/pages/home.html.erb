@@ -1,17 +1,124 @@
+<section class="search_home new inside">
+    <div class="search_home_intro">
+        <%= image_tag "home/canape-yellow copy.png", width: 650;%>
+        <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
+    </div>
+    <div class="form_carre">
+        <div class="search_form new">
+            <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+                <div class="inline_input">
+                    <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
+                    <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
+                </div>
+                <%= f.input :city,class:"city", placeholder:"Localisation" %>
+                <div class="inline_input">
+                    <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
+                    <%= f.input :surface, placeholder:"m2",class:"surface" %>
+                </div>
+                <div class="inline_input">
+                    <%= f.input :budget_min,class:"max_budg",placeholder:"Budget min" %>
+                    <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
+                </div>
+                <%= f.submit "Rechercher", class: "btn btn-primary" %>
+            <% end %>
+        </div>
+    </div>
+</section>
 <section class="inside">
-<h2>Pages#home</h2>
-<p>Find me in app/views/pages/home.html.erb</p>
+    <h2 class="titre styling">Nos derniers coups de coeur</h2>
+    <ul>
+    </ul>
+    <%= link_to "Voir d'autres annonces"%>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Des agences proches de chez vous</h2>
+    <ul>
+        <li>Strasbourg</li>
+        <li>Wissembourg</li>
+        <li>Colmar</li>
+        <li>Molsheim</li>
+        <li>Haguenau</li>
+    </ul>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Nous avons la solution pour votre projet immobilier</h2>
+    <ul class="prestations">
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Acheter</h3>
+                <p>Faites votre choix parmis nos annonces ou confiez nous la recherche de votre futur logement.</p>
+            <div>
+        </li>
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Vendre</h3>
+                <p>Confiez-nous l'estimation et la vente de votre logement au meilleur prix.</p>
+            <div>
+        </li>
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Louer</h3>
+                <p>Consultez nos nombreuses offres de location pour emménager sans délais.</p>
+            <div>
+        </li>
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Home staging</h3>
+                <p>Améliorer vos chances de vendre en mettant au goût du jour votre logement.</p>
+            <div>
+        </li>
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Gestion locative</h3>
+                <p>Notre agence s'occupe de la bonne gestion de votre patrimoine locatif.</p>
+            <div>
+        </li>
+        <li class="prestation">
+            <img>
+            <div>
+                <h3>Investir</h3>
+                <p>Investissez dans la pierre et bénéficiez d'avantages pour faire fructifier votre patrimoine.</p>
+            <div>
+        </li>
+    </ul>
+</section>
+
+<section class="search_home inside">
+    <div class="search_home_intro">
+        <%= image_tag "home/canape-yellow copy.png", width: 650;%>
+        <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
+    </div>
+    <div class="search_form inline">
+        <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+            <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
+            <%= f.input :city,class:"city", placeholder:"Localisation" %>
+            <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
+            <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
+            <%= f.input :surface, placeholder:"m2",class:"surface" %>
+            <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
+            <%= f.submit "Rechercher", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</section>
+
+
+<section class="inside">
 <ul>
 <% AchatsController.action_methods.to_a.each do |lieu| %>
     <li><a href="/achat/strasbourg/<%= lieu %>"><%=lieu %></a></li>
 <% end %>
 </ul>
-
+</section>
 <section class="inside">
 <h2>ça vaut le coupe d'oeil</h2>
 </section>
 
-<section>
+<section class="inside">
 <ul>
 <% @annonces.each do |annonce| %>
     <li><%= link_to "annonce", achat_show_path(annonce) %></li>

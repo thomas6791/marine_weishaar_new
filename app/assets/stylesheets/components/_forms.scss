@@ -1,0 +1,91 @@
+.search_form {
+    border: solid 2px #D5C6C6;
+    border-radius: 3px;
+    padding: 2px;
+    font-family: "Inter";
+    font-weight: 200;
+    form {
+        display: grid;
+        select,input {
+            border:1px solid #ccc;
+            vertical-align:top;
+            height:2.5rem;
+            margin-right: 4px;
+            text-align: center;
+            box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          cursor: pointer;
+          //display: inline-block;
+          //width: 100%;
+          //min-width: 120px;
+        }
+        label {display: none;}
+        .query_action {grid-area: "action";}
+        .query_city {grid-area:"city";}
+        .query_bien {grid-area: "bien";}
+        .query_pieces {grid-area: "pieces";}
+        .query_surface {grid-area: "surface";}
+        .query_budget_min {grid-area: "min";}
+        .query_budget_max {grid-area: "max";}
+        .btn {grid-area: "btn"; background-color: rgba(239, 204, 83, 0.59); font-weight:400; margin-right: 0;
+            &:hover {background-color: #EDC272;}
+        }
+        #query_budget_max,#query_budget_min {}
+
+        option,select,input, ::placeholder {color: black;}
+    }
+    &.inline {
+        form {
+            display: flex;
+            .query_city {display: flex;width: 100%;
+                input {width: 100%;}
+            }
+            //grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+    &.carre {
+        form {
+            grid-template-areas:
+            "action bien"
+            "city city"
+            "pieces surface"
+            "min max"
+            ". btn";
+        }
+    }
+    &.new {
+        display: flex;
+        width: fit-content;
+        padding: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        input,select,textarea {display: flex; width: 100%;}
+        .query_city {
+            margin-bottom: 20px;
+            input {
+                background: url("pictos/marker-localisation.png") no-repeat 10px 3px;;
+                //background-repeat: no-repeat;
+                text-indent: 20px;
+                &:focus {
+                    background-image:none;
+                }
+            }
+        }
+        #query_type_bien {
+            background: url("pictos/house-2.png") no-repeat 10px 3px;;
+                //background-repeat: no-repeat;
+                text-indent: 20px;
+                &:focus {
+                    background-image:none;
+                }
+        }
+        .inline_input {
+            display: flex;
+            div, {width:100%; margin-bottom: 10px;}
+            input {width: 100%;}
+            div:first-of-type {margin-right: 5px;}
+        }
+        .btn {display: flex; justify-content: center;margin-top: 15px;}
+    }
+}

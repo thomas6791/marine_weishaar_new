@@ -1,0 +1,49 @@
+.search_home {
+    position: relative;
+    .search_home_intro {
+        position: relative;
+        display: flex;
+        width: fit-content;
+
+        .titre_search {
+            font-family: "Inter", sans-serif;
+            color: white;
+            text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
+            display: inline-block;
+            font-size: 4em;
+            position: absolute;
+            line-height: 1em;
+            right: -10%;
+            bottom: 22%;
+            font-weight: 600;
+        }
+    }
+    .search_form {
+        position: absolute;
+        left: 0;
+        bottom: 10%;
+    }
+    &.new {
+        display: flex;
+        .search_home_intro {width: 70%;
+            .titre_search {bottom: 10%;}
+        }
+        .form_carre {position: initial;width:50%;
+            display: flex;justify-content:center; align-items: center;
+            .search_form.new {position: initial; width: fit-content;height: fit-content;}
+        }
+    }
+}
+.titre.styling {
+    font-family: "Nothing you could do";
+    text-align: center;
+    font-size: 2rem;
+}
+.prestations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .prestation h3 {
+        font-family: "Inter";
+        font-weight: 500;
+    }
+}
