@@ -59,7 +59,25 @@
         padding-top: 15px;
         padding-bottom: 15px;
         input,select,textarea {display: flex; width: 100%;}
-        .query_city {margin-bottom: 20px;}
+        .query_city {
+            margin-bottom: 20px;
+            input {
+                background: url("pictos/marker-localisation.png") no-repeat 10px 3px;;
+                //background-repeat: no-repeat;
+                text-indent: 20px;
+                &:focus {
+                    background-image:none;
+                }
+            }
+        }
+        #query_type_bien {
+            background: url("pictos/house-2.png") no-repeat 10px 3px;;
+                //background-repeat: no-repeat;
+                text-indent: 20px;
+                &:focus {
+                    background-image:none;
+                }
+        }
         .inline_input {
             display: flex;
             div, {width:100%; margin-bottom: 10px;}
