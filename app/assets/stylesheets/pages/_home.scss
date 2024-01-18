@@ -34,3 +34,16 @@
         }
     }
 }
+.titre.styling {
+    font-family: "Nothing you could do";
+    text-align: center;
+    font-size: 2rem;
+}
+.prestations {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    .prestation h3 {
+        font-family: "Inter";
+        font-weight: 500;
+    }
+}

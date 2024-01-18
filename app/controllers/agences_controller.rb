@@ -18,4 +18,6 @@ class AgencesController < ApplicationController
   end
   def molsheim
   end
+  def haguenau
+  end
 end
