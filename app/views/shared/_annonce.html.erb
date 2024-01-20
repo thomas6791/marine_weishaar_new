@@ -1,11 +1,13 @@
 <section class="inside">
-    <div class="annonce_show_photos">
+    <div class="annonce_show_photos" data-controller="annonce">
         <div class="cover">
-            <%= image_tag @annonce.photos[0] %>
+            <% @annonce.photos.each do |photo| %>
+                <%= image_tag photo, class: "cover-img", data: { annonce_target: "cover" } %>
+            <% end %>
         </div>
         <ul class="carrousel_photos inside">
             <% @annonce.photos.each do |photo| %>
-            <li class="carrousel_select"><%= image_tag photo %></li>
+            <li class="carrousel_select" data-action="click->annonce#selectImg" data-annonce-target="image"><%= image_tag photo %></li>
             <% end %>
         </ul>
     </div>
