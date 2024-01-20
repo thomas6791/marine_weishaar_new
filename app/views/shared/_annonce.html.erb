@@ -1,0 +1,20 @@
+<section class="inside">
+    <div class="annonce_show_photos">
+        <div class="cover">
+            <%= image_tag @annonce.photos[0] %>
+        </div>
+        <ul class="carrousel_photos inside">
+            <% @annonce.photos.each do |photo| %>
+            <li class="carrousel_select"><%= image_tag photo %></li>
+            <% end %>
+        </ul>
+    </div>
+
+</section>
+<section class="inside">
+    <h1><%= @annonce.titre %></h1>
+
+    <% @annonce.photos.each do |photo| %>
+        <%= image_tag photo,height: 400, width: 400, class:"pdt-img-main" %>
+    <% end %>
+</section>

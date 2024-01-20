@@ -1,3 +1,34 @@
 #annonce {
-    
+}
+.annonce_show_photos {
+    border: solid 2px blue;
+    margin-bottom: 2rem;
+    .cover {
+        margin-bottom: 10px;
+        height: auto;
+        display: flex;
+        height: 500px;
+        img {display: flex; width: 100%; height: 100%;
+            object-fit: cover;
+        }
+    }
+    .carrousel_photos{
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        padding: 0;
+        margin: 0;
+        .carrousel_select {
+            list-style: none;
+            cursor: pointer;
+            padding: 0;
+            margin: 0;
+            border-radius: 3px;
+            min-width: 200px;
+            height: 150px;
+            display: flex;
+            margin-right: 10px;
+            img {object-fit: cover; display: flex;width: 100%; border-radius: 3px;}
+        }
+    }
 }
