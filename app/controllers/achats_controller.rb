@@ -2,20 +2,20 @@ class AchatsController < ApplicationController
   def index
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
     @annonces = Annonce.all
-    if params[:query].present?
-      action_switch = params[:query][:action]
-    end
+    #if params[:query].present?
+    #  action_switch = params[:query][:action]
+    #end
 
-    if action_switch == "Acheter"
+    #if action_switch == "Acheter"
       #bien = params[:query][:type_bien].downcase
-    elsif action_switch == "Louer"
-      redirect_to locations_path()
-    elsif action_switch == "Location Professionnelle"
-    elsif action_switch == "Achat Neuf"
-    elsif action_switch == "Achat Ancien"
-    else
-      redirect_to annonces_path
-    end
+    #elsif action_switch == "Louer"
+      #redirect_to locations_path()
+    #elsif action_switch == "Location Professionnelle"
+    #elsif action_switch == "Achat Neuf"
+    #elsif action_switch == "Achat Ancien"
+    #else
+    #  redirect_to annonces_path
+    #end
 
     # The `geocoded` scope filters only flats with coordinates
     @markers = @annonces.geocoded.map do |flat|
