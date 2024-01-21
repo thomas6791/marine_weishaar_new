@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
     @annonces = Annonce.all
+    @icones = YAML.load_file('config/datas/icones.yml')
   end
 
   def about

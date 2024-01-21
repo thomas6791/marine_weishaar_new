@@ -125,3 +125,8 @@
 <% end %>
 </ul>
 </section>
+<section>
+    <% @icones.each do |key,value| %>
+    <p><%= key %> : <%= image_tag @icones[key]["img"],width:70 %></p>
+    <% end %>
+</section>
