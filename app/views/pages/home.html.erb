@@ -127,6 +127,10 @@
 </section>
 <section>
     <% @icones.each do |key,value| %>
-    <p><%= key %> : <%= image_tag @icones[key]["img"],width:70 %></p>
+    <p><%= key %> : 
+    <% @icones[key].each do|item| %>
+        <%= image_tag item, width:80 %>
+    <% end %>
+    </p>
     <% end %>
 </section>
