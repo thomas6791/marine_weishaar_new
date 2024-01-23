@@ -23,3 +23,10 @@ surface:
   - ""
 biens:
   - ""
+
+terrain:
+  - "https://cdn-icons-png.flaticon.com/128/7012/7012489.png"
+  - "https://cdn-icons-png.flaticon.com/128/7896/7896888.png"
+  - "https://cdn-icons-png.flaticon.com/128/7896/7896893.png"
+  - "https://cdn-icons-png.flaticon.com/128/7896/7896890.png"
+  - 
