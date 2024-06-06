@@ -8,7 +8,7 @@
     <%= f.input :country %>
     <%= f.input :quartier %>
     <%= f.input :surface %>
-    <%= f.input :type_bien %>
+    <%= f.input :type_bien, collection: Annonce::TYPE_BIEN %>
     <%= f.input :dpe %>
     <%= f.input :ges %>
     <%= f.input :description %>

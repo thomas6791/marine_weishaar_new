@@ -1,0 +1,35 @@
+<section class="inside">
+    <div class="annonce_show_photos" data-controller="annonce">
+        <div class="cover">
+            <% @annonce.photos.each do |photo| %>
+                <%= image_tag photo, class: "cover-img", data: { annonce_target: "cover" } %>
+            <% end %>
+        </div>
+        <ul class="carrousel_photos inside">
+            <% @annonce.photos.each do |photo| %>
+            <li class="carrousel_select" data-action="click->annonce#selectImg" data-annonce-target="image"><%= image_tag photo %></li>
+            <% end %>
+        </ul>
+    </div>
+
+</section>
+<section class="inside">
+    <h1><%= @annonce.titre %></h1>
+    <p><%= @annonce.description %></p>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Descriptif</h2>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Diagnostic énergétique</h2>
+</section>
+<section class="inside">
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Autres annonces dans le secteur</h2>
+</section>
