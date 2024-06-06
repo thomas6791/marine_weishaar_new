@@ -15,4 +15,21 @@
 </section>
 <section class="inside">
     <h1><%= @annonce.titre %></h1>
+    <p><%= @annonce.description %></p>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Descriptif</h2>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Diagnostic énergétique</h2>
+</section>
+<section class="inside">
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</section>
+<section class="inside">
+    <h2 class="titre styling">Autres annonces dans le secteur</h2>
 </section>

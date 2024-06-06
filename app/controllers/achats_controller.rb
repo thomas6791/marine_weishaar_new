@@ -30,6 +30,13 @@ class AchatsController < ApplicationController
 
   def show
     @annonce = Annonce.find(params[:id])
+    @markers =
+      {
+        lat: @annonce.latitude,
+        lng: @annonce.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {flat: @annonce}),
+        marker_html: render_to_string(partial: "marker")
+      }
   end
 
   def appartements
