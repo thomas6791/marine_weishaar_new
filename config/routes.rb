@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/contact', to: "pages#contact"
   get '/gestion-locative', to:  "pages#gestion_locative"
 
+  get 'components', to: "pages#components"
+
   resources :admins, path: "admin" do
     resources :annonces
     #collection do
