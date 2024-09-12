@@ -23,15 +23,41 @@
     }
 }
 .card_annonce {
-    border: solid 1px;
+    border: solid 1px lightgray;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     max-width: 500px;
     flex-direction: column;
     border-radius: 5px;
-    img {
-        width: 100%; height: 300px;
-        object-fit: cover;
-        object-position: 50% 50%;
+    width: 100%;
+    max-width: 590px;
+    height: 100%;
+    max-height: 520px;
+    * {margin: 0;padding: 0;}
+    padding: 5px;
+    .card_flex {
+        display: flex; justify-content: space-between;
+        align-items: baseline;
+        &.grey {color: grey;}
     }
-    div {padding: 5px;}
+    .card_img {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        object-fit: cover;
+        margin-bottom: 5px;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        span {
+            position: absolute; top: 10px; left: 5px; background-color: $yellow;
+            color:white;
+            padding: 2px 15px;
+            border-radius: 2px;
+        }
+    }
+    .card_desc {}
 }
