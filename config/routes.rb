@@ -52,6 +52,7 @@ Rails.application.routes.draw do
     get "/bas-rhin", to: "achats#bas_rhin"
     get "/haut-rhin", to: "achats#haut_rhin"
     get "/strasbourg", to: "achats#strasbourg"
+    get "/test", to: "achats#test"
     scope "strasbourg" do
       get '/bourse',to: "achats#bourse"
       get '/esplanade',to: "achats#esplanade"

@@ -90,3 +90,29 @@
 }
 
 
+.new_list_annonces {
+    display: flex;
+    .list_annonces {
+        border: solid 4px;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        width: 100%;
+        //--largeurA: calc(100% - 40%);
+        .new_annonces {
+            border: solid 2px;
+            height: 100vh;
+            width: calc(1116px/2);
+            //width: var(--largeurA);
+
+            //max-width: calc(1116px - 50%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    #map {
+        width: 100%;
+    }
+}
+
+

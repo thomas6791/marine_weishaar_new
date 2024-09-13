@@ -1,0 +1,28 @@
+<h1>Test</h1>
+
+<div class="new_list_annonces">
+    <section class="list_annonces">
+        <ul class="new_annonces">
+            <li>1</li>
+             <li>1</li>
+              <li>1</li>
+               <li>1</li>
+                <li>1</li>
+        </ul>
+    </section>
+    <div id="map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+</div>
+
+    
+<section class="inside">
+    <ul>
+        <li>Alsace</li>
+        <li>Bas-Rhin</li>
+        <li>Haut-Rhin</li>
+        <li>Strasbourg</li>
+    </ul>
+</section>

@@ -23,7 +23,6 @@
     }
 }
 .card_annonce {
-    border: solid 1px lightgray;
     font-family: "Montserrat", sans-serif;
     display: flex;
     max-width: 500px;
@@ -53,13 +52,17 @@
             border-radius: 5px;
         }
         span {
-            position: absolute; top: 10px; left: 5px; background-color: $yellow;
-            color:white;
+            position: absolute; bottom: 10px; left: 5px; background-color: transparent;
+            border: solid 1px white;
+            color: white;
             padding: 2px 15px;
             border-radius: 2px;
         }
     }
     .card_desc {}
+    &:hover {
+        border: solid 1px lightgray;
+    }
 }
 
 .list_video {
