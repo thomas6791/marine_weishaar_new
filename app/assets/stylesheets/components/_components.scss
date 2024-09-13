@@ -61,3 +61,13 @@
     }
     .card_desc {}
 }
+
+.list_video {
+    display: grid;
+    grid-template-columns: repeat(5, 250px);
+    gap: 10px;
+    .card_video {
+        border: solid 1px;
+        height: 400px;
+    }
+}
