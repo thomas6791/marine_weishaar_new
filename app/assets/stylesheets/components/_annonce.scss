@@ -97,12 +97,13 @@
         display: flex;
         justify-content: flex-end;
         height: 100%;
-        width: 100%;
+        width: 65%;
         //--largeurA: calc(100% - 40%);
         .new_annonces {
             border: solid 2px;
             height: 100vh;
-            width: calc(1116px/2);
+            min-width: calc(1116px * 0.70);
+            //width: calc(1116/2);
             //width: var(--largeurA);
 
             //max-width: calc(1116px - 50%);
@@ -111,7 +112,7 @@
         }
     }
     #map {
-        width: 100%;
+        width: 35%;
     }
 }
 
