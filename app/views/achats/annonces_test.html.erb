@@ -1,0 +1,17 @@
+<h1>Annonces test</h1>
+<article class="annonces_test">
+    <section class="list_annonces">
+        <ul class="new_annonces">
+            <% 10.times do %>
+            <%= render "achats/annonce" %>
+            <% end %>
+        </ul>
+    </section>
+    <section class="carte_fixed">
+        <div id="map"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+    </section> 
+</article>

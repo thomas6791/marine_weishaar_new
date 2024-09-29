@@ -138,4 +138,7 @@ class AchatsController < ApplicationController
   
   def test
   end
+
+  def annonces_test
+  end
 end
