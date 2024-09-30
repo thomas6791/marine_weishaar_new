@@ -92,6 +92,8 @@
 
 .new_list_annonces {
     display: flex;
+    border: solid 3px;
+    height: 100%;
     .list_annonces {
         //border: solid 4px;
         display: flex;
@@ -116,18 +118,46 @@
             grid-template-columns: 1fr 1fr;
         }
     }
-    #map {
+    .map_fixed {
         width: 35%;
+        position: relative;
+        border: solid 2px;
+        height: 100vh;
+        #map {
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            position: sticky;
+        }
     }
 }
 
 .annonces_test {
     display: flex;
-    section {min-width: 200px; width: 100%;}
+    //section {width: 100%;}
     border: solid 1px;
+    .list_annonces {
+        display: initial;
+        padding-left: 5px;
+        width: 80%;
+        border: solid;
+        //display: flex;
+        //justify-content: flex-end;
+        .new_annonces {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 15px;
+            row-gap: 5px;
+            padding-right: 5px;
+            margin-right: 10px;
+            max-width: calc(1120px * 0.70);
+            border: solid;
+        }
+    }
     .carte_fixed {
         border: solid 1px red;
         position: relative;
+        width: 30%;
         #map {
             height: 100vh;
             position: sticky;
