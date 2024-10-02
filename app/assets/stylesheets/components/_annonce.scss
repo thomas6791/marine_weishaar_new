@@ -132,35 +132,35 @@
     }
 }
 
-.annonces_test {
+.annonces_index {
     display: flex;
     //section {width: 100%;}
-    border: solid 1px;
+    //border: solid 1px;
     .list_annonces {
         display: initial;
         padding-left: 5px;
         padding-right: 5px;
         width: 100%;
-        border: solid;
+        //border: solid;
         //display: flex;
         //justify-content: flex-end;
         margin-left: calc((100% - 1116px)/2) ;
         .new_annonces {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 15px;
+            column-gap: 10px;
             row-gap: 5px;
             //padding-right: 5px;
             //margin-right: 10px;
             //max-width: calc(1120px * 0.70);
-            border: solid;
+            //border: solid;
             .card_annonce{
                 box-sizing: border-box;
             }  
         }
     }
     .carte_fixed {
-        border: solid 1px red;
+        //border: solid 1px red;
         position: relative;
         width: 45%;
         #map {
