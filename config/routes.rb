@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/contact', to: "pages#contact"
   get '/gestion-locative', to:  "pages#gestion_locative"
 
+  get 'components', to: "pages#components"
+
   resources :admins, path: "admin" do
     resources :annonces
     #collection do
@@ -44,12 +46,14 @@ Rails.application.routes.draw do
   get "annonces-appartements", to: "achats#appartements", as: :appartements
   get "annonces-maisons", to: "achats#maisons", as: :maisons
   get "annonces-terrains", to: "achats#terrains", as: :terrains
+  get "annonces-test", to: "achats#annonces_test"
 
   scope "achat" do
     get "/alsace", to: "achats#alsace"
     get "/bas-rhin", to: "achats#bas_rhin"
     get "/haut-rhin", to: "achats#haut_rhin"
     get "/strasbourg", to: "achats#strasbourg"
+    get "/test", to: "achats#test"
     scope "strasbourg" do
       get '/bourse',to: "achats#bourse"
       get '/esplanade',to: "achats#esplanade"

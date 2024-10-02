@@ -135,4 +135,10 @@ class AchatsController < ApplicationController
 
   def wacken
   end
+  
+  def test
+  end
+
+  def annonces_test
+  end
 end
