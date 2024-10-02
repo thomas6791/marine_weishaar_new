@@ -89,3 +89,12 @@
         .btn {display: flex; justify-content: center;margin-top: 15px;}
     }
 }
+.flex_input {
+    display: flex;
+}
+form {
+    border: solid 1px;
+    input,textarea,select {
+        border: solid 1px;
+    }
+}
