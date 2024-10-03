@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_02_192744) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_03_185252) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -70,7 +70,8 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_02_192744) do
     t.string "dpe"
     t.string "ges"
     t.string "country"
-    t.float "price"
+    t.integer "price_cents", default: 0, null: false
+    t.string "price_currency", default: "USD", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
