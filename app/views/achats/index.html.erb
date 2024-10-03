@@ -1,13 +1,16 @@
 
 
-<article class="annonces_index">
-    <section class="list_annonces">
+<article class="">
+    <section class="inside">
         <h1>Annonces immobilieres</h1>
         <ul class="filtre_tags">
-            <li class="filtre_tag">Maison</li>
-            <li class="filtre_tag">Appartement</li>
+            <li class="raccourci_achat"><%= link_to "Maisons", maisons_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
         </ul>
-        <ul></ul>
+    </section>
+    <div class="annonces_index">
+    <section class="list_annonces">
         <ul class="new_annonces">
             <% 10.times do %>
             <%= render "achats/annonce" %>
@@ -29,5 +32,6 @@
             data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
     </section> 
+    </div>
 </article>
     
