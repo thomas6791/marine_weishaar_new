@@ -30,6 +30,6 @@ class AnnoncesController < ApplicationController
   end
 
   def annonce_params
-    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:type_bien,:surface,:dpe,:ges, photos:[])
+    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:type_bien,:surface,:dpe,:ges,:price, photos:[])
   end
 end

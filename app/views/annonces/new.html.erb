@@ -1,10 +1,13 @@
-<h1>Annonces#new</h1>
-<p>Find me in app/views/annonces/new.html.erb</p>
-<%= simple_form_for @annonce, :url => url_for(:action => 'create', :controller => 'annonces'), :method => 'post' do |f| %>
+<article class="inside">
+<h1>Ajouter une nouvelle annonce</h1>
+<%= simple_form_for @annonce,:url => url_for(:action => 'create', :controller => 'annonces'), :method => 'post' do |f| %>
     <%= f.input :titre %>
+    <%= f.input :price %>
     <%= f.input :address %>
-    <%= f.input :zipcode %>
-    <%= f.input :city %>
+    <div class="flex_input">
+      <%= f.input :zipcode %>
+      <%= f.input :city %>
+    </div>
     <%= f.input :country %>
     <%= f.input :quartier %>
     <%= f.input :surface %>
@@ -16,3 +19,4 @@
     <!-- [...] -->
     <%= f.submit %>
   <% end %>
+  </article>
