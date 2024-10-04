@@ -22,8 +22,8 @@ class AchatsController < ApplicationController
       {
         lat: flat.latitude,
         lng: flat.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {flat: flat}),
-        marker_html: render_to_string(partial: "marker", locals: {flat: flat})
+        info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+        marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
       }
     end
   end
@@ -34,8 +34,8 @@ class AchatsController < ApplicationController
       {
         lat: @annonce.latitude,
         lng: @annonce.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: {flat: @annonce}),
-        marker_html: render_to_string(partial: "marker")
+        info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: @annonce}),
+        marker_html: render_to_string(partial: "shared/marker", locals: {flat: @annonce})
       }
   end
 

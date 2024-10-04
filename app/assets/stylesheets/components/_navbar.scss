@@ -17,6 +17,7 @@
             justify-content: space-between;
         }
         .header_cta {
+            display: flex;
             .btn:first-of-type {
                 margin-right: 10px;
             }

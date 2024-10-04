@@ -12,8 +12,12 @@
     <div class="annonces_index">
     <section class="list_annonces">
         <ul class="new_annonces">
-            <% 10.times do %>
-            <%= render "achats/annonce" %>
+            <% @annonces.each do |annonce| %>
+            <li>
+            <%= link_to achat_show_path(annonce) do %>
+            <%= render partial: "achats/annonce", locals: {annonce: annonce} %>
+            <% end %>
+            </li>
             <% end %>
         </ul>
         <div>

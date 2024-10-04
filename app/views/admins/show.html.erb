@@ -1,4 +1,5 @@
 <section class="inside">
-    <h1>Admin show</h1>
-    <%= current_admin.email %>
+    <h1>Espace Admin</h1>
+    <%= link_to "Créer une annonce",new_admin_annonce_path(params[:id]), class:"btn white" %>
+    <p></p><%= current_admin.email %></p>
 </section>
