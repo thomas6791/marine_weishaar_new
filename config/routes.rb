@@ -41,12 +41,12 @@ Rails.application.routes.draw do
       get "agence-immobiliere-cernay", to: "agences#cernay", as: "cernay"
     end
   end
-  get "annonces-immobilieres", to: "achats#index", as: :annonces
-  get "annonces-immobilieres/:id", to: "achats#show", as: :achat_show
-  get "annonces-appartements", to: "achats#appartements", as: :appartements
-  get "annonces-maisons", to: "achats#maisons", as: :maisons
-  get "annonces-terrains", to: "achats#terrains", as: :terrains
-  get "annonces-test", to: "achats#annonces_test"
+  get "achat-immobilier", to: "achats#index", as: :annonces
+  get "achat-immobilier/:id", to: "achats#show", as: :achat_show
+  get "achat-appartements", to: "achats#appartements", as: :appartements
+  get "achat-maisons", to: "achats#maisons", as: :maisons
+  get "achat-terrains", to: "achats#terrains", as: :terrains
+  get "achat-test", to: "achats#annonces_test"
 
   scope "achat" do
     get "/alsace", to: "achats#alsace"

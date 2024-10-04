@@ -1,2 +1,36 @@
-<h1>Achats#strasbourg</h1>
-<p>Find me in app/views/achats/strasbourg.html.erb</p>
+<article class="">
+    <section class="inside">
+        <h1>Annonces immobilieres Strasbourg</h1>
+        <ul class="filtre_tags">
+            <li class="raccourci_achat"><%= link_to "Petite France", petite_france_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Krutenau", krutenau_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Koenigshoffen", koenigshoffen_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Neudorf", neudorf_path() %></li>
+        </ul>
+    </section>
+    <div class="annonces_index">
+    <section class="list_annonces">
+        <ul class="new_annonces">
+            <% 10.times do %>
+            <%= render "achats/annonce" %>
+            <% end %>
+        </ul>
+        <div>
+            <ul>
+                <li>Alsace</li>
+                <li>Bas-Rhin</li>
+                <li>Haut-Rhin</li>
+                <li>Strasbourg</li>
+            </ul>
+        </div>
+    </section>
+    <section class="carte_fixed">
+        <div id="map"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+    </section> 
+    </div>
+</article>
+    
