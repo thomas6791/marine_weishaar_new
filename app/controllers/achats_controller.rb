@@ -56,6 +56,7 @@ class AchatsController < ApplicationController
   end
 
   def strasbourg
+    @annonces = Annonce.all
   end
 
   def bourse
