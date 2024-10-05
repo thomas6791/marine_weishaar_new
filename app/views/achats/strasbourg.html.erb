@@ -3,10 +3,10 @@
         <h1>Annonces immobilieres Strasbourg</h1>
         <ul class="filtre_tags">
             <li class="raccourci_achat"><%= link_to "Petite France", petite_france_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Krutenau", krutenau_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Koenigshoffen", koenigshoffen_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Neudorf", neudorf_path() %></li>
             <li class="raccourci_achat"><%= link_to "test quartier", strasbourg_quartier_path("neunhoffen")%></li>
+            <% @quartiers.keys.each do |quartier_name| %>
+                <li class="raccourci_achat"><%= link_to quartier_name, strasbourg_quartier_path(quartier_name.downcase)%></li>
+            <% end %>
         </ul>
     </section>
     <div class="annonces_index">
