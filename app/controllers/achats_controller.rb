@@ -70,12 +70,6 @@ class AchatsController < ApplicationController
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
 
-
-  def petite_france
-    @annonces = Annonce.all
-    @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
-  end
-
  
   
   def test
