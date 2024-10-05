@@ -5,7 +5,7 @@
             <li class="raccourci_achat"><%= link_to "Petite France", petite_france_path() %></li>
             <li class="raccourci_achat"><%= link_to "test quartier", strasbourg_quartier_path("neunhoffen")%></li>
             <% @quartiers.keys.each do |quartier_name| %>
-                <li class="raccourci_achat"><%= link_to quartier_name, strasbourg_quartier_path(quartier_name.downcase)%></li>
+                <li class="raccourci_achat"><%= link_to quartier_name, strasbourg_quartier_path(quartier_name.downcase.parameterize(separator: '-'))%></li>
             <% end %>
         </ul>
     </section>

@@ -62,7 +62,10 @@ class AchatsController < ApplicationController
 
   def strasbourg_quartier
     quartier_yml = YAML.load_file('config/datas/quartiers.yml')
-    @quartier = params[:quartier].capitalize
+    urls =  quartier_yml.map { |_, v| v["url"] }
+    
+    @quartier_name = quartier_yml.find { |k, v| v["url"] == params[:quartier] }&.first
+    
     @annonces = Annonce.all
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
