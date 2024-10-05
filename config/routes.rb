@@ -79,6 +79,7 @@ Rails.application.routes.draw do
       get '/ganzau',to: "achats#ganzau"
       get '/robertsau',to: "achats#robertsau"
       get '/wacken',to: "achats#wacken"
+      get '/:quartier', to: "achats#strasbourg_quartier", as: :strasbourg_quartier
     end
   end
 
