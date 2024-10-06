@@ -55,30 +55,7 @@ Rails.application.routes.draw do
     get "/strasbourg", to: "achats#strasbourg"
     get "/test", to: "achats#test"
     scope "strasbourg" do
-      get '/bourse',to: "achats#bourse"
-      get '/esplanade',to: "achats#esplanade"
-      get '/krutenau',to: "achats#krutenau"
-      get '/centre-ville',to: "achats#centre_ville"
-      get '/gare',to: "achats#gare"
-      get '/tribunal',to: "achats#tribunal"
-      get '/orangerie',to: "achats#orangerie"
-      get '/conseil_des_xv',to: "achats#conseil_des_xv"
-      get '/cronenbourg',to: "achats#cronenbourg"
-      get '/hautepierre',to: "achats#hautepierre"
-      get '/poteries',to: "achats#poteries"
-      get '/koenigshoffen',to: "achats#koenigshoffen"
-      get '/montagne-verte',to: "achats#montagne_verte"
-      get '/elsau',to: "achats#elsau"
-      get '/meinau',to: "achats#meinau"
-      get '/neudorf',to: "achats#neudorf"
-      get '/musau',to: "achats#musau"
-      get '/port-rhin',to: "achats#port_rhin"
-      get '/petite-france',to: "achats#petite_france"
-      get '/neuhof',to: "achats#neuhof"
-      get '/stockfeld',to: "achats#stockfeld"
-      get '/ganzau',to: "achats#ganzau"
-      get '/robertsau',to: "achats#robertsau"
-      get '/wacken',to: "achats#wacken"
+      get '/:quartier', to: "achats#strasbourg_quartier", as: :strasbourg_quartier
     end
   end
 

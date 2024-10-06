@@ -1,10 +1,72 @@
-Petite France:
+Bourse:
+  url: bourse
   cover: quartiers/petite-france.png
-Krutenau:
+Centre-ville:
+  url: centre-ville
+  cover: quartiers/petite-france.png
+Conseil des XV:
+  url: conseil-des-xv
+  cover: quartiers/petite-france.png
+Cronenbourg:
+  url: cronenbourg
+  cover: quartiers/petite-france.png
+Elsau:
+  url: elsau
+  cover: quartiers/petite-france.png
+Esplanade:
+  url: esplanade
+  cover: quartiers/petite-france.png
+Ganzau:
+  url: ganzau
+  cover: quartiers/petite-france.png
+Gare:
+  url: gare
+  cover: quartiers/petite-france.png
+Hautepierre:
+  url: hautepierre
   cover: quartiers/krutenau.png
 Koenigshoffen:
+  url: koenigshoffen
   cover: quartiers/petite-france.png
+Krutenau:
+  url: krutenau
+  cover: quartiers/krutenau.png
+Meinau:
+  url: meinau
+  cover: quartiers/krutenau.png
+Montagne Verte:
+  url: montagne-verte
+  cover: quartiers/krutenau.png
+Musau:
+  url: musau
+  cover: quartiers/krutenau.png
 Neudorf:
+  url: neudorf
   cover: quartiers/krutenau.png
 Neuhof:
+  url: neuhof
+  cover: quartiers/krutenau.png
+Orangerie:
+  url: orangerie
+  cover: quartiers/krutenau.png
+Petite France:
+  url: petite-france
+  cover: quartiers/petite-france.png
+Poteries:
+  url: poteries
+  cover: quartiers/krutenau.png
+Port du Rhin:
+  url: port-du-rhin
+  cover: quartiers/krutenau.png
+Robertsau:
+  url: robertsau
+  cover: quartiers/krutenau.png
+Stockfeld:
+  url: stockfeld
+  cover: quartiers/krutenau.png
+Tribunal:
+  url: tribunal
+  cover: quartiers/krutenau.png
+Wacken:
+  url: wacken
   cover: quartiers/krutenau.png

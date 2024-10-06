@@ -57,85 +57,20 @@ class AchatsController < ApplicationController
 
   def strasbourg
     @annonces = Annonce.all
+    @quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
 
-  def bourse
-  end
-
-  def esplanade
-    @cover = "https://as2.ftcdn.net/v2/jpg/00/84/97/39/1000_F_84973930_D32qRKKtikoNtjODkRbksAWd1SWQY7Wb.jpg"
-  end
-
-  def krutenau
-    @cover = "https://as2.ftcdn.net/v2/jpg/00/04/82/59/1000_F_4825925_lCoYYhc5vgqepg3xVZPaGchAC6jHX0k8.jpg"
-  end
-
-  def centre_ville
-  end
-
-  def gare
-  end
-
-  def tribunal
-  end
-
-  def orangerie
-  end
-
-  def conseil_des_xv
-  end
-
-  def cronenbourg
-  end
-
-  def hautepierre
-  end
-
-  def poteries
-  end
-
-  def koenigshoffen
-    @annonces = Annonce.all
-  end
-
-  def montagne_verte
-  end
-
-  def elsau
-  end
-
-  def meinau
-  end
-
-  def neudorf
-    @cover = "https://as2.ftcdn.net/v2/jpg/04/70/29/27/1000_F_470292724_8yBwI8tgTnku1ISwbxXJQmmj4PX0mHJu.jpg"
-  end
-
-  def musau
-  end
-
-  def port_rhin
-  end
-
-  def petite_france
+  def strasbourg_quartier
+    quartier_yml = YAML.load_file('config/datas/quartiers.yml')
+    urls =  quartier_yml.map { |_, v| v["url"] }
+    
+    @quartier_name = quartier_yml.find { |k, v| v["url"] == params[:quartier] }&.first
+    
     @annonces = Annonce.all
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
 
-  def neuhof
-  end
-
-  def stockfeld
-  end
-
-  def ganzau
-  end
-
-  def robertsau
-  end
-
-  def wacken
-  end
+ 
   
   def test
   end
