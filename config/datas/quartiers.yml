@@ -58,6 +58,9 @@ Poteries:
 Port du Rhin:
   url: port-du-rhin
   cover: quartiers/krutenau.png
+Presqu’île Malraux:
+  url: presqu-ile-malraux
+  cover: quartiers/krutenau.png
 Robertsau:
   url: robertsau
   cover: quartiers/krutenau.png
