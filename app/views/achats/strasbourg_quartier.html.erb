@@ -2,11 +2,7 @@
     <%= image_tag "quartiers/petite-france.png", width: 500, height:500;%>
     <h1><%= @quartier_name %></h1>
     <div class="quartier_intro_text">
-        <p>
-            Le quartier de la <strong>Petite France</strong> offre un véritable voyage dans le temps, où chaque bâtisse raconte une histoire riche et fascinante. Les façades romantiques reflètent l'empreinte des siècles passés, tandis que les petits ponts enjambant les canaux ajoutent une touche de poésie à l'ensemble. La <strong>Petite France</strong> est un tableau vivant, une symphonie d'architecture et de nature, imprégnée de l'essence même de <strong>Strasbourg</strong>.
-            <br><br>
-            Les restaurants authentiques, les cafés pittoresques et les boutiques d'artisans locaux contribuent à l'ambiance conviviale de ce quartier, créant un véritable art de vivre.
-        </p>
+        <%= sanitize @quartier_text %>
     </div>
 </section>
 <section class="inside">

@@ -14,8 +14,13 @@
 
 </section>
 <section class="inside">
-    <h1><%= @annonce.titre %></h1>
-    <p><%= @annonce.description %></p>
+    <div class="">
+        <h1 class="annonce_show_titre"><%= @annonce.titre %>|Titre</h1>
+        <p>PRIX</p>
+        <p>m2</p>
+        <p>Localisation</p>
+    </div>
+    <p class="annonce_show_description"><%= @annonce.description %></p>
 </section>
 <section class="inside">
     <h2 class="titre styling">Descriptif</h2>

@@ -30,13 +30,12 @@ class AchatsController < ApplicationController
 
   def show
     @annonce = Annonce.find(params[:id])
-    @markers =
-      {
+      @marker = [{
         lat: @annonce.latitude,
         lng: @annonce.longitude,
         info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: @annonce}),
         marker_html: render_to_string(partial: "shared/marker", locals: {flat: @annonce})
-      }
+      }]
   end
 
   def appartements
@@ -65,6 +64,8 @@ class AchatsController < ApplicationController
     urls =  quartier_yml.map { |_, v| v["url"] }
     
     @quartier_name = quartier_yml.find { |k, v| v["url"] == params[:quartier] }&.first
+    
+    @quartier_text = YAML.load_file('config/datas/quartiers.yml')[@quartier_name]["text"]
     
     @annonces = Annonce.all
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
