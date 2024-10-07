@@ -66,6 +66,8 @@ class AchatsController < ApplicationController
     @quartier_name = quartier_yml.find { |k, v| v["url"] == params[:quartier] }&.first
     
     @quartier_text = YAML.load_file('config/datas/quartiers.yml')[@quartier_name]["text"]
+
+    @cover = YAML.load_file('config/datas/quartiers.yml')[@quartier_name]["cover"]
     
     @annonces = Annonce.all
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
