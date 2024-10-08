@@ -3,13 +3,16 @@ Bourse:
   cover: quartiers/petite-france.png
 Centre-ville:
   url: centre-ville
-  cover: quartiers/petite-france.png
+  cover: quartiers/kleber.png
+  text: <p>Le <strong>Centre-ville de Strasbourg</strong> est un cadre de vie exceptionnel, idéal pour ceux qui recherchent un mélange parfait entre patrimoine et modernité. <strong>Acheter ou louer un bien immobilier</strong> dans ce quartier, c’est s’offrir un accès direct à l’histoire et à l’effervescence culturelle de la capitale alsacienne. Les immeubles de style haussmannien côtoient des bâtiments contemporains, offrant une diversité architecturale qui séduit les amateurs de charme ancien comme ceux en quête de modernité.<br><br>
+        </p>
 Conseil des XV:
   url: conseil-des-xv
   cover: quartiers/petite-france.png
 Cronenbourg:
   url: cronenbourg
-  cover: quartiers/petite-france.png
+  cover: quartiers/cronenbourg.png
+  text: <p>Le <strong>quartier de Cronenbourg</strong> à <strong>Strasbourg</strong> est un choix attractif pour ceux qui souhaitent acheter ou louer un <strong>bien immobilier</strong> dans un environnement résidentiel tout en restant proche du centre-ville.<br>Connu pour son ambiance de village, il offre des maisons traditionnelles alsaciennes et des immeubles modernes, répondant ainsi à divers styles de vie.Bien desservi par les transports en commun, <strong>Cronenbourg</strong> est apprécié des familles et des jeunes actifs qui bénéficient des nombreuses écoles, commerces de proximité, et espaces verts du quartier.</p>
 Elsau:
   url: elsau
   cover: quartiers/petite-france.png
@@ -21,7 +24,8 @@ Ganzau:
   cover: quartiers/petite-france.png
 Gare:
   url: gare
-  cover: quartiers/petite-france.png
+  cover: quartiers/gare.png
+  text: <p>Le <strong>quartier Gare de Strasbourg</strong> est un choix stratégique pour ceux qui cherchent à <strong>acheter</strong> ou <strong>louer un bien immobilier</strong> en ville tout en bénéficiant d'une accessibilité optimale. À proximité immédiate de la <strong>gare</strong> TGV et des transports en commun, il offre un cadre de vie pratique pour les actifs et les voyageurs.<br><br>Ce quartier en pleine transformation combine des immeubles de caractère et des constructions modernes, répondant ainsi à diverses préférences architecturales. On y trouve une grande variété de commerces, de restaurants, et de services, créant une atmosphère dynamique et pratique, idéale pour les citadins en quête de confort et de connectivité.</p>
 Hautepierre:
   url: hautepierre
   cover: quartiers/krutenau.png
@@ -42,7 +46,8 @@ Musau:
   cover: quartiers/krutenau.png
 Neudorf:
   url: neudorf
-  cover: quartiers/krutenau.png
+  cover: quartiers/neudorf.png
+  text: <p>Le <strong>quartier de Neudorf à Strasbourg</strong> est prisé pour son équilibre parfait entre vie urbaine et ambiance de quartier résidentiel. <strong>Acheter ou louer un bien immobilier</strong> ici, c’est profiter d’une atmosphère chaleureuse et conviviale, où les immeubles récents côtoient des maisons typiques, offrant ainsi une diversité architecturale attrayante.<br><br>Très bien desservi par les tramways et à quelques minutes seulement du centre-ville, <strong>Neudorf</strong> propose toutes les commodités essentielles(commerces de proximité, marchés, écoles, et espaces verts). C'est un quartier dynamique et en pleine évolution, idéal pour les familles, les jeunes couples, et les actifs cherchant à allier confort de vie et facilité d’accès aux services urbains.</p>
 Neuhof:
   url: neuhof
   cover: quartiers/krutenau.png
@@ -66,6 +71,7 @@ Port du Rhin:
 Presqu’île Malraux:
   url: presqu-ile-malraux
   cover: quartiers/presqu-ile-malraux.png
+  text: <p>La <strong>Presqu'île Malraux de Strasbourg</strong> est un quartier moderne et dynamique, parfait pour ceux qui souhaitent <strong>acheter</strong> ou <strong>louer</strong> un bien dans un cadre urbain en plein renouveau. Ancienne zone portuaire réhabilitée, elle se distingue par ses bâtiments contemporains, ses <strong>lofts lumineux</strong> et ses <strong>appartements</strong> offrant des vues imprenables sur le bassin.<br>C'est un lieu de vie idéal pour les amateurs de culture et de loisirs, avec la médiathèque André Malraux, des cinémas, et de nombreux restaurants branchés à proximité.</p>
 Robertsau:
   url: robertsau
   cover: quartiers/krutenau.png
