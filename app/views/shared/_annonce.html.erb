@@ -16,6 +16,18 @@
 <section class="inside">
     <div class="">
         <h1 class="annonce_show_titre"><%= @annonce.titre %>|Titre</h1>
+        <div class="inside">
+    <div class="energetique_barre dpe">
+        <% ["a","b","c","d","e","f","g"].each do |letter| %>
+            <span class="note <%= letter %>"><%= letter.capitalize %></span>
+        <% end %>
+    </div>
+    <div class="energetique_barre ges">
+        <% ["a","b","c","d","e","f","g"].each do |letter| %>
+            <span class="note <%= letter %>"><%= letter.capitalize %></span>
+        <% end %>
+    </div>
+</div>
         <p>PRIX</p>
         <p>m2</p>
         <p>Localisation</p>
