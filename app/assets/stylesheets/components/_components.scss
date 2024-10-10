@@ -90,3 +90,13 @@
     grid-template-columns: 390px 390px;
     gap: 15px;
 }
+
+.tag_filtre {
+    &.yellow { 
+        background-color: $yellow;
+        color: white;
+    }
+    &.black { background-color: black;
+        color: white;
+    }
+}
