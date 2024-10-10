@@ -100,3 +100,47 @@
         color: white;
     }
 }
+.energetique_barre {
+    display: flex;
+    font-size: 0.9em;
+    width: fit-content;
+    border: solid 1px;
+    height: 40px;
+    gap: 1px;
+    align-items: center;
+    span {
+        //padding:3px 6px;
+        color: white;
+        display: flex;
+        width: 1.5em;
+        height: 1.5em;
+        justify-content: center;
+        align-items: center;
+        &.selected {
+            width: 2em;
+            height: 2em;
+            border-radius: 2px;
+            font-size: 1.1em;
+        }
+    }
+    &.dpe {
+        .note {
+        &.a {background-color: $dpe-a;}
+        &.b {background-color: $dpe-b;}
+        &.c {background-color: $dpe-c; color:black;}
+        &.d {background-color: $dpe-d;color:black;}
+        &.e {background-color: $dpe-e; color:black;}
+        &.f {background-color: $dpe-f;}
+        &.g {background-color: $dpe-g;}
+        }
+    }
+    &.ges {
+        .a {background-color: $ges-a;color:black;}
+        .b {background-color: $ges-b;color:black;}
+        .c {background-color: $ges-c;}
+        .d {background-color: $ges-d;}
+        .e {background-color: $ges-e;}
+        .f {background-color: $ges-f;}
+        .g {background-color: $ges-g;}
+    }
+}
