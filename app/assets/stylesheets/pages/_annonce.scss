@@ -41,3 +41,8 @@
         }
     }
 }
+.annonce_entete {
+    display: flex;
+    align-items: baseline;
+    .annonce_show_titre {font-size: 2em; color: black;}
+}
