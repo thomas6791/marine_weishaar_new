@@ -4,26 +4,27 @@
     <p></p><%= current_admin.email %></p>
 </section>
 <section class="inside">
+
 <table>
     <thead>
         <tr>
-            <th>1</th>
-            <th>1</th>
-            <th>1</th>
-            <th>1</th>
-            <th>1</th>
-            <th>1</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Ville</th>
+            <th>Vues</th>
+            <th>Options</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-        </tr>
+        <% @annonces.each do |annonce|%>
+            <tr>
+                <td><%= annonce.titre %></td>
+                <td><%= annonce.price %></td>
+                <td><%= annonce.city %></td>
+                <td><%= @vues.where_props(title: annonce.titre).count %></td>
+                <td>Voir Editer</td>
+            </tr>
+        <%end%>
     </tbody>
 </table>
 </section>
