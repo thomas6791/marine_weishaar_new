@@ -6,6 +6,7 @@ class AnnoncesController < ApplicationController
   def new
     @admin = Admin.find(current_admin.id)
     @annonce = Annonce.new
+    @quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
 
   def edit
@@ -30,6 +31,6 @@ class AnnoncesController < ApplicationController
   end
 
   def annonce_params
-    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:type_bien,:surface,:dpe,:ges,:price, photos:[])
+    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:type_bien,:surface,:dpe,:ges,:price,:ref_annonce,:nb_pieces,:nb_etage,:chauffage,:chauffage_mode,:etat_general,:annee_construction,:ascenseur,:copropriete,:cuisine_equipee,:jardin,:balcon,:terrasse,:garage ,photos:[])
   end
 end

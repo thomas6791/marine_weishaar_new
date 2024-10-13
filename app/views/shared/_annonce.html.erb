@@ -26,12 +26,20 @@
         <div class="inside">
             <div class="energetique_barre dpe">
                 <% ["a","b","c","d","e","f","g"].each do |letter| %>
-                    <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% if letter == @annonce.dpe.downcase %>
+                        <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
+                    <% else %>
+                        <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% end %>
                 <% end %>
             </div>
             <div class="energetique_barre ges">
                 <% ["a","b","c","d","e","f","g"].each do |letter| %>
-                    <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% if letter == @annonce.ges.downcase %>
+                        <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
+                    <% else %>
+                        <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% end %>
                 <% end %>
             </div>
         </div>

@@ -98,3 +98,14 @@ form {
         border: solid 1px;
     }
 }
+.simple_form.new_annonce {
+    border: none;
+    input,select,textarea {width: 100%;box-sizing: border-box;}
+    input,select {height: 2em;padding-left: 5px; padding-right: 5px;}
+    
+    .grid {margin-bottom: 1em;}
+    input.boolean.optional {
+        width: fit-content; height: fit-content;
+    }
+    .btn.black {cursor: pointer; height: auto;width: fit-content; border: black;}
+}
