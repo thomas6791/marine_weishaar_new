@@ -6,6 +6,7 @@ class AnnoncesController < ApplicationController
   def new
     @admin = Admin.find(current_admin.id)
     @annonce = Annonce.new
+    @quartiers = YAML.load_file('config/datas/quartiers.yml')
   end
 
   def edit
