@@ -14,8 +14,29 @@
 
 </section>
 <section class="inside">
-    <h1><%= @annonce.titre %></h1>
-    <p><%= @annonce.description %></p>
+    <div class="">
+        <div class="annonce_entete">
+            <h1 class="annonce_show_titre"><%= @annonce.titre %>|Titre</h1>
+            <p><%= @annonce.surface.to_i %>m<sup>2</sup></p>
+            <p><%= @annonce.price %>€</p>
+        </div>
+        <div class="ville">
+            <p><%= @annonce.city %></p>
+        </div>
+        <div class="inside">
+            <div class="energetique_barre dpe">
+                <% ["a","b","c","d","e","f","g"].each do |letter| %>
+                    <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                <% end %>
+            </div>
+            <div class="energetique_barre ges">
+                <% ["a","b","c","d","e","f","g"].each do |letter| %>
+                    <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <p class="annonce_show_description"><%= @annonce.description %></p>
 </section>
 <section class="inside">
     <h2 class="titre styling">Descriptif</h2>
@@ -26,7 +47,7 @@
 <section class="inside">
     <div id="map"
         data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-markers-value="<%= @marker.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 </section>
