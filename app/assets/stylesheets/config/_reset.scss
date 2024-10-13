@@ -27,8 +27,8 @@ ul,li {
 }
 main {margin-top: 9rem;}
 .grid {display: grid;
-    &.columns_2 {grid-template-columns: repeat(2,1fr);}
-    &.columns_3 {grid-template-columns: repeat(3,1fr);}
-    &.columns_4 {grid-template-columns: repeat(4,1fr);}
+    &.columns_2 {grid-template-columns: repeat(2,1fr);gap:10px;}
+    &.columns_3 {grid-template-columns: repeat(3,1fr);gap:10px;}
+    &.columns_4 {grid-template-columns: repeat(4,1fr);gap:10px;}
 }
 

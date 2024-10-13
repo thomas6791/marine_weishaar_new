@@ -2,25 +2,27 @@
 <h1>Ajouter une nouvelle annonce</h1>
 <%= simple_form_for @annonce,:url => url_for(:action => 'create', :controller => 'annonces'), :method => 'post' do |f| %>
     <div class="grid columns_2">
-    <%= f.input :titre,placeholder:"Titre de l'annonce" %>
-    <%= f.input :ref_annonce,placeholder:"Ref. de l'annonce" %>
+    <%= f.input :titre,placeholder:"Titre de l'annonce",label:false %>
+    <%= f.input :ref_annonce,placeholder:"Ref. de l'annonce",label:false %>
     </div>
     <div class="grid columns_4">
-      <%= f.input :surface, placeholder:"Surface du bien" %>
-      <%= f.input :type_bien, collection: Annonce::TYPE_BIEN, selected:0,label:"Type de bien" %>
-      <%= f.input :nb_pieces, placeholder:"Nbre de pièces" %>
-      <%= f.input :price,label:"Prix", placeholder:"Prix du bien" %>
+      <%= f.input :surface, placeholder:"Surface du bien",label:false %>
+      <%= f.input :type_bien, collection: Annonce::TYPE_BIEN, selected:0,label:"Type de bien",label:false %>
+      <%= f.input :nb_pieces, placeholder:"Nbre de pièces",label:false %>
+      <%= f.input :price,label:"Prix", placeholder:"Prix du bien €",label:false %>
     </div>
     
     <%= f.input :description,placeholder:"Description" %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <div class="flex_input">
+    <div class="">
       <h3>Adresse</h3>
-      <%= f.input :address,label:"Adresse",placeholder:"Adresse" %>
-      <%= f.input :zipcode,label:"Code postal",placeholder:"Code postal" %>
-      <%= f.input :city,label:"Ville/Commune",placeholder:"Ville/commune" %>
-       <%= f.input :quartier,label:"Quartier de Strasbourg", collection:@quartiers %>
-      <%= f.input :country, priority: [ "France" ] %>
+      <div class="grid columns_4">
+        <%= f.input :address,label:"Adresse",placeholder:"Adresse" %>
+        <%= f.input :zipcode,label:"Code postal",placeholder:"Code postal" %>
+        <%= f.input :city,label:"Ville/Commune",placeholder:"Ville/commune" %>
+        <%= f.input :quartier,label:"Quartier de Strasbourg", collection:@quartiers,selected:1 %>
+        <%= f.input :country, priority: [ "France" ],label:"Pays" %>
+      </div>
     </div>
    
     <div>
@@ -29,15 +31,16 @@
         <%= f.input :dpe, collection: Annonce::DPE, selected:0 %>
         <%= f.input :ges, collection: Annonce::GES, selected:0 %>
         <%= f.input :chauffage, collection: Annonce::CHAUFFAGE, selected:0 %>
-        <%= f.input :chauffage_mode,collection: Annonce::TYPE_CHAUFFAGE, selected:0 %>
+        <%= f.input :chauffage_mode,collection: Annonce::TYPE_CHAUFFAGE, selected:0, label:"Mode de chauffage" %>
       </div>
     </div>
-   
-    <%= f.input :nb_etage %>
-    <%= f.input :etat_general %>
-    <%= f.input :annee_construction,as: :date, start_year: Date.today.year - 120,
-                              end_year: Date.today.year - 12, discard_day: true,
-                              order: [:year]%>
+   <div class="grid columns_4">
+      <%= f.input :nb_etage %>
+      <%= f.input :etat_general,label:"Etat général du logement" %>
+      <%= f.input :annee_construction,as: :date, start_year: Date.today.year - 120,
+                              end_year: Date.today.year, discard_day: true,
+                              order: [:year],label:"Année de construction"%>
+    </div>
     <h3>Options</h3>
     <div class="grid columns_4">
       <%= f.input :cave %>
