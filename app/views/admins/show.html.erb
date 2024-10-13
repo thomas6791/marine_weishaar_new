@@ -21,7 +21,7 @@
                 <td><%= annonce.titre %></td>
                 <td><%= annonce.price %></td>
                 <td><%= annonce.city %></td>
-                <td>...</td>
+                <td><%= @vues.where_props(title: annonce.titre).count %></td>
                 <td>Voir Editer</td>
             </tr>
         <%end%>

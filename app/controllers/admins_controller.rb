@@ -8,6 +8,7 @@ class AdminsController < ApplicationController
   end
   def show
     @annonces = Annonce.all
+    @vues = Ahoy::Event.where(name:"annonce vue")
   end
   
 end
