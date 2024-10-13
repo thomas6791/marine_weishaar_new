@@ -59,5 +59,7 @@ Rails.application.routes.draw do
     end
   end
 
+  post "full_list", to: "pages#full_list"
+
   
 end
