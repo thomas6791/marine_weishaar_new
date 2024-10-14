@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'components', to: "pages#components"
 
-  resources :admins, path: "admin" do
+  resources :admins do
     resources :annonces
     #collection do
       #get "annonces", to: "admins#annonces"

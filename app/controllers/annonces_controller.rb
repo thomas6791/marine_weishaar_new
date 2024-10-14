@@ -10,6 +10,7 @@ class AnnoncesController < ApplicationController
   end
 
   def edit
+    @annonce = Annonce.find(params[:id])
   end
 
   def create
@@ -21,13 +22,19 @@ class AnnoncesController < ApplicationController
   end
 
   def show
-    fail
   end
 
   def update
+    @annonce = Annonce.find(params[:id])
+    @annonce.update(annonce_params)
+    redirect_to admin_path(current_admin)
   end
 
   def destroy
+    @annonce = Annonce.find(params[:id])
+    @annonce.destroy
+    # No need for app/views/restaurants/destroy.html.erb
+    redirect_to admin_path(current_admin), status: :see_other
   end
 
   def annonce_params

@@ -16,3 +16,38 @@
         //box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     }
 }
+.filtre_btn {
+    border: solid 1px white;
+    //color: white;
+    background-color: grey;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    div {
+        border: solid 1px white;
+        border-radius: 25px;
+        //padding: 10px 2em;
+
+        min-width: 6em;
+        padding: 2px 15px;
+        display: flex;
+        justify-content: space-between;
+        .close_icon {
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+    &.peche {
+        background-color: #FA9977;
+    }
+    &.yellow {
+        background-color: #EDC272;
+        &:hover {opacity: 0.8;}
+    }
+}/* Rectangle 113 */
