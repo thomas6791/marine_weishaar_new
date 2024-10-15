@@ -17,8 +17,8 @@
     <% @annonce.photos.each do |image| %>
         <%= f.hidden_field :photos, multiple: true, value: image.signed_id %>
     <% end %>
-
     <%= f.file_field :photos, multiple: true %>
+
     <div class="">
       <h3>Adresse</h3>
       <div class="grid columns_4">
@@ -33,10 +33,10 @@
     <div>
       <h3>Energie - Performances énergétiques</h2>
       <div class="grid columns_4">
-        <%= f.input :dpe, collection: Annonce::DPE, selected:0 %>
-        <%= f.input :ges, collection: Annonce::GES, selected:0 %>
-        <%= f.input :chauffage, collection: Annonce::CHAUFFAGE, selected:0 %>
-        <%= f.input :chauffage_mode,collection: Annonce::TYPE_CHAUFFAGE, selected:0, label:"Mode de chauffage" %>
+        <%= f.input :dpe, collection: Annonce::DPE, selected: @annonce.dpe %>
+        <%= f.input :ges, collection: Annonce::GES, selected: @annonce.ges %>
+        <%= f.input :chauffage, collection: Annonce::CHAUFFAGE, selected: @annonce.chauffage %>
+        <%= f.input :chauffage_mode,collection: Annonce::TYPE_CHAUFFAGE, selected:@annonce.chauffage_mode, label:"Mode de chauffage" %>
       </div>
     </div>
    <div class="grid columns_4">
