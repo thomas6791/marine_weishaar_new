@@ -29,7 +29,6 @@ class AnnoncesController < ApplicationController
     @annonce.update(annonce_params)
     @annonce.type_bien = annonce_params[:type_bien]
     @annonce.save
-    fail
     redirect_to admin_path(current_admin)
   end
 
