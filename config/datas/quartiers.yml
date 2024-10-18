@@ -1,6 +1,6 @@
 Bourse:
   url: bourse
-  cover: quartiers/petite-france.png
+  cover: quartiers/bourse.png
 Centre-ville:
   url: centre-ville
   cover: quartiers/kleber.png
@@ -18,7 +18,7 @@ Elsau:
   cover: quartiers/petite-france.png
 Esplanade:
   url: esplanade
-  cover: quartiers/petite-france.png
+  cover: quartiers/esplanade.png
 Ganzau:
   url: ganzau
   cover: quartiers/petite-france.png

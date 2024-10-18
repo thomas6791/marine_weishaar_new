@@ -36,7 +36,7 @@ class AchatsController < ApplicationController
         info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: @annonce}),
         marker_html: render_to_string(partial: "shared/marker", locals: {flat: @annonce})
       }]
-    ahoy.track "annonce vue", title: @annonce.titre
+    ahoy.track "annonce vue", title: @annonce.titre, annonce_id:@annonce.id
   end
 
   def appartements

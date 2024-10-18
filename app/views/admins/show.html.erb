@@ -21,8 +21,13 @@
                 <td><%= annonce.titre %></td>
                 <td><%= annonce.price %></td>
                 <td><%= annonce.city %></td>
-                <td><%= @vues.where_props(title: annonce.titre).count %></td>
-                <td>Voir Editer</td>
+                <td><%= @vues.where_props(annonce_id: annonce.id).count %></td>
+                <td>Voir 
+                <%= link_to "Editer",edit_admin_annonce_path(current_admin,annonce)%>
+                <%= link_to "Supprimer",
+                    admin_annonce_path(current_admin,annonce),
+                    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                %></td>
             </tr>
         <%end%>
     </tbody>

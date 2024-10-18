@@ -22,4 +22,7 @@ class PagesController < ApplicationController
   def gestion_locative
   end
 
+  def full_list
+  end
+
 end

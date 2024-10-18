@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'components', to: "pages#components"
 
-  resources :admins, path: "admin" do
+  resources :admins do
     resources :annonces
     #collection do
       #get "annonces", to: "admins#annonces"
@@ -58,6 +58,8 @@ Rails.application.routes.draw do
       get '/:quartier', to: "achats#strasbourg_quartier", as: :strasbourg_quartier
     end
   end
+
+  post "full_list", to: "pages#full_list"
 
   
 end
