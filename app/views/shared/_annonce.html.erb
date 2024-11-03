@@ -78,3 +78,14 @@
 <section class="inside">
     <h2 class="titre styling">Autres annonces dans le secteur</h2>
 </section>
+<section class="inside">
+    <turbo-frame id="">
+        <%= button_to "View all", full_list_path, data:{turbo_frame:"second_frame"} %>
+    </turbo-frame>
+    <br>
+    <hr>
+    <div>
+        <turbo-frame id="second_frame">
+        </turbo-frame>
+    </div>
+</section>

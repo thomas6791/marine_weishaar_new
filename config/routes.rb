@@ -47,6 +47,7 @@ Rails.application.routes.draw do
   get "achat-maisons", to: "achats#maisons", as: :maisons
   get "achat-terrains", to: "achats#terrains", as: :terrains
   get "achat-test", to: "achats#annonces_test"
+  get "full_list", to: "achats#full_list"
 
   scope "achat" do
     get "/alsace", to: "achats#alsace"
