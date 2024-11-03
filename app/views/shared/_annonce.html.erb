@@ -48,6 +48,25 @@
 <section class="inside">
     <h2 class="titre styling">Descriptif</h2>
     <p class="annonce_show_description"><%= @annonce.description %></p>
+    <hr>
+    <%= @annonce.attributes %>
+    <div class="table_description_annonce">
+        <div><p>Surface: <%= @annonce.surface %></p></div>
+        <div><p>Nombre de pièces: <%= @annonce.nb_pieces %></p></div>
+        <div><p>Nombre d'étages: <%= @annonce.nb_etage %></p></div>
+        <div><p>Chauffage: <%= @annonce.chauffage %></p></div>
+        <div><p>Mode de chauffage: <%= @annonce.chauffage_mode %></p></div>
+        <div><p>Etat général: <%= @annonce.etat_general %></p></div>
+        <div><p>Année de construction: <%= @annonce.annee_construction %></p></div>
+        <div><p>Cave: <%= @annonce.cave %></p></div>
+        <div><p>Ascenseur: <%= @annonce.ascenseur %></p></div>
+        <div><p>Copropriété: <%= @annonce.copropriete %></p></div>
+         <div><p>Cuisine équipée: <%= @annonce.cuisine_equipee %></p></div>
+        <div><p>Jardin: <%= @annonce.jardin %></p></div>
+        <div><p>Balcon: <%= @annonce.balcon %></p></div>
+        <div><p>terrasse: <%= @annonce.terrasse %></p></div>
+         <div><p>Garage: <%= @annonce.garage %></p></div>
+    </div>
 </section>
 <section class="inside">
     <h2 class="titre styling">Diagnostic énergétique</h2>
