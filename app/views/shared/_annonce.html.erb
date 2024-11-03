@@ -44,10 +44,10 @@
             </div>
         </div>
     </div>
+    <p class="annonce_show_description"><%= @annonce.description %></p>
 </section>
 <section class="inside">
     <h2 class="titre styling">Descriptif</h2>
-    <p class="annonce_show_description"><%= @annonce.description %></p>
     
     <div class="table_description_annonce">
         <div><p>Surface: <%= @annonce.surface %> m<sup>2</sup></p></div>
@@ -56,7 +56,7 @@
         <div><p>Chauffage: <%= @annonce.chauffage %></p></div>
         <div><p>Mode de chauffage: <%= @annonce.chauffage_mode %></p></div>
         <div><p>Etat général: <%= @annonce.etat_general %></p></div>
-        <div><p>Année de construction: <%= @annonce.annee_construction %></p></div>
+        <div><p>Année de construction: <%= @annonce.annee_construction.strftime("%Y") %></p></div>
         <div><p>Cave: <%= @annonce.cave %></p></div>
         <div><p>Ascenseur: <%= @annonce.ascenseur %></p></div>
         <div><p>Copropriété: <%= @annonce.copropriete %></p></div>
@@ -67,11 +67,9 @@
          <div><p>Garage: <%= @annonce.garage %></p></div>
     </div>
 </section>
+
 <section class="inside">
-    <h2 class="titre styling">Diagnostic énergétique</h2>
-</section>
-<section class="inside">
-    <div id="map"
+    <div id="map" class="map_annonce"
         data-controller="map"
         data-map-markers-value="<%= @marker.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
