@@ -79,8 +79,8 @@
     <h2 class="titre styling">Autres annonces dans le secteur</h2>
 </section>
 <section class="inside">
-    <turbo-frame id="">
-        <%= button_to "View all", full_list_path, data:{turbo_frame:"second_frame"} %>
+    <turbo-frame id="first_frame">
+        <%= button_to "View all", full_list_path, data:{turbo_frame:"second_frame"}, params:"click" %>
     </turbo-frame>
     <br>
     <hr>
