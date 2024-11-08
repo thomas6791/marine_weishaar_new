@@ -132,6 +132,26 @@
     }
 }
 
+.table_description_annonce {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: 3em;
+    border-bottom: 2px solid lightgrey;
+    border-left: 2px solid lightgrey;
+    margin-bottom: 2em;
+    //gap: 4px;
+    div {
+        border-top: solid 2px lightgray;
+        border-right: solid 2px lightgray;
+        display: flex;
+        align-items: center;
+        padding: 4px;
+    }
+}
+.map_annonce {
+    height: 300px !important;
+}
+
 .annonces_index {
     display: flex;
     //section {width: 100%;}

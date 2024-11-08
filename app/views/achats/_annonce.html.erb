@@ -1,6 +1,6 @@
 <div class="card_annonce">
     <div class="card_img">
-        <span class="card_type"><%= annonce.type_bien.capitalize %></span>
+        <span class="card_type"><%= annonce.type_bien.capitalize if annonce.type_bien.present? %></span>
         <%= image_tag annonce.photos[0] if !annonce.photos[0].nil? %>
     </div>
     <div class="card_desc">
