@@ -2,33 +2,41 @@
 
 <article class="">
     <section class="inside">
-        <h1>Annonces immobilieres</h1>
-        <ul class="filtre_tags">
-                <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post},class:"filtre_btn grey" do %>
-                    <div>
-                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                        <span>Toutes les annonces</span>
-                    </div>
-                <% end %>
-            
-                <%= link_to rent_filter_path(type_bien:"maison"), data: {turbo_method: :post},class:"filtre_btn peche" do %>
-                    <div>
-                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                        <span>Maisons</span>
-                    </div>
-                <% end %>
-                <%= link_to rent_filter_path(type_bien:"appartement"), data: {turbo_method: :post},class:"filtre_btn yellow" do %>
-                    <div>
-                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                        <span>Appartements</span>
-                    </div>
-                <% end %>
-            <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
-            <li class="raccourci_achat">
+        <h1>Annonces immobilières</h1>
+        <div data-controller="filters">
+            <ul class="filtre_tags">
+                    <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn grey filter_actif" do %>
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <span>Toutes les annonces</span>
+                        </div>
+                    <% end %>
                 
-                    <%= button_to "View all", turbo_list_path(),data: { turbo_frame: "second_filtres" } %>
-            </li>
-        </ul>
+                    <%= link_to rent_filter_path(type_bien:"maison"), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn peche" do %>
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <span>Maisons</span>
+                        </div>
+                    <% end %>
+                    <%= link_to rent_filter_path(type_bien:"appartement"), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn yellow" do %>
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <span>Appartements</span>
+                        </div>
+                    <% end %>
+                <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
+                <%= simple_form_for :annonces_filtres,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
+                    <%= f.input :maison, as: :boolean %>
+                    <%= f.input :appartement, as: :boolean %>
+                    <%= f.button :submit %>
+                <% end %>
+                <li class="raccourci_achat">
+                    
+                        <%= button_to "View all", turbo_list_path(),data: { turbo_frame: "second_filtres" } %>
+                </li>
+            </ul>
+
+        </div>
         <turbo-frame id="second_filtres">
         </turbo-frame>
     </section>

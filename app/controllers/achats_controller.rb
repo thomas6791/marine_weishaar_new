@@ -40,6 +40,7 @@ class AchatsController < ApplicationController
   end
 
   def rent_filter
+    fail
     if params[:type_bien].present?
       @annonces = Annonce.where(type_bien: params[:type_bien])
     else

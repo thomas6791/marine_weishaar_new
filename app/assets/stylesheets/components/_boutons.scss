@@ -48,7 +48,9 @@
             height: fit-content;
             display: flex;
             filter: brightness(0) invert(1);
-            img {width: 1em;}
+            img {width: 0;}
+            visibility: hidden;
+            //display: none;
         }
     }
     &.peche {
@@ -59,5 +61,13 @@
     }
     &.yellow {
         background-color: $light-yellow;
+    }
+    &.filter_actif {
+        opacity: 1;
+        .close_icon {
+            visibility: visible;
+            //display: block;
+            img {width: 1em;}
+        }
     }
 }/* Rectangle 113 */
