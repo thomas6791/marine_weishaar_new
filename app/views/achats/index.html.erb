@@ -5,7 +5,7 @@
         <h1>Annonces immobilieres</h1>
         <ul class="filtre_tags">
             <li class="raccourci_achat"><%= link_to "Maisons", maisons_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path(), data: {turbo_method: :post} %></li>
+            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path(bien:"test"), data: {turbo_method: :post} %></li>
             <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
         </ul>
     </section>
