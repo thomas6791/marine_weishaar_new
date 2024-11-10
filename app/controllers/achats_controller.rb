@@ -40,10 +40,18 @@ class AchatsController < ApplicationController
   end
 
   def appartements
+    @annonces = Annonce.where(type_bien: "appartement")
+    respond_to do |format|
+      format.turbo_stream
+      format.html { redirect_to messages_url }
+    end
   end
   def maisons
   end
   def terrains
+  end
+
+  def full_list
   end
 
   def alsace

@@ -1,0 +1,3 @@
+<%= turbo_stream.update "annonces_list_index" do %>
+  <%= render partial: "achats/annonces", locals: { annonces: @annonces } %>
+<% end %>

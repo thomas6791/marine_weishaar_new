@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   end
   get "achat-immobilier", to: "achats#index", as: :annonces
   get "achat-immobilier/:id", to: "achats#show", as: :achat_show
-  get "achat-appartements", to: "achats#appartements", as: :appartements
+  post "achat-appartements", to: "achats#appartements", as: :appartements
   get "achat-maisons", to: "achats#maisons", as: :maisons
   get "achat-terrains", to: "achats#terrains", as: :terrains
   get "achat-test", to: "achats#annonces_test"

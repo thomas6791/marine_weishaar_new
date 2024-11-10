@@ -5,29 +5,15 @@
         <h1>Annonces immobilieres</h1>
         <ul class="filtre_tags">
             <li class="raccourci_achat"><%= link_to "Maisons", maisons_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path() %></li>
+            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path(), data: {turbo_method: :post} %></li>
             <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
         </ul>
     </section>
     <div class="annonces_index">
     <section class="list_annonces">
-        <ul class="new_annonces">
-            <% @annonces.each do |annonce| %>
-            <li>
-            <%= link_to achat_show_path(annonce) do %>
-            <%= render partial: "achats/annonce", locals: {annonce: annonce} %>
-            <% end %>
-            </li>
-            <% end %>
+        <ul class="new_annonces" id="annonces_list_index">
+            <%= render partial: "achats/annonces", locals: {annonces: @annonces}%>
         </ul>
-        <div>
-            <ul>
-                <li>Alsace</li>
-                <li>Bas-Rhin</li>
-                <li>Haut-Rhin</li>
-                <li>Strasbourg</li>
-            </ul>
-        </div>
     </section>
     <section class="carte_fixed">
         <div id="map"
