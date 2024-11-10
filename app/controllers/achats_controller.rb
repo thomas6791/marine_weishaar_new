@@ -49,13 +49,14 @@ class AchatsController < ApplicationController
       format.turbo_stream
       #format.html { redirect_to messages_url }
     end
+
   end
   def maisons
   end
   def terrains
   end
 
-  def full_list
+  def turbo_list
   end
 
   def alsace

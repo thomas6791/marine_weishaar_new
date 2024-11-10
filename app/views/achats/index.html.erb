@@ -4,28 +4,33 @@
     <section class="inside">
         <h1>Annonces immobilieres</h1>
         <ul class="filtre_tags">
-            
-                <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post},class:"filtre_btn yellow" do %>
+                <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post},class:"filtre_btn grey" do %>
                     <div>
-                        <span class="close_icon">x</span>
+                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                         <span>Toutes les annonces</span>
                     </div>
                 <% end %>
             
-                <%= link_to rent_filter_path(type_bien:"maison"), data: {turbo_method: :post},class:"filtre_btn yellow" do %>
+                <%= link_to rent_filter_path(type_bien:"maison"), data: {turbo_method: :post},class:"filtre_btn peche" do %>
                     <div>
-                        <span class="close_icon">x</span>
+                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                         <span>Maisons</span>
                     </div>
                 <% end %>
                 <%= link_to rent_filter_path(type_bien:"appartement"), data: {turbo_method: :post},class:"filtre_btn yellow" do %>
                     <div>
-                        <span class="close_icon">x</span>
+                        <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                         <span>Appartements</span>
                     </div>
                 <% end %>
             <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
+            <li class="raccourci_achat">
+                
+                    <%= button_to "View all", turbo_list_path(),data: { turbo_frame: "second_filtres" } %>
+            </li>
         </ul>
+        <turbo-frame id="second_filtres">
+        </turbo-frame>
     </section>
     <div class="annonces_index">
     <section class="list_annonces">
