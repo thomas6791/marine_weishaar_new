@@ -39,11 +39,15 @@ class AchatsController < ApplicationController
     ahoy.track "annonce vue", title: @annonce.titre, annonce_id:@annonce.id
   end
 
-  def appartements
-    @annonces = Annonce.where(type_bien: "appartement")
+  def rent_filter
+    if params[:type_bien].present?
+      @annonces = Annonce.where(type_bien: params[:type_bien])
+    else
+      @annonces = Annonce.all
+    end
     respond_to do |format|
       format.turbo_stream
-      format.html { redirect_to messages_url }
+      #format.html { redirect_to messages_url }
     end
   end
   def maisons
