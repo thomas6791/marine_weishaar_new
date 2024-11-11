@@ -26,8 +26,8 @@
                     <% end %>
                 <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
                 <%= simple_form_for :annonces_filtres,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
-                    <%= f.input :maison, as: :boolean %>
-                    <%= f.input :appartement, as: :boolean %>
+                    <%= f.input :maison, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"} } %>
+                    <%= f.input :appartement, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"} } %>
                     <%= f.button :submit %>
                 <% end %>
                 <li class="raccourci_achat">

@@ -11,4 +11,7 @@ export default class extends Controller {
     //Array.from(this.category_selectTargets)
     debugger;
   }
+  checkedSelect(){
+    this.category_formTarget.submit();
+  }
 }
