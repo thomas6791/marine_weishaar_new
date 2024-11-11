@@ -25,9 +25,19 @@
                         </div>
                     <% end %>
                 <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
-                <%= simple_form_for :annonces_filtres,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
-                    <%= f.input :maison, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"} } %>
-                    <%= f.input :appartement, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"} } %>
+                <%= simple_form_for :annonces_filtres, url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
+                    <div class="filtre_btn filter_actif peche">
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <%= f.input :maison, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        </div>
+                    </div>
+                    <div class="filtre_btn grey filter_actif yellow">
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <%= f.input :appartement, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        </div>
+                    </div>
                     <%= f.button :submit %>
                 <% end %>
                 <li class="raccourci_achat">

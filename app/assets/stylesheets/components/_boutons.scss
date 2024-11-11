@@ -17,6 +17,7 @@
     }
 }
 .filtre_btn {
+    cursor: pointer;
     border: solid 1px white;
     //color: white;
     background-color: grey;
@@ -71,3 +72,23 @@
         }
     }
 }/* Rectangle 113 */
+
+.simple_form.annonces_filtres {
+    display: flex;
+    gap: 3px;
+    input {
+        transform: scale(0);
+        position: absolute;
+        visibility: hidden !important;
+    }
+    .input.boolean.optional {
+        //border: solid 1px;
+        //background-color: grey;
+        
+    }
+}
+.filtre_btn {
+    .input.boolean.optional {
+        border: none;
+    }
+}

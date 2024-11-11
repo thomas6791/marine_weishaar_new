@@ -40,14 +40,28 @@ class AchatsController < ApplicationController
   end
 
   def rent_filter
-    fail
-    if params[:type_bien].present?
-      @annonces = Annonce.where(type_bien: params[:type_bien])
-    else
-      @annonces = Annonce.all
+    annonces = []
+    params[:annonces_filtres].keys.each do |type_bien|
+      if params[:annonces_filtres][type_bien] == "1"
+        annonces << Annonce.where(type_bien: type_bien)
+      end
     end
+    @annonces = annonces.flatten
+    #if params[:type_bien].present?
+    #  @annonces = Annonce.where(type_bien: params[:type_bien])
+    #else
+    #  @annonces = Annonce.all
+    #end
     respond_to do |format|
-      format.turbo_stream
+      #format.turbo_stream
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.update(:annonces_list_index, partial: "achats/annonces",
+          locals: { annonces: @annonces })
+      end
+      format.html {}
+      #format.turbo_stream do
+      #  render turbo_stream: turbo_stream.update("annonces_list_index", partial: "achats/annonces", locals: { annonces: @annonces })
+      #end
       #format.html { redirect_to messages_url }
     end
 

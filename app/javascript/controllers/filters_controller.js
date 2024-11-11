@@ -11,7 +11,9 @@ export default class extends Controller {
     //Array.from(this.category_selectTargets)
     debugger;
   }
-  checkedSelect(){
-    this.category_formTarget.submit();
+  checkedSelect(event){
+    this.category_formTarget.requestSubmit()
+    event.currentTarget.parentElement.parentElement.parentElement.parentElement.classList.toggle("filter_actif");
+    //console.log("checked")
   }
 }
