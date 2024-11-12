@@ -5,26 +5,7 @@
         <h1>Annonces immobilières</h1>
         <div data-controller="filters">
             <ul class="filtre_tags">
-                    <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn grey filter_actif" do %>
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <span>Toutes les annonces</span>
-                        </div>
-                    <% end %>
-                
-                    <%= link_to rent_filter_path(type_bien:"maison"), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn peche" do %>
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <span>Maisons</span>
-                        </div>
-                    <% end %>
-                    <%= link_to rent_filter_path(type_bien:"appartement"), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#selectCategory"},class:"filtre_btn yellow" do %>
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <span>Appartements</span>
-                        </div>
-                    <% end %>
-                <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
+                <%= link_to "Strasbourg", strasbourg_path() %>
                 <%= simple_form_for :annonces_filtres, url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
                     <div class="filtre_btn filter_actif peche">
                         <div>
@@ -32,10 +13,16 @@
                             <%= f.input :maison, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
                         </div>
                     </div>
-                    <div class="filtre_btn grey filter_actif yellow">
+                    <div class="filtre_btn filter_actif yellow">
                         <div>
                             <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                             <%= f.input :appartement, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        </div>
+                    </div>
+                    <div class="filtre_btn filter_actif green">
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                            <%= f.input :terrain, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
                         </div>
                     </div>
                     <%= f.button :submit %>
