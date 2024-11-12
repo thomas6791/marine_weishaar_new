@@ -17,7 +17,7 @@
     }
 }
 .filtre_btn {
-    cursor: pointer;
+    cursor: pointer !important;
     border: solid 1px white;
     //color: white;
     background-color: grey;
@@ -32,6 +32,7 @@
     font-size: 0.9em;
     //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     opacity: 0.8;
+    label {cursor: pointer;}
     &:hover {opacity: 1;}
     div {
         border: solid 1px white;
@@ -62,6 +63,13 @@
     }
     &.yellow {
         background-color: $light-yellow;
+    }
+    &.white {
+        background-color: white;
+        border: black solid;
+        color: black;
+        .close_icon {filter: unset;}
+        div {border: black solid;}
     }
     &.filter_actif {
         opacity: 1;

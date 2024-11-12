@@ -40,15 +40,15 @@
                     </div>
                     <%= f.button :submit %>
                 <% end %>
-                <li class="raccourci_achat">
-                    
-                        <%= button_to "View all", turbo_list_path(),data: { turbo_frame: "second_filtres" } %>
-                </li>
+                <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#moreOptions"},class:"filtre_btn white filter_actif" do %>
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-plus-solid.svg"%></span>
+                            <span>Plus de critères</span>
+                        </div>
+                <% end %>
             </ul>
 
         </div>
-        <turbo-frame id="second_filtres">
-        </turbo-frame>
     </section>
     <div class="annonces_index">
     <section class="list_annonces">
