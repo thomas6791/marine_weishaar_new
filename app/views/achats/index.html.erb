@@ -6,24 +6,38 @@
         <div data-controller="filters">
             <ul class="filtre_tags">
                 <%= link_to "Strasbourg", strasbourg_path() %>
-                <%= simple_form_for :annonces_filtres, url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
-                    <div class="filtre_btn filter_actif peche">
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <%= f.input :maison, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
+                    <div class="visible_filters">
+                        <div class="filtre_btn filter_actif peche">
+                            <div>
+                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                            </div>
+                        </div>
+                        <div class="filtre_btn filter_actif yellow">
+                            <div>
+                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                            </div>
+                        </div>
+                        <div class="filtre_btn filter_actif green">
+                            <div>
+                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                            </div>
                         </div>
                     </div>
-                    <div class="filtre_btn filter_actif yellow">
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <%= f.input :appartement, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
-                        </div>
-                    </div>
-                    <div class="filtre_btn filter_actif green">
-                        <div>
-                            <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                            <%= f.input :terrain, as: :boolean, input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
-                        </div>
+                    <div class="hidden_filters">
+                        <%= f.input :min_price %>
+                        <%= f.input :max_price %>
+                        <%= f.input :min_surface %>
+                        <%= f.input :balcon,as: :boolean %>
+                        <%= f.input :terrasse,as: :boolean %>
+                        <%= f.input :garage,as: :boolean %>
+                        <%= f.input :jardin,as: :boolean %>
+                        <%= f.input :ascenseur,as: :boolean %>
+                        <%= f.input :min_dpe %>
+                        <%= f.input :min_ges %>
                     </div>
                     <%= f.button :submit %>
                 <% end %>
@@ -33,17 +47,6 @@
                             <span>Plus de critères</span>
                         </div>
                 <% end %>
-            </ul>
-            <ul class="filtre_tags more_filtres">
-                <p>prix</p>
-                <p>surface</p>
-                <p>balcon</p>
-                <p>terrasse</p>
-                <p>garage</p>
-                <p>jardin</p>
-                <p>ascenseur</p>
-                <p>dpe</p>
-                <p>ges</p>
             </ul>
 
         </div>

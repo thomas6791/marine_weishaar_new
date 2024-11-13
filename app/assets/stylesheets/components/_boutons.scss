@@ -30,6 +30,7 @@
     color: white;
     font-family: Montserrat, sans-serif;
     font-size: 0.9em;
+    height: fit-content;
     //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     opacity: 0.8;
     label {cursor: pointer;}
@@ -91,7 +92,7 @@
     input {
         transform: scale(0);
         position: absolute;
-        visibility: hidden !important;
+        visibility: hidden;
     }
     .input.boolean.optional {
         //border: solid 1px;
@@ -106,4 +107,21 @@
 }
 .more_filtres {
     border: solid 1px;
+}
+
+.simple_form.annonces_filtres {
+    display: flex;
+    flex-direction: column;
+    .visible_filters {display: flex;}
+}
+.hidden_filters {
+    display: flex;
+    div label {
+        border: solid 1px;
+        input {
+            visibility: visible !important;
+            transform: none !important;
+            position: initial !important;
+        }
+    }
 }
