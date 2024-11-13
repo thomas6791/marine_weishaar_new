@@ -44,7 +44,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 5px;
+        //gap: 5px;
         .close_icon {
             width: fit-content;
             height: fit-content;
@@ -76,6 +76,7 @@
     }
     &.filter_actif {
         opacity: 1;
+        div {gap: 5px;}
         .close_icon {
             visibility: visible;
             //display: block;
