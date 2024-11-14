@@ -31,7 +31,7 @@
                         <%= f.input :min_price %>
                         <%= f.input :max_price %>
                         <%= f.input :min_surface %>
-                        <%= f.input :balcon,as: :boolean %>
+                        <%= f.input :balcon,as: :boolean,input_html: { data: {action: "change->filters#checkedSelect"}} %>
                         <%= f.input :terrasse,as: :boolean %>
                         <%= f.input :garage,as: :boolean %>
                         <%= f.input :jardin,as: :boolean %>
