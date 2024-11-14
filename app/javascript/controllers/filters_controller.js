@@ -9,7 +9,7 @@ export default class extends Controller {
     event.currentTarget.classList.toggle("filter_actif");
     Array.from(this.category_formTarget.querySelectorAll('input[type="checkbox"]'))
     //Array.from(this.category_selectTargets)
-    debugger;
+    //debugger;
   }
   checkedSelect(event){
     this.category_formTarget.requestSubmit()

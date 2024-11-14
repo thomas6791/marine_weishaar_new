@@ -36,8 +36,8 @@
                         <%= f.input :garage,as: :boolean %>
                         <%= f.input :jardin,as: :boolean %>
                         <%= f.input :ascenseur,as: :boolean %>
-                        <%= f.input :min_dpe %>
-                        <%= f.input :min_ges %>
+                        <%= f.input :min_dpe, collection:["A","B","C","D","E","F","G"] %>
+                        <%= f.input :min_ges, collection:["A","B","C","D","E","F","G"] %>
                     </div>
                     <%= f.button :submit %>
                 <% end %>
