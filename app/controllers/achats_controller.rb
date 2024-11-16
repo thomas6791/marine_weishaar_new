@@ -41,12 +41,21 @@ class AchatsController < ApplicationController
 
   def rent_filter
     annonces = []
-    params[:annonces_filtres].keys.each do |type_bien|
+
+    biens = params[:annonces_filtres].keys[0..2]
+    options = params[:annonces_filtres].keys[3..-1]
+   
+    biens.each do |type_bien|
       if params[:annonces_filtres][type_bien] == "1"
         annonces << Annonce.where(type_bien: type_bien)
       end
     end
     @annonces = annonces.flatten
+    options.each do |option|
+      if params[:annonces_filtres][option] != "0" && params[:annonces_filtres][option] != ""
+        #fail
+      end
+    end
     #if params[:type_bien].present?
     #  @annonces = Annonce.where(type_bien: params[:type_bien])
     #else
