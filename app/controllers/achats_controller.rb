@@ -1,7 +1,34 @@
 class AchatsController < ApplicationController
   def index
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
-    @annonces = Annonce.all
+    if params[:query].present?
+
+      case params[:query][:action]
+      when "Louer"
+        redirect_to locations_path()
+      when "Acheter"
+        Annonce.where(type_bien: params[:query][:type_bien].downcase)
+        fail
+        #User.where(["name LIKE ?", "%#{params[:query]}%"]).where(:admin => [nil, false])
+      else
+        print('It is not a string or number')
+      end
+
+      fail
+
+
+    else
+      @annonces = Annonce.all
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
+      end
+    end
+    
     #if params[:query].present?
     #  action_switch = params[:query][:action]
     #end
@@ -18,14 +45,6 @@ class AchatsController < ApplicationController
     #end
 
     # The `geocoded` scope filters only flats with coordinates
-    @markers = @annonces.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude,
-        info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
-        marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
-      }
-    end
   end
 
   def show
