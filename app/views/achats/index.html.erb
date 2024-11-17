@@ -2,32 +2,95 @@
 
 <article class="">
     <section class="inside">
-        <h1>Annonces immobilieres</h1>
-        <ul class="filtre_tags">
-            <li class="raccourci_achat"><%= link_to "Maisons", maisons_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Appartements", appartements_path() %></li>
-            <li class="raccourci_achat"><%= link_to "Strasbourg", strasbourg_path() %></li>
-        </ul>
+        <h1>Annonces immobilières</h1>
+        <%= link_to "Strasbourg", strasbourg_path() %>
+        <div data-controller="filters">
+            <ul class="filtre_tags">
+                <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
+                    <div class="visible_filters">
+                        <% if @type_bien == "maison" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif peche">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+                        <% else %>
+                            <div class="filtre_btn peche">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
+                                </div>
+                            </div>
+                        <% end %>
+
+                        <% if @type_bien == "appartement" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif yellow">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+
+                        <% else %>
+
+                            <div class="filtre_btn yellow">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
+                                </div>
+                            </div>
+
+                        <% end %>
+
+                        <% if @type_bien == "terrain" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif green">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+                        
+                        <% else %>
+
+                            <div class="filtre_btn green">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+
+                        <% end %>
+                    </div>
+                    <div class="hidden_filters">
+                        <%= f.input :min_price %>
+                        <%= f.input :max_price %>
+                        <%= f.input :min_surface %>
+                        <%= f.input :balcon,as: :boolean,input_html: { data: {action: "change->filters#checkedSelect"}} %>
+                        <%= f.input :terrasse,as: :boolean %>
+                        <%= f.input :garage,as: :boolean %>
+                        <%= f.input :jardin,as: :boolean %>
+                        <%= f.input :ascenseur,as: :boolean %>
+                        <%= f.input :min_dpe, collection:["A","B","C","D","E","F","G"] %>
+                        <%= f.input :min_ges, collection:["A","B","C","D","E","F","G"] %>
+                    </div>
+                    <%= f.button :submit %>
+                <% end %>
+                <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#moreOptions"},class:"filtre_btn white filter_actif" do %>
+                        <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-plus-solid.svg"%></span>
+                            <span>Plus de critères</span>
+                        </div>
+                <% end %>
+            </ul>
+
+        </div>
     </section>
     <div class="annonces_index">
     <section class="list_annonces">
-        <ul class="new_annonces">
-            <% @annonces.each do |annonce| %>
-            <li>
-            <%= link_to achat_show_path(annonce) do %>
-            <%= render partial: "achats/annonce", locals: {annonce: annonce} %>
-            <% end %>
-            </li>
-            <% end %>
+        <ul class="new_annonces" id="annonces_list_index">
+            <%= render partial: "achats/annonces", locals: {annonces: @annonces}%>
         </ul>
-        <div>
-            <ul>
-                <li>Alsace</li>
-                <li>Bas-Rhin</li>
-                <li>Haut-Rhin</li>
-                <li>Strasbourg</li>
-            </ul>
-        </div>
     </section>
     <section class="carte_fixed">
         <div id="map"

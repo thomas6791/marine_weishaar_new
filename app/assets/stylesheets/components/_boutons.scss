@@ -17,6 +17,7 @@
     }
 }
 .filtre_btn {
+    cursor: pointer !important;
     border: solid 1px white;
     //color: white;
     background-color: grey;
@@ -24,30 +25,103 @@
     display: flex;
     justify-content: center;
     width: fit-content;
-    padding: 5px;
+    padding: 3px;
     text-decoration: none;
     color: white;
     font-family: Montserrat, sans-serif;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 0.9em;
+    height: fit-content;
+    //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 0.8;
+    label {cursor: pointer;}
+    &:hover {opacity: 1;}
     div {
         border: solid 1px white;
         border-radius: 25px;
-        //padding: 10px 2em;
+        padding: 2px 5px;
 
-        min-width: 6em;
-        padding: 2px 15px;
+        //min-width: 6em;
+        //padding: 2px 15px;
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        //gap: 5px;
         .close_icon {
             width: fit-content;
             height: fit-content;
+            display: flex;
+            filter: brightness(0) invert(1);
+            img {width: 0;}
+            visibility: hidden;
+            //display: none;
         }
     }
     &.peche {
-        background-color: #FA9977;
+        background-color:$peche;
+    }
+    &.grey {
+        background-color: $dark-grey;
     }
     &.yellow {
-        background-color: #EDC272;
-        &:hover {opacity: 0.8;}
+        background-color: $light-yellow;
+    }
+    &.green {
+        background-color: $green;
+    }
+    &.white {
+        background-color: white;
+        border: black solid;
+        color: black;
+        .close_icon {filter: unset;}
+        div {border: black solid;}
+    }
+    &.filter_actif {
+        opacity: 1;
+        div {gap: 5px;}
+        .close_icon {
+            visibility: visible;
+            //display: block;
+            img {width: 1em;}
+        }
     }
 }/* Rectangle 113 */
+
+.simple_form.annonces_filtres {
+    display: flex;
+    gap: 3px;
+    input {
+        transform: scale(0);
+        position: absolute;
+        visibility: hidden;
+    }
+    .input.boolean.optional {
+        //border: solid 1px;
+        //background-color: grey;
+        
+    }
+}
+.filtre_btn {
+    .input.boolean.optional {
+        border: none;
+    }
+}
+.more_filtres {
+    border: solid 1px;
+}
+
+.simple_form.annonces_filtres {
+    display: flex;
+    flex-direction: column;
+    .visible_filters {display: flex;}
+}
+.hidden_filters {
+    display: flex;
+    div label {
+        border: solid 1px;
+        input {
+            visibility: visible !important;
+            transform: none !important;
+            position: initial !important;
+        }
+    }
+}

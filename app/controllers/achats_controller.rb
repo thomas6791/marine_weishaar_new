@@ -1,7 +1,65 @@
 class AchatsController < ApplicationController
   def index
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
-    @annonces = Annonce.all
+    if params[:query].present?
+
+      case params[:query][:action]
+      when "Louer"
+        redirect_to locations_path()
+      when "Acheter"
+        #params[:query].delete("action")
+        if params[:query][:type_bien].present? && params[:query][:type_bien] != "" && params[:query][:type_bien] != "Type de bien"
+          @annonces = Annonce.where(type_bien: params[:query][:type_bien].downcase)
+          @type_bien = params[:query][:type_bien].downcase
+        else
+          @type_bien = "all"
+          @annonces = Annonce.all
+        end
+
+        params[:query].delete("action")
+        #params[:query].delete("type_bien")
+
+        if params[:query]["nb_pieces"].present? && params[:query]["nb_pieces"] != ""
+          @annonces = @annonces.where("nb_pieces >= ?", params[:query]["nb_pieces"])
+        end
+        if params[:query]["budget_min"].present? && params[:query]["budget_min"] != ""
+          #@annonces = @annonces.where(" >= ?", params[:query]["nb_pieces"])
+        end
+
+        if params[:query]["budget_max"].present? && params[:query]["budget_max"] != ""
+        end
+
+        if params[:query]["surface"].present? && params[:query]["surface"] != ""
+          @annonces = @annonces.where("surface >= ?", params[:query]["surface"].to_f)
+        end
+
+        #params[:query].delete("action")
+        #User.where(["name LIKE ?", "%#{params[:query]}%"]).where(:admin => [nil, false])
+      else
+        print('It is not a string or number')
+      end
+
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
+      end
+
+    else
+      @annonces = Annonce.all
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
+      end
+    end
+    
     #if params[:query].present?
     #  action_switch = params[:query][:action]
     #end
@@ -18,14 +76,6 @@ class AchatsController < ApplicationController
     #end
 
     # The `geocoded` scope filters only flats with coordinates
-    @markers = @annonces.geocoded.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude,
-        info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
-        marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
-      }
-    end
   end
 
   def show
@@ -39,11 +89,48 @@ class AchatsController < ApplicationController
     ahoy.track "annonce vue", title: @annonce.titre, annonce_id:@annonce.id
   end
 
-  def appartements
+  def rent_filter
+    annonces = []
+
+    biens = params[:annonces_filtres].keys[0..2]
+    options = params[:annonces_filtres].keys[3..-1]
+   
+    biens.each do |type_bien|
+      if params[:annonces_filtres][type_bien] == "1"
+        annonces << Annonce.where(type_bien: type_bien)
+      end
+    end
+    @annonces = annonces.flatten
+    options.each do |option|
+      if params[:annonces_filtres][option] != "0" && params[:annonces_filtres][option] != ""
+        #fail
+      end
+    end
+    #if params[:type_bien].present?
+    #  @annonces = Annonce.where(type_bien: params[:type_bien])
+    #else
+    #  @annonces = Annonce.all
+    #end
+    respond_to do |format|
+      #format.turbo_stream
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.update(:annonces_list_index, partial: "achats/annonces",
+          locals: { annonces: @annonces })
+      end
+      format.html {}
+      #format.turbo_stream do
+      #  render turbo_stream: turbo_stream.update("annonces_list_index", partial: "achats/annonces", locals: { annonces: @annonces })
+      #end
+      #format.html { redirect_to messages_url }
+    end
+
   end
   def maisons
   end
   def terrains
+  end
+
+  def turbo_list
   end
 
   def alsace

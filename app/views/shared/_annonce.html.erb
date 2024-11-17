@@ -57,14 +57,14 @@
         <div><p>Mode de chauffage: <%= @annonce.chauffage_mode %></p></div>
         <div><p>Etat général: <%= @annonce.etat_general %></p></div>
         <div><p>Année de construction: <%= @annonce.annee_construction.strftime("%Y") %></p></div>
-        <div><p>Cave: <%= @annonce.cave %></p></div>
-        <div><p>Ascenseur: <%= @annonce.ascenseur %></p></div>
-        <div><p>Copropriété: <%= @annonce.copropriete %></p></div>
-         <div><p>Cuisine équipée: <%= @annonce.cuisine_equipee %></p></div>
-        <div><p>Jardin: <%= @annonce.jardin %></p></div>
-        <div><p>Balcon: <%= @annonce.balcon %></p></div>
-        <div><p>terrasse: <%= @annonce.terrasse %></p></div>
-         <div><p>Garage: <%= @annonce.garage %></p></div>
+        <div><p>Cave: <%= @annonce.cave == true ? "Oui": "Non" %></p></div>
+        <div><p>Ascenseur: <%= @annonce.ascenseur == true ? "Oui": "Non" %></p></div>
+        <div><p>Copropriété: <%= @annonce.copropriete == true ? "Oui" : "Non" %></p></div>
+         <div><p>Cuisine équipée: <%= @annonce.cuisine_equipee == true ? "Oui" : "Non" %></p></div>
+        <div><p>Jardin: <%= @annonce.jardin == true ? "Oui" : "Non" %></p></div>
+        <div><p>Balcon: <%= @annonce.balcon == true ? "Oui" : "Non" %></p></div>
+        <div><p>Terrasse: <%= @annonce.terrasse == true ? "Oui" : "Non" %></p></div>
+         <div><p>Garage: <%= @annonce.garage == true ? "Oui" : "Non" %></p></div>
     </div>
 </section>
 

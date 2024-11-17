@@ -6,6 +6,7 @@
     font-weight: 200;
     form {
         display: grid;
+        border: none;
         select,input {
             border:1px solid #ccc;
             vertical-align:top;
