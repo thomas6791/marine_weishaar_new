@@ -8,7 +8,7 @@
             <ul class="filtre_tags">
                 <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
                     <div class="visible_filters">
-                        <% if @type_bien == "maison" || @type_bien == "all" %>
+                        <% if @type_bien == "maison" || @type_bien == "all" || @type_bien == nil %>
                             <div class="filtre_btn filter_actif peche">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
@@ -24,7 +24,7 @@
                             </div>
                         <% end %>
 
-                        <% if @type_bien == "appartement" || @type_bien == "all" %>
+                        <% if @type_bien == "appartement" || @type_bien == "all" || @type_bien == nil %>
                             <div class="filtre_btn filter_actif yellow">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
@@ -43,7 +43,7 @@
 
                         <% end %>
 
-                        <% if @type_bien == "terrain" || @type_bien == "all" %>
+                        <% if @type_bien == "terrain" || @type_bien == "all" || @type_bien == nil %>
                             <div class="filtre_btn filter_actif green">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
