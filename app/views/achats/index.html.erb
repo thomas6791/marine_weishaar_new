@@ -8,24 +8,59 @@
             <ul class="filtre_tags">
                 <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
                     <div class="visible_filters">
-                        <div class="filtre_btn filter_actif peche">
-                            <div>
-                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        <% if @type_bien == "maison" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif peche">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
                             </div>
-                        </div>
-                        <div class="filtre_btn filter_actif yellow">
-                            <div>
-                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        <% else %>
+                            <div class="filtre_btn peche">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :maison, as: :boolean,label:"Maisons", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
+                                </div>
                             </div>
-                        </div>
-                        <div class="filtre_btn filter_actif green">
-                            <div>
-                                <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                        <% end %>
+
+                        <% if @type_bien == "appartement" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif yellow">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
                             </div>
-                        </div>
+
+                        <% else %>
+
+                            <div class="filtre_btn yellow">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :appartement, as: :boolean,label:"Appartements", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
+                                </div>
+                            </div>
+
+                        <% end %>
+
+                        <% if @type_bien == "terrain" || @type_bien == "all" %>
+                            <div class="filtre_btn filter_actif green">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+                        
+                        <% else %>
+
+                            <div class="filtre_btn green">
+                                <div>
+                                    <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
+                                    <%= f.input :terrain, as: :boolean,label:"Terrains", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                </div>
+                            </div>
+
+                        <% end %>
                     </div>
                     <div class="hidden_filters">
                         <%= f.input :min_price %>

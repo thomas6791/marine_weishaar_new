@@ -7,14 +7,38 @@ class AchatsController < ApplicationController
       when "Louer"
         redirect_to locations_path()
       when "Acheter"
-        Annonce.where(type_bien: params[:query][:type_bien].downcase)
-        fail
+        #params[:query].delete("action")
+        if params[:query][:type_bien].present? && params[:query][:type_bien] != "" && params[:query][:type_bien] != "Type de bien"
+          @annonces = Annonce.where(type_bien: params[:query][:type_bien].downcase)
+          @type_bien = params[:query][:type_bien].downcase
+        else
+          @type_bien = "all"
+          @annonces = Annonce.all
+        end
+
+        params[:query].delete("action")
+        #params[:query].delete("type_bien")
+
+        if params[:query]["nb_pieces"].present? && params[:query]["nb_pieces"] != ""
+          @annonces = @annonces.where("nb_pieces >= ?", params[:query]["nb_pieces"])
+        end
+        if params[:query]["budget_min"].present? && params[:query]["budget_min"] != ""
+          #@annonces = @annonces.where(" >= ?", params[:query]["nb_pieces"])
+        end
+
+        if params[:query]["budget_max"].present? && params[:query]["budget_max"] != ""
+        end
+
+        if params[:query]["surface"].present? && params[:query]["surface"] != ""
+          @annonces = @annonces.where("surface >= ?", params[:query]["surface"].to_f)
+        end
+
+        #params[:query].delete("action")
         #User.where(["name LIKE ?", "%#{params[:query]}%"]).where(:admin => [nil, false])
       else
         print('It is not a string or number')
       end
 
-      fail
 
 
     else
