@@ -3,9 +3,9 @@
 <article class="">
     <section class="inside">
         <h1>Annonces immobilières</h1>
+        <%= link_to "Strasbourg", strasbourg_path() %>
         <div data-controller="filters">
             <ul class="filtre_tags">
-                <%= link_to "Strasbourg", strasbourg_path() %>
                 <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
                     <div class="visible_filters">
                         <div class="filtre_btn filter_actif peche">
