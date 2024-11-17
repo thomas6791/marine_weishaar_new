@@ -39,7 +39,14 @@ class AchatsController < ApplicationController
         print('It is not a string or number')
       end
 
-
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
+      end
 
     else
       @annonces = Annonce.all
