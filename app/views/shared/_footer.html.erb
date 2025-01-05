@@ -1,11 +1,16 @@
 <footer id="footer">
-    <p class="inside">footer</p>
-    <ul>
-        <li></li>
-        <li>Mentions légales</li>
-        <li>Politique de confidentialité </li>
-        <li>Gestion des cookies</li>
-        <li>Plan du site</li>
-        <li>Ozymedia</li>
-    </ul>
+    <div class="inside">
+        <ul>
+            <li><%= link_to "Mentions légales", mentions_path %></li>
+            <li><%= link_to "Politique de confidentialité", confidentialite_path %></li>
+            <li><%= link_to "Gestion des cookies", cookies_path %></li>
+            <li><%= link_to "Plan du site", plan_site_path %></li>
+        </ul>
+        <div>
+            
+        </div>
+        <%= link_to "https://www.immomann.com/" do %>
+        <%= image_tag 'logo-blanc-immoman.png' %>
+        <% end %>
+    </div>
 </footer>
