@@ -168,3 +168,11 @@ form {
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 40em) {
+    .contact {
+        .inline_form {
+            flex-direction: column;
+        }
+    }
+}
