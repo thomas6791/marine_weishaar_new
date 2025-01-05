@@ -17,7 +17,7 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-    
+    fail
   end
 
   def agences
