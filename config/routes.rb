@@ -11,6 +11,11 @@ Rails.application.routes.draw do
   get '/contact', to: "pages#contact"
   get '/gestion-locative', to:  "pages#gestion_locative"
 
+  get '/mentions',to: "pages#mentions"
+  get '/confidentialite', to: "pages#confidentialite"
+  get '/cookies',to:"pages#cookies"
+  get '/plan-site',to:"pages#plan_site"
+
   get 'components', to: "pages#components"
 
   resources :admins do
