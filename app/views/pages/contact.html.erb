@@ -1,0 +1,20 @@
+<div class="contact">
+<h1>Nous contacter</h1>
+<%= simple_form_for :contact do |f| %>
+    <div class="inline_form">
+        <%= f.input :person,label:"Vous êtes", collection:["Particulier","Professionnel"] %>
+        <%= f.input :object,label:"Votre demande concerne", collection:["Acheter","Vendre","Louer","Gestion location","Estimation","Autre"] %>
+    </div>
+    <div class="inline_form">
+        <%= f.input :lastname,label:"Nom" %>
+        <%= f.input :firstname,label:"Prénom" %>
+  </div>
+  <div class="inline_form">
+        <%= f.input :email,label:"Email" %>
+        <%= f.input :tel,label:"Tel" %>
+  </div>
+  <%= f.input :message,label:"Message",as: :text,:input_html => { 'rows' => 10} %>
+  <%= f.input :rgpd,label:"J'accepte que mes données soient transmises dans le cadre de ma démarche. En savoir plus sur notre politique de confidentialité" %>
+  <%= f.button :submit,"Envoyer" %>
+<% end %>
+</div>
