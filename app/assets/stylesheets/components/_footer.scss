@@ -12,4 +12,20 @@
         li {height: fit-content;}
     }
     a {text-decoration: none; color:white;}
+    .social_links {
+        display: flex;
+        gap: 1em;
+        a img {
+            width: 1.5em;
+            filter: invert(1);
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    #footer {
+        .inside {
+            flex-direction: column; gap:1em;
+        }
+    }
 }

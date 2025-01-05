@@ -6,11 +6,16 @@
             <li><%= link_to "Gestion des cookies", cookies_path %></li>
             <li><%= link_to "Plan du site", plan_site_path %></li>
         </ul>
-        <div>
-            
+        <div class="social_links">
+            <%= link_to "https://www.facebook.com/marineweishaar.agentimmo?locale=fr_FR" do %>
+                <%= image_tag "pictos/facebook-brands-solid.svg"%>
+            <% end %>
+            <%= link_to "https://www.instagram.com/marine_weishaar_immobilier/" do %>
+                <%= image_tag "pictos/instagram-brands-solid.svg"%>
+            <% end %>
         </div>
         <%= link_to "https://www.immomann.com/" do %>
-        <%= image_tag 'logo-blanc-immoman.png' %>
+            <%= image_tag 'logo-blanc-immoman.png' %>
         <% end %>
     </div>
 </footer>
