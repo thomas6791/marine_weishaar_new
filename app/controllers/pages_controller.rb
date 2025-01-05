@@ -25,4 +25,13 @@ class PagesController < ApplicationController
   def full_list
   end
 
+  def mentions
+  end
+  def confidentialite
+  end
+  def cookies
+  end
+  def plan_site
+  end
+
 end
