@@ -1,6 +1,6 @@
 <div class="contact">
 <h1>Nous contacter</h1>
-<%= simple_form_for :contact do |f| %>
+<%= simple_form_for :url => send_contact_path(),:method => :post do |f| %>
     <div class="inline_form">
         <%= f.input :person,label:"Vous êtes", collection:["Particulier","Professionnel"] %>
         <%= f.input :object,label:"Votre demande concerne", collection:["Acheter","Vendre","Louer","Gestion location","Estimation","Autre"] %>

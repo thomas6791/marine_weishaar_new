@@ -16,6 +16,10 @@ class PagesController < ApplicationController
 
   end
 
+  def send_contact
+    
+  end
+
   def agences
   end
 
