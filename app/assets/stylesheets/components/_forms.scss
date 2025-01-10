@@ -125,3 +125,67 @@ form {
     visibility: hidden;
     height: 0;
 }
+.contact {
+    max-width: 900px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    .inline_form {
+        display: flex;
+        gap: 10px;
+    }
+    form {border: none;margin-top: 1em; padding: 0;}
+    div.input {
+        position: relative;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    input,select {
+        display: flex;
+        flex-direction: column;
+        height: 2.5em;
+        padding: 5px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: solid 1px lightgray;
+        color: black;
+    }
+    textarea {width: 100%;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: solid 1px lightgray;
+    }
+    label {
+        position: absolute;
+    top: -9px;
+    background-color: white;
+    left: 10px;
+    padding: 0px 12px;
+    color: grey;
+    font-family: Montserrat, sans-serif;
+    font-size: 0.8em;
+    }
+    .contact_rgpd {
+        label {position: initial;display: flex;
+            align-items: center;
+            padding: 0;
+            gap:10px;
+            input {width: fit-content;}
+        }
+    }
+    input[type=submit]{
+        width: fit-content;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .contact {
+        .inline_form {
+            flex-direction: column;
+        }
+    }
+    .contact input[type=submit] {width: 100%;display: flex;}
+}
