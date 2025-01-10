@@ -82,7 +82,7 @@
                         <% end %>
 
                         <% if @type_bien == "immeuble" || @type_bien == "all" || @type_bien == nil %>
-                            <div class="filtre_btn filter_actif green">
+                            <div class="filtre_btn filter_actif grey">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                                     <%= f.input :immeuble, as: :boolean,label:"Immeubles", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
@@ -91,7 +91,7 @@
                         
                         <% else %>
 
-                            <div class="filtre_btn green">
+                            <div class="filtre_btn grey">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
                                     <%= f.input :immeuble, as: :boolean,label:"Immeubles", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
