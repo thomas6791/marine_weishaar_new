@@ -47,3 +47,31 @@
         font-weight: 500;
     }
 }
+@media only screen and (max-width: 40em) {
+    .search_home {
+        flex-direction: column;
+        position: relative !important;
+        .titre_search {display: none !important;}
+        .search_home_intro {
+            width: 100% !important;
+            img {width: 100%;}
+        }
+        .form_carre {
+            position: absolute !important;
+            width: 90% !important;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            .input {
+                background-color: white !important;
+            }
+            input,select {
+                font-size: 0.8em !important;
+            }
+            .btn.btn-primary {background-color: $yellow-2; font-size: 0.8em;}
+        }
+    }
+    .list_video {
+        display: none;
+    }
+}

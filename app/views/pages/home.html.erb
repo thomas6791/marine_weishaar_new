@@ -97,23 +97,7 @@
     </ul>
 </section>
 
-<section class="search_home inside">
-    <div class="search_home_intro">
-        <%= image_tag "home/canape-yellow copy.png", width: 650 %>
-        <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
-    </div>
-    <div class="search_form inline">
-        <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
-            <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
-            <%= f.input :city,class:"city", placeholder:"Localisation" %>
-            <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
-            <%= f.input :nbre_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
-            <%= f.input :surface, placeholder:"m2",class:"surface" %>
-            <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
-            <%= f.submit "Rechercher", class: "btn btn-primary" %>
-        <% end %>
-    </div>
-</section>
+
 
 
 <section class="inside">
@@ -150,6 +134,4 @@
     </turbo-frame>
 
 </section>
-<div data-controller="barchart">
-  <canvas id="bar-chart" data-barchart-target="myChart" width="800" height="450"></canvas>
-</div>
+
