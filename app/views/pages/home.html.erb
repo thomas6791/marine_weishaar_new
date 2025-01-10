@@ -10,7 +10,13 @@
                     <%= f.input :action, collection:["Acheter","Louer","Location professionnelle","Achat Neuf","Achat Ancien"], class:"action", selected:1 %>
                     <%= f.input :type_bien, collection:["Type de bien","Appartement","Maison","Commerce","Immeuble","Terrain","Parking/Box"],class:"bien",selected:1 %>
                 </div>
+                <%= f.input :address,
+                    input_html: {data: {address_autocomplete_target: "address"}},
+                    wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]},class: "d-none"} 
+                %>               
+                <!--
                 <%= f.input :city,class:"city", placeholder:"Localisation" %>
+                -->
                 <div class="inline_input">
                     <%= f.input :nb_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
                     <%= f.input :surface, placeholder:"m2",class:"surface" %>
@@ -108,7 +114,7 @@
 </ul>
 </section>
 <section class="inside">
-<h2>ça vaut le coupe d'oeil</h2>
+<h2>ça vaut le coupe d'oeil !!</h2>
 </section>
 
 <section class="inside">
@@ -135,3 +141,4 @@
 
 </section>
 
+</section>
