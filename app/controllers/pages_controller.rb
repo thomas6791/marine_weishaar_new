@@ -16,6 +16,10 @@ class PagesController < ApplicationController
 
   end
 
+  def send_contact
+    ContactMailer.contact_email.delivery_now
+  end
+
   def agences
   end
 
@@ -23,6 +27,15 @@ class PagesController < ApplicationController
   end
 
   def full_list
+  end
+
+  def mentions
+  end
+  def confidentialite
+  end
+  def cookies
+  end
+  def plan_site
   end
 
 end

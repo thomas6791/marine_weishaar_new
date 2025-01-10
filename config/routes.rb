@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/about'
   get '/contact', to: "pages#contact"
+  post '/send', to:"pages#send_contact"
   get '/gestion-locative', to:  "pages#gestion_locative"
+
+  get '/mentions',to: "pages#mentions"
+  get '/confidentialite', to: "pages#confidentialite"
+  get '/cookies',to:"pages#cookies"
+  get '/plan-site',to:"pages#plan_site"
 
   get 'components', to: "pages#components"
 
