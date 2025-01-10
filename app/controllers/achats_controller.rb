@@ -2,6 +2,14 @@ class AchatsController < ApplicationController
   def index
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
     if params[:query].present?
+      @address = params[:query][:address]
+      coordinates = Geocoder.search(@address).first.coordinates if @address != ""
+      
+      if @address != ""
+        @annonces = Annonce.near(coordinates, 10)
+      else
+        @annonces = Annonce.all
+      end
 
       case params[:query][:action]
       when "Louer"
@@ -9,11 +17,11 @@ class AchatsController < ApplicationController
       when "Acheter"
         #params[:query].delete("action")
         if params[:query][:type_bien].present? && params[:query][:type_bien] != "" && params[:query][:type_bien] != "Type de bien"
-          @annonces = Annonce.where(type_bien: params[:query][:type_bien].downcase)
+          @annonces = @annonces.where(type_bien: params[:query][:type_bien].downcase)
           @type_bien = params[:query][:type_bien].downcase
         else
           @type_bien = "all"
-          @annonces = Annonce.all
+          #@annonces = Annonce.all
         end
 
         params[:query].delete("action")
