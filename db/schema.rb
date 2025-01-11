@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_15_164239) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_11_161924) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -113,7 +113,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_15_164239) do
     t.string "ges"
     t.string "country"
     t.integer "price_cents", default: 0, null: false
-    t.string "price_currency", default: "USD", null: false
     t.string "ref_annonce"
     t.integer "nb_pieces"
     t.integer "nb_etage"
@@ -130,6 +129,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_15_164239) do
     t.boolean "terrasse", default: false
     t.boolean "garage", default: false
     t.string "type_bien"
+    t.integer "price_currency_cents", default: 0, null: false
+    t.string "price_currency_currency"
+    t.integer "price_metre_cents", default: 0, null: false
+    t.string "price_metre_currency", default: "EUR", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

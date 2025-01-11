@@ -10,7 +10,7 @@
         </div>
         <div class="card_flex grey">
             <p><%= annonce.zipcode %> <%= annonce.city %></p>
-            <p>1280€/m<sup>2</sup></p>
+            <p><%=annonce.price_metre %> €/m<sup>2</sup></p>
         </div>
         <div class="card_flex">
             <p><%= annonce.surface.to_i %>m<sup>2</sup></p>
