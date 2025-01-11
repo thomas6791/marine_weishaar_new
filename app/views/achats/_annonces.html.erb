@@ -1,4 +1,4 @@
-<% @annonces.each do |annonce| %>
+<% annonces.each do |annonce| %>
     <li>
         <%= link_to achat_show_path(annonce) do %>
             <%= render partial: "achats/annonce", locals: {annonce: annonce} %>

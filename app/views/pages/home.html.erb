@@ -32,15 +32,17 @@
 </section>
 <section class="inside">
     <h2 class="titre styling">Nos dernières nouveautés</h2>
-    <ul>
-    </ul>
-    <%= link_to "Toutes nos annonces"%>
+    <ul class="list_annonces three new_annonces">
+            <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
+        </ul>
+    <%= link_to "Voir toutes nos annonces",annonces_path, class:"btn black"%>
 </section>
 <section class="inside">
     <h2 class="titre styling">Nos derniers coups de coeur</h2>
-    <ul>
-    </ul>
-    <%= link_to "Voir d'autres annonces"%>
+     <ul class="list_annonces three new_annonces">
+            <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
+        </ul>
+    <%= link_to "Voir toutes nos annonces",annonces_path, class:"btn black"%>
 </section>
 <section class="inside">
     <h2 class="titre styling">Des agences proches de chez vous</h2>
