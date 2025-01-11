@@ -42,6 +42,8 @@
 .prestations {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    gap:1em;
     .prestation h3 {
         font-family: "Inter";
         font-weight: 500;
@@ -52,7 +54,7 @@
     overflow-x: scroll;
     gap: 10px;
     li {
-        min-width: 30%;
+        min-width: 320px;
         height: 45vh;
         display: flex;
         position: relative;
@@ -73,6 +75,10 @@
             bottom: 1.5em;
         }
     }
+}
+.margin_home {
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 @media only screen and (max-width: 40em) {

@@ -30,14 +30,14 @@
         </div>
     </div>
 </section>
-<section class="inside">
+<section class="inside margin_home">
     <h2 class="titre styling">Nos dernières nouveautés</h2>
     <ul class="scroll-carrousel">
             <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
         </ul>
     <%= link_to "Voir toutes nos annonces",annonces_path, class:"btn black"%>
 </section>
-<section class="inside">
+<section class="inside margin_home">
     <h2 class="titre styling">Nos derniers coups de coeur</h2>
      <ul class="scroll-carrousel">
             <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
@@ -51,16 +51,22 @@
             <%= image_tag "agences/strasbourg.png"%>
             <h3>Strasbourg</h3>
         </li>
-        <li>Wissembourg</li>
+        <li>
+            <%= image_tag "agences/wissembourg.png"%>
+            <h3>Wissembourg</h3>
+        </li>
         <li>
             <%= image_tag "agences/colmar.png"%>
             <h3>Colmar</h3>
         </li>
-        <li>Molsheim</li>
-        <li>Haguenau</li>
+        <li>
+            <%= image_tag "agences/haguenau.png"%>
+            <h3>Haguenau</h3>
+        </li>
     </ul>
 </section>
-<section class="inside">
+<!--
+<section class="inside margin_home">
     <h2 class="titre styling">Les dernières visites</h2>
     <ul class="list_video">
         <li class="card_video">1</li>
@@ -69,7 +75,8 @@
         <li class="card_video">4</li>
     </ul>
 </section>
-<section class="inside">
+-->
+<section class="inside margin_home">
     <h2 class="titre styling">Nous avons la solution pour votre projet immobilier</h2>
     <ul class="prestations">
         <li class="prestation">
@@ -119,8 +126,8 @@
 
 
 
-
-<section class="inside">
+<!--
+<section class="inside margin_home">
 <ul>
 <% AchatsController.action_methods.to_a.each do |lieu| %>
     <li><a href="/achat/strasbourg/<%= lieu %>"><%=lieu %></a></li>
@@ -156,3 +163,4 @@
 </section>
 
 </section>
+-->
