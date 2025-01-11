@@ -32,14 +32,14 @@
 </section>
 <section class="inside">
     <h2 class="titre styling">Nos dernières nouveautés</h2>
-    <ul class="list_annonces three new_annonces">
+    <ul class="scroll-carrousel">
             <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
         </ul>
     <%= link_to "Voir toutes nos annonces",annonces_path, class:"btn black"%>
 </section>
 <section class="inside">
     <h2 class="titre styling">Nos derniers coups de coeur</h2>
-     <ul class="list_annonces three new_annonces">
+     <ul class="scroll-carrousel">
             <%= render partial: "achats/annonces", locals: {annonces: @last_annonces}%>
         </ul>
     <%= link_to "Voir toutes nos annonces",annonces_path, class:"btn black"%>
