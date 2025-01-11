@@ -47,6 +47,34 @@
         font-weight: 500;
     }
 }
+.list_agences_home {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    li {
+        min-width: 30%;
+        height: 45vh;
+        display: flex;
+        position: relative;
+        border: solid 1px #F0ECEC;
+        border-radius: 5px;
+        img {width: 100%;object-fit: contain;}
+        a {}
+        h3 {
+            position: absolute;
+            font-family: "Inter", sans-serif;
+            color: white;
+            text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
+            display: inline-block;
+
+            font-size: 2.5em;
+            width: 100%;
+            text-align: center;
+            bottom: 1.5em;
+        }
+    }
+}
+
 @media only screen and (max-width: 40em) {
     .search_home {
         flex-direction: column;
