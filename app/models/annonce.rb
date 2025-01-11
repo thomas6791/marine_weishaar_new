@@ -1,5 +1,5 @@
 class Annonce < ApplicationRecord
-    TYPE_BIEN = ["maison","appartement","terrain"]
+    TYPE_BIEN = ["maison","appartement","terrain","commerce","immeuble","parking"]
     DPE = ["A","B","C","D","E","F","G"]
     GES = ["A","B","C","D","E","F","G"]
     CHAUFFAGE = ["Individuel","Collectif"]

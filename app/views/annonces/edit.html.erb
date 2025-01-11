@@ -7,7 +7,7 @@
     </div>
     <div class="grid columns_4">
       <%= f.input :surface, placeholder:"Surface du bien",label:false %>
-      <%= f.input :type_bien, collection: ["maison","appartement","terrain"] %>
+      <%= f.input :type_bien, collection: Annonce::TYPE_BIEN, selected:0,label:"Type de bien",label:false %>
       <%= f.input :nb_pieces, placeholder:"Nbre de pièces",label:false %>
       
       <%= f.input :price,label:"Prix", placeholder:"Prix du bien €",label:false %>

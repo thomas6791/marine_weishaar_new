@@ -69,16 +69,13 @@
                                     <%= f.input :commerce, as: :boolean,label:"Commerces", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
                                 </div>
                             </div>
-                        
                         <% else %>
-
                             <div class="filtre_btn dark-blue">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                    <%= f.input :commerce, as: :boolean,label:"Commerces", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                    <%= f.input :commerce, as: :boolean,label:"Commerces", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
                                 </div>
                             </div>
-
                         <% end %>
 
                         <% if @type_bien == "immeuble" || @type_bien == "all" || @type_bien == nil %>
@@ -88,16 +85,13 @@
                                     <%= f.input :immeuble, as: :boolean,label:"Immeubles", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
                                 </div>
                             </div>
-                        
                         <% else %>
-
                             <div class="filtre_btn grey">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                    <%= f.input :immeuble, as: :boolean,label:"Immeubles", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                    <%= f.input :immeuble, as: :boolean,label:"Immeubles", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
                                 </div>
                             </div>
-
                         <% end %>
 
                         <% if @type_bien == "parking" || @type_bien == "all" || @type_bien == nil %>
@@ -107,17 +101,18 @@
                                     <%= f.input :parking, as: :boolean,label:"Parking/Box", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
                                 </div>
                             </div>
-                        
                         <% else %>
-
                             <div class="filtre_btn purple">
                                 <div>
                                     <span class="close_icon"><%= image_tag "pictos/circle-xmark-regular.svg"%></span>
-                                    <%= f.input :parking, as: :boolean,label:"Parking/Box", input_html: { data: {action: "change->filters#checkedSelect"},:checked => true } %>
+                                    <%= f.input :parking, as: :boolean,label:"Parking/Box", input_html: { data: {action: "change->filters#checkedSelect"},:checked => false } %>
                                 </div>
                             </div>
-
                         <% end %>
+
+                        
+
+                        
                     </div>
                     <div class="hidden_filters">
                         <%= f.input :min_price %>

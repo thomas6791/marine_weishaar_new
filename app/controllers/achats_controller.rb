@@ -99,8 +99,8 @@ class AchatsController < ApplicationController
 
   def rent_filter
     annonces = []
-
-    biens = params[:annonces_filtres].keys[0..2]
+ 
+    biens = params[:annonces_filtres].keys[0..5]
     options = params[:annonces_filtres].keys[3..-1]
    
     biens.each do |type_bien|
@@ -119,6 +119,7 @@ class AchatsController < ApplicationController
     #else
     #  @annonces = Annonce.all
     #end
+    
     respond_to do |format|
       #format.turbo_stream
       format.turbo_stream do

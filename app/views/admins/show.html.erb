@@ -10,6 +10,7 @@
         <tr>
             <th>Nom</th>
             <th>Prix</th>
+            <th>Bien</th>
             <th>Ville</th>
             <th>Vues</th>
             <th>Options</th>
@@ -20,6 +21,7 @@
             <tr>
                 <td><%= annonce.titre %></td>
                 <td><%= annonce.price %></td>
+                <td><%= annonce.type_bien %></td>
                 <td><%= annonce.city %></td>
                 <td><%= @vues.where_props(annonce_id: annonce.id).count %></td>
                 <td>Voir 
