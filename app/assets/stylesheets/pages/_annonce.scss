@@ -46,3 +46,8 @@
     align-items: baseline;
     .annonce_show_titre {font-size: 2em; color: black;}
 }
+
+@media only screen and (max-width: 40em) {
+    #map {display: none;}
+    .filtre_tags {overflow-x: scroll;}
+}
