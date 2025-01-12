@@ -6,7 +6,7 @@
     <div class="card_desc">
         <div class="card_flex">
             <h2><%= annonce.titre %></h2>
-            <p><%= annonce.price %></p>
+            <p><%= humanized_money annonce.price %> <%= currency_symbol %></p>
         </div>
         <div class="card_flex grey">
             <p><%= annonce.zipcode %> <%= annonce.city %></p>
