@@ -32,9 +32,23 @@ class AchatsController < ApplicationController
         end
         if params[:query]["budget_min"].present? && params[:query]["budget_min"] != ""
           #@annonces = @annonces.where(" >= ?", params[:query]["nb_pieces"])
+          min_price = Money.new(params[:query]["budget_min"])*100
+          #fail
+          array_annonces = []
+          #@annonces = @annonces.where("price.fractional >= ?",min_price.fractional)
+          @annonces.each do |annonce|
+            array_annonces << annonce if annonce.price >= min_price
+          end
+          @annonces = Annonce.where(id: array_annonces.map(&:id))
         end
 
         if params[:query]["budget_max"].present? && params[:query]["budget_max"] != ""
+          max_price = Money.new(params[:query]["budget_max"])*100
+          array_annonces = []
+          @annonces.each do |annonce|
+            array_annonces << annonce if annonce.price <= max_price
+          end
+          @annonces = Annonce.where(id: array_annonces.map(&:id))
         end
 
         if params[:query]["surface"].present? && params[:query]["surface"] != ""
