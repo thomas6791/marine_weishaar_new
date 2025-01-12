@@ -19,11 +19,11 @@
                 -->
                 <div class="inline_input">
                     <%= f.input :nb_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
-                    <%= f.input :surface, placeholder:"m2",class:"surface" %>
+                    <%= f.input :surface, placeholder:"min m2",class:"surface",as: :integer %>
                 </div>
                 <div class="inline_input">
-                    <%= f.input :budget_min,class:"max_budg",placeholder:"Budget min" %>
-                    <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max" %>
+                    <%= f.input :budget_min,class:"max_budg",placeholder:"Budget min",as: :integer,step: 1000 %>
+                    <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max",as: :integer,step: 1000 %>
                 </div>
                 <%= f.submit "Rechercher", class: "btn btn-primary" %>
             <% end %>
