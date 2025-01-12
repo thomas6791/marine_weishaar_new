@@ -128,12 +128,19 @@
                     </div>
                     <%= f.button :submit %>
                 <% end %>
+
                 <%= link_to rent_filter_path(type_bien:nil), data: {turbo_method: :post,filters_target: "category_filtre", action:"click->filters#moreOptions"},class:"filtre_btn white filter_actif" do %>
                         <div>
                             <span class="close_icon"><%= image_tag "pictos/circle-plus-solid.svg"%></span>
                             <span>Plus de critères</span>
                         </div>
                 <% end %>
+                <button onclick="filtersDialog.showModal();" class="filtre_btn white filter_actif">
+                    <div>
+                            <span class="close_icon"><%= image_tag "pictos/circle-plus-solid.svg"%></span>
+                            <span>Plus de critères</span>
+                        </div>
+                </button>
             </ul>
 
         </div>
@@ -153,4 +160,12 @@
     </section> 
     </div>
 </article>
+
+<dialog id="filtersDialog">
+            <p>Koor.fr Dialog demonstration</p>
+            
+            <form method="dialog">
+                <button>Close the dialog</button>
+            </form>
+</dialog>
     
