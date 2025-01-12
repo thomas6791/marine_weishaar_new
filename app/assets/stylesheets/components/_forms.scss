@@ -182,6 +182,13 @@ form {
         cursor: pointer;
     }
 }
+#filtersDialog {
+    position:fixed;
+    width: 505px;
+    left: 50%;
+    top:50%;
+    transform: translateX(-50%);
+}
 
 @media only screen and (max-width: 40em) {
     .contact {
