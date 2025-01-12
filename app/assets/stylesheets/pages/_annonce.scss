@@ -50,4 +50,10 @@
 @media only screen and (max-width: 40em) {
     #map {display: none;}
     .filtre_tags {overflow-x: scroll;}
+
+    .annonces_index {
+        .carte_fixed {display: none;}
+        .list_annonces {margin: 0;}
+        #annonces_list_index {grid-template-columns: 1fr;}
+    }
 }
