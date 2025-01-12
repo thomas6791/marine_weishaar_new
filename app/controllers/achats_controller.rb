@@ -30,6 +30,11 @@ class AchatsController < ApplicationController
         if params[:query]["nb_pieces"].present? && params[:query]["nb_pieces"] != ""
           @annonces = @annonces.where("nb_pieces >= ?", params[:query]["nb_pieces"])
         end
+
+        if params[:query][:surface].present? && params[:query][:surface] != ""
+          @annonces = @annonces.where("surface >= ?", params[:query][:surface].to_f)
+        end
+
         if params[:query]["budget_min"].present? && params[:query]["budget_min"] != ""
           #@annonces = @annonces.where(" >= ?", params[:query]["nb_pieces"])
           min_price = Money.new(params[:query]["budget_min"])*100
