@@ -5,13 +5,11 @@ Bourse:
 Centre-ville:
   url: centre-ville
   cover: quartiers/kleber.png
-  text: <p>Le <strong>Centre-ville de Strasbourg</strong> est un cadre de vie exceptionnel, idéal pour ceux qui recherchent un mélange parfait entre patrimoine et modernité. <strong>Acheter ou louer un bien immobilier</strong> dans ce quartier, c’est s’offrir un accès direct à l’histoire et à l’effervescence culturelle de la capitale alsacienne. Les immeubles de style haussmannien côtoient des bâtiments contemporains, offrant une diversité architecturale qui séduit les amateurs de charme ancien comme ceux en quête de modernité.<br><br>
-        </p>
+  text: <p>Le <strong>Centre-ville de Strasbourg</strong> est un cadre de vie exceptionnel, idéal pour ceux qui recherchent un mélange parfait entre patrimoine et modernité. <strong>Acheter ou louer un bien immobilier</strong> dans ce quartier, c’est s’offrir un accès direct à l’histoire et à l’effervescence culturelle de la capitale alsacienne. Les immeubles de style haussmannien côtoient des bâtiments contemporains, offrant une diversité architecturale qui séduit les amateurs de charme ancien comme ceux en quête de modernité.<br><br></p>
 Conseil des XV:
   url: conseil-des-xv
   cover: quartiers/petite-france.png
-  text: <p>Le Conseil des XV, réputé pour son ambiance résidentielle et ses superbes villas, est une adresse prisée pour l’achat immobilier ou la location à Strasbourg. Proche des institutions européennes, ce quartier séduit par ses rues calmes et arborées, idéales pour les familles et les professionnels en quête de sérénité.<br>Avec ses écoles de qualité, sa proximité avec le Parc de l’Orangerie et ses commerces, le Conseil des XV offre un cadre de vie raffiné où il fait bon s’installer, que ce soit pour louer ou acheter un logement.
-</p>
+  text: <p>Le Conseil des XV, réputé pour son ambiance résidentielle et ses superbes villas, est une adresse prisée pour l’achat immobilier ou la location à Strasbourg. Proche des institutions européennes, ce quartier séduit par ses rues calmes et arborées, idéales pour les familles et les professionnels en quête de sérénité.<br>Avec ses écoles de qualité, sa proximité avec le Parc de l’Orangerie et ses commerces, le Conseil des XV offre un cadre de vie raffiné où il fait bon s’installer, que ce soit pour louer ou acheter un logement.</p>
 Cronenbourg:
   url: cronenbourg
   cover: quartiers/cronenbourg.png
@@ -35,8 +33,7 @@ Gare:
 Hautepierre:
   url: hautepierre
   cover: quartiers/krutenau.png
-  text: <p>Hautepierre, en constante évolution, propose de nombreuses opportunités d’achat immobilier et de location accessibles à tous les budgets. Ses résidences modernes et ses projets d’aménagement récents en font un secteur attractif pour les familles et les jeunes actifs.<br>Avec ses équipements sportifs, ses écoles et son accès direct au tram, Hautepierre offre un cadre de vie pratique et convivial. Ce quartier en plein renouveau reflète parfaitement le dynamisme et la diversité de Strasbourg.
-</p>
+  text: <p>Hautepierre, en constante évolution, propose de nombreuses opportunités d’achat immobilier et de location accessibles à tous les budgets. Ses résidences modernes et ses projets d’aménagement récents en font un secteur attractif pour les familles et les jeunes actifs.<br>Avec ses équipements sportifs, ses écoles et son accès direct au tram, Hautepierre offre un cadre de vie pratique et convivial. Ce quartier en plein renouveau reflète parfaitement le dynamisme et la diversité de Strasbourg.</p>
 Koenigshoffen:
   url: koenigshoffen
   cover: quartiers/petite-france.png
@@ -68,8 +65,7 @@ Neuhof:
 Orangerie:
   url: orangerie
   cover: quartiers/krutenau.png
-  text: <p>L’Orangerie est l’un des quartiers les plus prestigieux de Strasbourg. Connue pour son parc emblématique et ses élégantes demeures, elle offre des opportunités rares d’achat immobilier et de location. Entre appartements spacieux et villas d’exception, ce quartier séduit une clientèle exigeante.<br>Proche des institutions européennes, des commerces et des écoles renommées, l’Orangerie est le lieu idéal pour ceux qui recherchent une vie paisible et raffinée, à quelques minutes du centre-ville.
-</p>
+  text: <p>L’Orangerie est l’un des quartiers les plus prestigieux de Strasbourg. Connue pour son parc emblématique et ses élégantes demeures, elle offre des opportunités rares d’achat immobilier et de location. Entre appartements spacieux et villas d’exception, ce quartier séduit une clientèle exigeante.<br>Proche des institutions européennes, des commerces et des écoles renommées, l’Orangerie est le lieu idéal pour ceux qui recherchent une vie paisible et raffinée, à quelques minutes du centre-ville.</p>
 Petite France:
   url: petite-france
   cover: quartiers/petite-france.png
