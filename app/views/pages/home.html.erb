@@ -48,20 +48,30 @@
     <h2 class="titre styling">Des agences proches de chez vous</h2>
     <ul class="list_agences_home">
         <li>
-            <%= image_tag "agences/strasbourg.png"%>
-            <h3>Strasbourg</h3>
+            <%= link_to strasbourg_path do%>
+                <div>
+                <%= image_tag "agences/strasbourg.png"%>
+                <h3>Strasbourg</h3>
+                </div>
+            <% end %>
         </li>
         <li>
+            <div>
             <%= image_tag "agences/wissembourg.png"%>
             <h3>Wissembourg</h3>
+            </div>
         </li>
         <li>
+            <div>
             <%= image_tag "agences/colmar.png"%>
             <h3>Colmar</h3>
+            </div>
         </li>
         <li>
+            <div>
             <%= image_tag "agences/haguenau.png"%>
             <h3>Haguenau</h3>
+            </div>
         </li>
     </ul>
 </section>
