@@ -1,6 +1,7 @@
 Bourse:
   url: bourse
   cover: quartiers/bourse.png
+  text: <p>Le quartier de la Bourse, idéalement situé entre le centre historique et l'Esplanade, séduit par son calme et son charme authentique. Ses immeubles élégants du début du 20ᵉ siècle, ses espaces verts comme le Parc de l'Étoile et sa proximité des quais en font un lieu de vie recherché. Que vous soyez à la recherche d’un achat immobilier ou d’une location, ce quartier offre des opportunités variées, allant des appartements lumineux aux résidences modernes.<br>Avec ses écoles, ses commerces de proximité et son excellente desserte en transports en commun, la Bourse est un choix idéal pour s’installer et profiter pleinement de la vie à Strasbourg.</p>
 Centre-ville:
   url: centre-ville
   cover: quartiers/kleber.png
@@ -9,6 +10,8 @@ Centre-ville:
 Conseil des XV:
   url: conseil-des-xv
   cover: quartiers/petite-france.png
+  text: <p>Le Conseil des XV, réputé pour son ambiance résidentielle et ses superbes villas, est une adresse prisée pour l’achat immobilier ou la location à Strasbourg. Proche des institutions européennes, ce quartier séduit par ses rues calmes et arborées, idéales pour les familles et les professionnels en quête de sérénité.<br>Avec ses écoles de qualité, sa proximité avec le Parc de l’Orangerie et ses commerces, le Conseil des XV offre un cadre de vie raffiné où il fait bon s’installer, que ce soit pour louer ou acheter un logement.
+</p>
 Cronenbourg:
   url: cronenbourg
   cover: quartiers/cronenbourg.png
@@ -19,9 +22,11 @@ Elsau:
 Esplanade:
   url: esplanade
   cover: quartiers/esplanade.png
+  text: <p>L’Esplanade, quartier jeune et animé de Strasbourg, est particulièrement prisé pour la location, notamment grâce à sa proximité avec le campus universitaire. Ses immeubles modernes proposent également des opportunités d’achat immobilier pour ceux qui recherchent un investissement pratique et bien situé.<br>Commerces, restaurants, transports en commun et espaces verts en font un quartier dynamique où la vie est simple et agréable. Idéal pour les étudiants, les jeunes actifs ou les familles à la recherche de praticité.</p>
 Ganzau:
   url: ganzau
   cover: quartiers/petite-france.png
+  text: <p>La Ganzau, au sud de Strasbourg, est un quartier calme et verdoyant qui attire ceux à la recherche d’un achat immobilier ou d’une location dans un environnement naturel. Avec ses maisons individuelles et ses résidences paisibles, ce quartier offre un cadre idéal pour les familles souhaitant vivre au grand air.<br>Entre son ambiance villageoise, ses connexions rapides avec le centre-ville et son cadre authentique, la Ganzau combine tranquillité et qualité de vie.</p>
 Gare:
   url: gare
   cover: quartiers/gare.png
@@ -29,21 +34,28 @@ Gare:
 Hautepierre:
   url: hautepierre
   cover: quartiers/krutenau.png
+  text: <p>Hautepierre, en constante évolution, propose de nombreuses opportunités d’achat immobilier et de location accessibles à tous les budgets. Ses résidences modernes et ses projets d’aménagement récents en font un secteur attractif pour les familles et les jeunes actifs.<br>Avec ses équipements sportifs, ses écoles et son accès direct au tram, Hautepierre offre un cadre de vie pratique et convivial. Ce quartier en plein renouveau reflète parfaitement le dynamisme et la diversité de Strasbourg.
+</p>
 Koenigshoffen:
   url: koenigshoffen
   cover: quartiers/petite-france.png
+  text: <p>Koenigshoffen, situé à l’ouest de Strasbourg, séduit par son mélange harmonieux entre tradition et modernité. Ce quartier résidentiel, en plein développement, propose une grande diversité de biens, qu’il s’agisse d’achat immobilier ou de location. Entre maisons alsaciennes typiques et résidences récentes, chacun peut y trouver son bonheur.<br>Avec ses commerces, ses écoles et ses espaces verts, Koenigshoffen est particulièrement apprécié des familles et des jeunes actifs. Sa proximité avec le centre-ville, facilement accessible en tram ou en bus, en fait un quartier pratique et convivial où il fait bon vivre.</p>
 Krutenau:
   url: krutenau
   cover: quartiers/krutenau.png
+  text: <p>La Krutenau est sans doute l’un des quartiers les plus emblématiques et vivants de Strasbourg. Connue pour son ambiance bohème et ses ruelles pittoresques, elle attire aussi bien les étudiants que les familles grâce à une offre variée en matière de location et d’achat immobilier.<br>Entre ses petits immeubles anciens, ses maisons typiques et ses boutiques branchées, la Krutenau allie charme et praticité. Proche du centre historique, elle bénéficie d’une excellente accessibilité, tout en offrant une qualité de vie incomparable au cœur de la ville.</p>
 Meinau:
   url: meinau
   cover: quartiers/krutenau.png
+  text: <p>La Meinau, située au sud de Strasbourg, est un quartier prisé pour sa tranquillité et ses nombreux espaces verts. Elle propose des opportunités intéressantes en matière d’achat immobilier et de location, avec des logements modernes et bien entretenus, adaptés aussi bien aux familles qu’aux jeunes actifs.<br>Avec ses infrastructures sportives, ses écoles et sa bonne desserte en transports en commun, la Meinau combine confort de vie et accessibilité. C’est un quartier parfait pour ceux qui recherchent un équilibre entre nature et commodités.</p>
 Montagne Verte:
   url: montagne-verte
   cover: quartiers/krutenau.png
+  text: <p>La Montagne Verte est un quartier paisible, idéal pour ceux qui souhaitent s’éloigner de l’effervescence du centre-ville tout en restant connectés à Strasbourg. Ce secteur résidentiel propose un éventail de biens immobiliers, entre maisons individuelles et appartements récents, disponibles à l’achat ou à la location.<br>Avec ses berges verdoyantes, parfaites pour se promener ou se détendre, et ses infrastructures de proximité, la Montagne Verte offre un cadre de vie serein, parfait pour les familles et les amoureux de nature.</p>
 Musau:
   url: musau
   cover: quartiers/krutenau.png
+  text: <p>La Musau, petit quartier discret de Strasbourg, est parfait pour les familles à la recherche d’un environnement paisible. Ce secteur résidentiel propose principalement des maisons et des appartements confortables, disponibles à l’achat ou à la location, souvent entourés de verdure.<br>Grâce à sa proximité avec les écoles, les parcs et les commerces de quartier, la Musau est idéale pour ceux qui souhaitent vivre dans un cadre convivial tout en profitant de la quiétude de la périphérie strasbourgeoise.</p>
 Neudorf:
   url: neudorf
   cover: quartiers/neudorf.png
@@ -51,9 +63,12 @@ Neudorf:
 Neuhof:
   url: neuhof
   cover: quartiers/krutenau.png
+  text: <p>Le Neuhof, situé au sud de Strasbourg, est un quartier en pleine transformation, offrant de belles opportunités en matière d’achat immobilier et de location. Entre résidences modernes, maisons individuelles et logements récents, il s’adresse à un public varié, des familles aux jeunes actifs.<br>Ce quartier bénéficie de nombreux équipements, d’espaces verts et d’un accès rapide au centre-ville grâce aux transports en commun. Le Neuhof séduit par son dynamisme et ses projets urbains qui le placent au cœur du renouveau strasbourgeois.</p>
 Orangerie:
   url: orangerie
   cover: quartiers/krutenau.png
+  text: <p>L’Orangerie est l’un des quartiers les plus prestigieux de Strasbourg. Connue pour son parc emblématique et ses élégantes demeures, elle offre des opportunités rares d’achat immobilier et de location. Entre appartements spacieux et villas d’exception, ce quartier séduit une clientèle exigeante.<br>Proche des institutions européennes, des commerces et des écoles renommées, l’Orangerie est le lieu idéal pour ceux qui recherchent une vie paisible et raffinée, à quelques minutes du centre-ville.
+</p>
 Petite France:
   url: petite-france
   cover: quartiers/petite-france.png
@@ -65,9 +80,11 @@ Petite France:
 Poteries:
   url: poteries
   cover: quartiers/krutenau.png
+  text: <p>Les Poteries, à l'ouest de Strasbourg, est un quartier moderne et dynamique, idéal pour les familles et les jeunes actifs. Ce secteur propose de nombreux logements récents, accessibles à l’achat immobilier ou à la location, avec une architecture contemporaine pensée pour le confort de vie.<br>Avec ses espaces verts, ses équipements sportifs, ses commerces et son accès facile au tram, les Poteries offrent un cadre de vie agréable, alliant modernité et praticité. Parfait pour ceux qui recherchent un quartier en plein essor, bien connecté au reste de Strasbourg.</p>
 Port du Rhin:
   url: port-du-rhin
   cover: quartiers/krutenau.png
+  text: <p>Situé à la frontière entre la France et l’Allemagne, le Port du Rhin est un quartier en pleine transformation qui attire les adeptes d’ambiances urbaines et modernes. Ce secteur offre de belles perspectives d’achat immobilier et de location, notamment dans des résidences neuves et bien aménagées.<br>Entre son ambiance internationale, ses projets innovants et son accès rapide au centre-ville, le Port du Rhin séduit ceux qui cherchent un cadre de vie alliant dynamisme et modernité, tout en restant proche de Strasbourg et de Kehl.</p>
 Presqu’île Malraux:
   url: presqu-ile-malraux
   cover: quartiers/presqu-ile-malraux.png
@@ -75,12 +92,16 @@ Presqu’île Malraux:
 Robertsau:
   url: robertsau
   cover: quartiers/krutenau.png
+  text: <p>La Robertsau, au nord-est de Strasbourg, est un quartier recherché pour son cadre verdoyant et son ambiance villageoise. Que ce soit pour l’achat immobilier ou la location, ce secteur propose une diversité de biens; maisons familiales, appartements spacieux et logements modernes.<br>Avec ses nombreux parcs, sa proximité avec les institutions européennes et son esprit convivial, la Robertsau est idéale pour les familles ou les amoureux de nature souhaitant s’installer dans un cadre préservé à deux pas de Strasbourg.</p>
 Stockfeld:
   url: stockfeld
   cover: quartiers/krutenau.png
+  text: <p>Le Stockfeld, niché dans le sud du Neuhof, est un véritable havre de paix. Avec ses petites maisons entourées de jardins et ses rues calmes, ce quartier séduit particulièrement les familles à la recherche d’une location ou d’un achat immobilier dans un environnement serein et verdoyant.<br>Ce secteur, marqué par son ambiance résidentielle, bénéficie d’une belle connexion avec le centre-ville grâce aux transports en commun. Stockfeld est parfait pour ceux qui souhaitent profiter de la tranquillité tout en restant proches des commodités de Strasbourg.</p>
 Tribunal:
   url: tribunal
   cover: quartiers/krutenau.png
+  text: <p>Le quartier du Tribunal, situé en plein cœur de Strasbourg, est un lieu privilégié pour les amateurs de charme et de raffinement. Il offre des opportunités d’achat immobilier et de location dans des immeubles haussmanniens ou des résidences modernes de standing.<br>Avec ses bâtiments majestueux, ses commerces de proximité et sa localisation idéale à deux pas des institutions judiciaires et des lieux culturels, ce quartier séduira ceux qui recherchent un cadre de vie prestigieux et central.</p>
 Wacken:
   url: wacken
   cover: quartiers/krutenau.png
+  text: <p>Le Wacken, connu comme le quartier des affaires de Strasbourg, est un secteur dynamique qui attire aussi bien les professionnels que les familles. Entre résidences modernes et appartements confortables, ce quartier offre de belles options pour un achat immobilier ou une location.<br>Proche des institutions européennes, du Palais des Congrès et du Parc de l’Orangerie, le Wacken bénéficie d’un emplacement stratégique. Son excellent réseau de transports en fait un choix idéal pour ceux qui souhaitent concilier vie professionnelle et cadre de vie agréable.</p>
