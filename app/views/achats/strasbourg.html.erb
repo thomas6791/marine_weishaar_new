@@ -1,7 +1,15 @@
 <article class="">
+<section class="quartier_intro inside petite_france">
+    <%= image_tag "agences/strasbourg.png", width: 500, height:500;%>
+    <h1>Strasbourg</h1>
+    <div class="quartier_intro_text">
+        <%= sanitize @intro_text %>
+    </div>
+</section>
     <section class="inside">
-        <h1>Annonces immobilieres Strasbourg</h1>
-        <ul class="filtre_tags">
+        
+
+        <ul class="filtre_tags quartiers_strasbourg">
             <% @quartiers.keys.each do |quartier_name| %>
                 <li class="raccourci_achat"><%= link_to quartier_name, strasbourg_quartier_path(quartier_name.downcase.parameterize(separator: '-'))%></li>
             <% end %>

@@ -173,6 +173,7 @@ class AchatsController < ApplicationController
   def strasbourg
     @annonces = Annonce.all
     @quartiers = YAML.load_file('config/datas/quartiers.yml')
+    @intro_text = "<p>Vous recherchez un appartement, une maison ou un bien commercial à Strasbourg ? Que vous soyez à la recherche de votre premier logement, d’un investissement locatif ou d'une propriété de prestige, nous vous offrons un accompagnement personnalisé pour concrétiser votre projet immobilier.</p>"
   end
 
   def strasbourg_quartier
