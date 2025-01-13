@@ -13,7 +13,10 @@
       <%= f.input :price,label:"Prix", placeholder:"Prix du bien €",label:false %>
     </div>
     
-    <%= f.input :description,placeholder:"Description",:input_html => {:rows => 25} %>
+    <div class="field">
+      <%= f.label :description %>
+      <%= f.rich_text_area :description,:input_html => {:rows => 25} %>
+    </div>
     <% @annonce.photos.each do |image| %>
         <%= f.hidden_field :photos, multiple: true, value: image.signed_id %>
     <% end %>
