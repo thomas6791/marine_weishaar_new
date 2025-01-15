@@ -16,6 +16,12 @@ export default class extends Controller {
 
     this.geocoder.on("result", event => this.#setInputValue(event))
     this.geocoder.on("clear", () => this.#clearInputValue())
+
+    if (document.getElementsByTagName("h1")[0].dataset.address !== undefined && document.getElementsByTagName("h1")[0].dataset.address !== ''){
+      document.querySelector(".mapboxgl-ctrl-geocoder--input").placeholder = document.getElementsByTagName("h1")[0].dataset.address
+    }
+    
+    //document.querySelector(".mapboxgl-ctrl-geocoder--input").placeholder
   }
 
   #setInputValue(event) {

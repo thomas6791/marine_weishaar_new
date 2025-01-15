@@ -1,7 +1,7 @@
 class AchatsController < ApplicationController
   def index
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
-    if params[:query].present?
+    if params[:query].present? && params[:query]["address"] != ""
       @address = params[:query][:address]
       coordinates = Geocoder.search(@address).first.coordinates if @address != ""
       

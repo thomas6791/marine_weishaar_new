@@ -1,9 +1,16 @@
 
 
-<article class="">
+<article class="achat_index">
     <section class="inside">
-        <h1>Annonces immobilières</h1>
+        <h1 data-address="<%= @address %>">Annonces immobilières</h1>
         <%= link_to "Strasbourg", strasbourg_path() %>
+        <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+            <%= f.input :address,
+                    input_html: {data: {address_autocomplete_target: "address"}},
+                    wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]},class: "d-none"} 
+                %>
+            <%= f.submit "Rechercher", class: "btn btn-primary" %> 
+        <% end %>
         <div data-controller="filters">
             <ul class="filtre_tags">
                 <%= simple_form_for :annonces_filtres,class:"form_filters" ,url: rent_filter_path,data:{filters_target: "category_form"} do |f| %>
