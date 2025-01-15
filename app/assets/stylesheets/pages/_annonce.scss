@@ -47,6 +47,21 @@
     .annonce_show_titre {font-size: 2em; color: black;}
 }
 
+.achat_index .simple_form.query {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    label {display: none;}
+    .query_address {width: 100%;}
+    input[type=submit] {background-color: black;color:white;padding: 0;
+        border-radius: 25px;
+        padding: 0 1em;
+        cursor: pointer;
+    }
+    #query_address {display: none;}
+    .mapboxgl-ctrl-geocoder.mapboxgl-ctrl{margin: 0;}
+}
+
 @media only screen and (max-width: 40em) {
     #map {display: none;}
     .filtre_tags {overflow-x: scroll;}
