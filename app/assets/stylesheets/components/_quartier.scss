@@ -56,3 +56,21 @@
 }
 .map_quartier {height: 300px; #map {height: 100%;}}
 
+@media only screen and (max-width: 40em) {
+    .quartier_intro {
+        position: inherit;
+        flex-direction: column;
+        .quartier_intro_mobile {
+            position: relative;
+            display: flex;
+            img {width: 100%;object-fit: cover;}
+            h1 {left: 0;bottom: 5rem; font-size: 4rem;text-align: center;width: 100%;}
+        }
+        .quartier_intro_text {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            p{margin: 0;}
+        }
+    }
+}
