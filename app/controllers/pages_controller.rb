@@ -18,8 +18,7 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-    fail
-    ContactMailer.contact_email.delivery_now
+    ContactMailer.contact_email.deliver_now
   end
 
   def agences
