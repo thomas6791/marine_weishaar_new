@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-    default from: "contact@marine-weishaar.com"
+    default from: "test@marine-weishaar.com"
     
     def contact_email
         mail(to: "hunckler.thomas@hotmail.fr", subject:"test")
