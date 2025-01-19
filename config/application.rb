@@ -24,7 +24,7 @@ module MarineWeishaarNew
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { api_token: Rails.application.credentials.postmark_api_token }
-    
+    config.action_mailer.postmark_settings = { :api_token => "68408476-292e-488b-bb07-3bd281659e7d" }
+
   end
 end
