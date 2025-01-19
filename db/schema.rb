@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_13_104021) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_19_095923) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -143,6 +143,44 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_13_104021) do
     t.string "price_currency_currency"
     t.integer "price_metre_cents", default: 0, null: false
     t.string "price_metre_currency", default: "EUR", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "titre"
+    t.string "city"
+    t.string "zipcode"
+    t.text "description"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
+    t.string "quartier"
+    t.float "surface"
+    t.string "dpe"
+    t.string "ges"
+    t.string "country"
+    t.string "ref_annonce"
+    t.integer "nb_pieces"
+    t.integer "nb_etage"
+    t.string "chauffage"
+    t.string "chauffage_mode"
+    t.string "etat_general"
+    t.datetime "annee_construction"
+    t.boolean "cave", default: false
+    t.boolean "ascenseur", default: false
+    t.boolean "copropriete", default: false
+    t.boolean "cuisine_equipee", default: false
+    t.boolean "jardin", default: false
+    t.boolean "balcon", default: false
+    t.boolean "terrasse", default: false
+    t.boolean "garage", default: false
+    t.string "type_bien"
+    t.boolean "colocation", default: false
+    t.integer "loyer_cents", default: 0, null: false
+    t.string "loyer_currency", default: "EUR", null: false
+    t.integer "charges_cents", default: 0, null: false
+    t.string "charges_currency", default: "EUR", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
