@@ -80,7 +80,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = false
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -100,8 +100,17 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
-  config.action_mailer.delivery_method     = :postmark
-  config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "mail.smtp2go.com",
+    port: 2525, # 8025, 587 and 25 can also be used.
+    domain: "www.marine-weishaar.com",
+    authentication: "plain",
+    enable_starttls_auto: true,
+    user_name: "Marine Weishaar",
+    password: "MerciUnclair"
+   }
+  #config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
   config.action_mailer.default_url_options = { host: "www.marine-weishaar.com" }
 
 end
