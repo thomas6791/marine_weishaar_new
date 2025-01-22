@@ -107,8 +107,8 @@ Rails.application.configure do
     domain: "www.marine-weishaar.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "Marine Weishaar",
-    password: "MerciUnclair"
+    user_name: "marine-weishaar.com",
+    password: "EvUB4QoGEhCJanR4"
    }
    config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
