@@ -108,7 +108,7 @@ Rails.application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "marine-weishaar.com",
-    password: "UJxFrARIz63py37E"
+    password: ENV['SMTP2GO_PASSWORD']
    }
    config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
