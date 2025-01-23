@@ -104,11 +104,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "mail.smtp2go.com",
     port: 2525, # 8025, 587 and 25 can also be used.
-    domain: "www.marine-weishaar.com",
+    domain: "marine-weishaar.com",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: "marine-weishaar.com",
-    password: "EvUB4QoGEhCJanR4"
+    password: "UJxFrARIz63py37E"
    }
    config.action_mailer.raise_delivery_errors = true
   #config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
