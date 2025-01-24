@@ -18,7 +18,13 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-    ContactMailer.contact_email.deliver_now
+  
+    @object = params[:contact][:person]
+    @sender = params[:contact][:email]
+    @person = params[:contact][:lastname] + " " +params[:contact][:firstname]
+    @tel = params[:contact][:tel]
+    @message = params[:contact][:message]
+    ContactMailer.with(object:@object,sender:@sender,person:@person,tel:@tel,message:@message).contact_email.deliver_now
   end
 
   def agences
