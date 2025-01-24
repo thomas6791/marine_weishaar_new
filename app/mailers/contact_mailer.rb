@@ -7,7 +7,7 @@ class ContactMailer < ApplicationMailer
         @person = params[:person]
         @tel = params[:tel]
         @message = params[:message]
-        mail(to: "mw@marine-weishaar.com")
+        mail(to: "hunckler.thomas@hotmail.fr")
         #@user = params[:user]
         #@url  = "http://example.com/login"
         #mail(to: @user.email, subject: "Welcome to My Awesome Site")
