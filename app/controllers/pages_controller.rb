@@ -18,13 +18,16 @@ class PagesController < ApplicationController
   end
 
   def send_contact
-  
-    @object = params[:contact][:person]
-    @sender = params[:contact][:email]
-    @person = params[:contact][:lastname] + " " +params[:contact][:firstname]
-    @tel = params[:contact][:tel]
-    @message = params[:contact][:message]
-    ContactMailer.with(object:@object,sender:@sender,person:@person,tel:@tel,message:@message).contact_email.deliver_now
+    if params[:contact][:hidden_message].present?
+      redirect_to request.referrer
+    else
+      @object = params[:contact][:person]
+      @sender = params[:contact][:email]
+      @person = params[:contact][:lastname] + " " +params[:contact][:firstname]
+      @tel = params[:contact][:tel]
+      @message = params[:contact][:message]
+      ContactMailer.with(object:@object,sender:@sender,person:@person,tel:@tel,message:@message).contact_email.deliver_now
+    end
   end
 
   def agences
