@@ -182,6 +182,11 @@ form {
         cursor: pointer;
     }
 }
+.contact_hidden_message {
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
 #filtersDialog {
     position:fixed;
     width: 505px;
