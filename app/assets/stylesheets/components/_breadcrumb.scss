@@ -1,0 +1,14 @@
+#breadcrumb {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    a {
+        text-decoration: none; color: grey;
+        &:hover {text-decoration: underline;}
+    }
+    img {
+        width: 1.5em;
+    }
+}
