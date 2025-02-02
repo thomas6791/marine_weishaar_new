@@ -20,6 +20,14 @@
     <p class="alert"><%= alert %></p>
     <main>
       <article>
+        <div id="breadcrumb" class="inside">
+          <% if params[:action] != "home" %>
+          <%= link_to root_path do %>
+            <%= image_tag "pictos/house.png"%>
+          <% end %>
+          <% end  %>
+          <%= render_breadcrumbs %>
+        </div>
         <%= yield %>
       </article>
     </main>
