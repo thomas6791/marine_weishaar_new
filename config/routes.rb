@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post '/send', to:"pages#send_contact"
   get '/message_send', to: "pages#message_send"
   get '/gestion-locative', to:  "pages#gestion_locative"
+  get '/gestion-locative/:ville',to: "pages#gestion_locative_ville", as: :gestion_loc_ville
 
   get '/mentions',to: "pages#mentions"
   get '/confidentialite', to: "pages#confidentialite"
