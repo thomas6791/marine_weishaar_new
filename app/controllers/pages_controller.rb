@@ -4,6 +4,7 @@ class PagesController < ApplicationController
     @annonces = Annonce.all
     @last_annonces = Annonce.last(5)
     @icones = YAML.load_file('config/datas/icones.yml')
+    @page_title = "Marine Weishaar | Agent immobilier"
   end
 
   def about
@@ -14,7 +15,7 @@ class PagesController < ApplicationController
     #"https://maps.googleapis.com/maps/api/place/textsearch/json?query=salon+de+beaute+in+Strasbourg&key=AIzaSyC74ObwjB-HWFHBjvCyZUpgduKw-uQQ7a4"
     #"https://maps.googleapis.com/maps/api/place/textsearch/json?query=pharmacie+in+Strasbourg&key=AIzaSyC74ObwjB-HWFHBjvCyZUpgduKw-uQQ7a4"
     #puts response.body, response.code, response.message, response.headers.inspect
-
+    @page_title = "Contact | Marine Weishaar Immobilier"
   end
 
   def send_contact

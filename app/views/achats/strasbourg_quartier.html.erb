@@ -1,7 +1,7 @@
 <section class="quartier_intro inside petite_france">
     <div class="quartier_intro_mobile">
-        <%= image_tag @cover, width: 500, height:500;%>
-        <h1><%= @quartier_name %></h1>
+        <h1><%= image_tag @cover, width: 500, height:500,alt:"Achat & location d'appartements - quartier #{@quartier_name} - Strasbourg";%></h1>
+        <h2 class="titre_quartier_show"><%= @quartier_name %></h1>
     </div>
     <div class="quartier_intro_text">
         <%= sanitize @quartier_text %>

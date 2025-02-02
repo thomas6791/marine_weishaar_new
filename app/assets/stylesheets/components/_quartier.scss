@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     img {}
-    h1 {
+    .titre_quartier_show {
         font-family: "Inter", sans-serif;
         color: white;
         text-shadow: 6.10444px 6.10444px 32.0483px rgba(0, 0, 0, 0.25);
@@ -11,7 +11,7 @@
         position: absolute;
     }
     &.krutenau, &.petite_france {
-        h1 {left: 130px;bottom: 60px;}
+        .titre_quartier_show {left: 130px;bottom: 60px;}
     }
     .quartier_intro_text {
         display: flex;
@@ -64,7 +64,7 @@
             position: relative;
             display: flex;
             img {width: 100%;object-fit: cover;}
-            h1 {left: 0;bottom: 5rem; font-size: 4rem;text-align: center;width: 100%;}
+            .titre_quartier_show {left: 0;bottom: 5rem; font-size: 4rem;text-align: center;width: 100%;}
         }
         .quartier_intro_text {
             width: 100%;

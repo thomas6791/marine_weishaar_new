@@ -1,5 +1,6 @@
 class AchatsController < ApplicationController
   def index
+    @page_title = "Achat immobilier | Marine Weishaar Immobilier"
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
     if params[:query].present? && params[:query]["address"] != ""
       @address = params[:query][:address]
@@ -171,6 +172,7 @@ class AchatsController < ApplicationController
   end
 
   def strasbourg
+    @page_title = "Achat d'appartements et maisons à Strasbourg | Marine Weishaar Immobilier"
     @annonces = Annonce.all
     @quartiers = YAML.load_file('config/datas/quartiers.yml')
     @intro_text = "<p>Vous recherchez un appartement, une maison ou un bien commercial à Strasbourg ? Que vous soyez à la recherche de votre premier logement, d’un investissement locatif ou d'une propriété de prestige, nous vous offrons un accompagnement personnalisé pour concrétiser votre projet immobilier.</p>"
@@ -188,6 +190,8 @@ class AchatsController < ApplicationController
     
     @annonces = Annonce.all
     @autres_quartiers = YAML.load_file('config/datas/quartiers.yml')
+
+    @page_title = "Achat & location d'appartements et maisons | #{@quartier_name}, Strasbourg | Marine Weishaar Immobilier"
   end
 
  
