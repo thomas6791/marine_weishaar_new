@@ -25,7 +25,7 @@ ul,li {
     padding-right: 10px;
     margin: auto;
 }
-main {margin-top: 9rem;}
+main {margin-top: 9rem; min-height: 100vh;}
 .grid {display: grid;
     &.columns_2 {grid-template-columns: repeat(2,1fr);gap:10px;}
     &.columns_3 {grid-template-columns: repeat(3,1fr);gap:10px;}

@@ -28,7 +28,11 @@ class PagesController < ApplicationController
       @tel = params[:contact][:tel]
       @message = params[:contact][:message]
       ContactMailer.with(object:@object,sender:@sender,person:@person,tel:@tel,message:@message).contact_email.deliver_now
+      redirect_to message_send_path()
     end
+  end
+
+  def message_send
   end
 
   def agences
@@ -41,12 +45,16 @@ class PagesController < ApplicationController
   end
 
   def mentions
+    @page_title = "Mentions légales | Marine Weishaar Immobilier"
   end
   def confidentialite
+    @page_title = "Politique de confidentialité | Marine Weishaar Immobilier"
   end
   def cookies
+    @page_title = "Gestion des cookies | Marine Weishaar Immobilier"
   end
   def plan_site
+    @page_title = "Plan du site | Marine Weishaar Immobilier"
   end
 
 end
