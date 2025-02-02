@@ -176,7 +176,7 @@ class AchatsController < ApplicationController
     @page_title = "Achat d'appartements et maisons à Strasbourg | Marine Weishaar Immobilier"
     @annonces = Annonce.all
     @quartiers = YAML.load_file('config/datas/quartiers.yml')
-    @intro_text = "<p>Vous recherchez un appartement, une maison ou un bien commercial à Strasbourg ? Que vous soyez à la recherche de votre premier logement, d’un investissement locatif ou d'une propriété de prestige, nous vous offrons un accompagnement personnalisé pour concrétiser votre projet immobilier.</p>"
+    @intro_text = "<p>Vous recherchez un <strong>appartement, une maison ou un bien commercial</strong> à <strong>Strasbourg</strong> ? Que vous soyez à la recherche de votre premier logement, d’un investissement locatif ou d'une propriété de prestige, nous vous offrons un accompagnement personnalisé pour concrétiser votre projet immobilier.</p>"
     add_breadcrumb "Nos annonces immobilières", annonces_path
     add_breadcrumb "Strasbourg", strasbourg_path
   end
@@ -198,7 +198,7 @@ class AchatsController < ApplicationController
     add_breadcrumb "Accueil", root_path
     add_breadcrumb "Nos annonces immobilières", annonces_path
     add_breadcrumb "Strasbourg", strasbourg_path
-    add_breadcrumb "#{@quartier_name}", strasbourg_quartier_path(@quartier_name.downcase.gsub!(" ","-"))
+    add_breadcrumb "#{@quartier_name}", @quartier_name.include?(" ") ? strasbourg_quartier_path(@quartier_name.downcase.gsub!(" ","-")) : strasbourg_quartier_path(@quartier_name.downcase)
   end
 
  
