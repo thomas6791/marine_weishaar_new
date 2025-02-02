@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'pages/about'
   get '/contact', to: "pages#contact"
   post '/send', to:"pages#send_contact"
+  get '/message_send', to: "pages#message_send"
   get '/gestion-locative', to:  "pages#gestion_locative"
 
   get '/mentions',to: "pages#mentions"
