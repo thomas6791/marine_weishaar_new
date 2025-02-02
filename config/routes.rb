@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   get 'locations/appartements', to: "locations#appartements"
   get 'locations/maisons', to: "locations#maisons"
 
+  get "commerces", to: "commerces#index"
+
   resources :agences do
     collection do
       get "agence-immobiliere-strasbourg", to: "agences#orangerie", as: "strasbourg"

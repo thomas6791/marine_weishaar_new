@@ -198,7 +198,7 @@ class AchatsController < ApplicationController
     add_breadcrumb "Accueil", root_path
     add_breadcrumb "Nos annonces immobilières", annonces_path
     add_breadcrumb "Strasbourg", strasbourg_path
-    add_breadcrumb "#{@quartier_name}", strasbourg_quartier_path(@quartier_name.downcase.gsub!(" ","-"))
+    add_breadcrumb "#{@quartier_name}", @quartier_name.include?(" ") ? strasbourg_quartier_path(@quartier_name.downcase.gsub!(" ","-")) : strasbourg_quartier_path(@quartier_name.downcase)
   end
 
  
