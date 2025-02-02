@@ -39,6 +39,14 @@ class PagesController < ApplicationController
   end
 
   def gestion_locative
+    @villes = YAML.load_file('config/datas/villes_gestion_locative.yml')
+    add_breadcrumb "Gestion locative", gestion_locative_path
+  end
+
+  def gestion_locative_ville
+    @ville = params[:ville]
+    add_breadcrumb "Gestion locative", gestion_locative_path
+    add_breadcrumb "#{@ville.capitalize}"
   end
 
   def full_list

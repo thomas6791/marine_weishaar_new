@@ -1,0 +1,8 @@
+<section class="inside">
+<h1>Gestion locative</h1>
+<ul>
+<% @villes.keys.each do |ville| %>
+<li><%= link_to ville, gestion_loc_ville_path(ville) %></li>
+<% end %>
+</ul>
+</section>
