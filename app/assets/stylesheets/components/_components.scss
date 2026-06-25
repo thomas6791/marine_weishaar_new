@@ -24,11 +24,11 @@
 }
 .card_annonce {
     * {margin: 0;padding: 0;}
-    font-family: "Montserrat", sans-serif;
+    font-family: $headers-font;
     display: flex;
     max-width: 500px;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 20px;
     width: 100%;
     max-width: 590px;
     height: fit-content;
@@ -51,15 +51,16 @@
         position: relative;
         img {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 15px 15px 0 0;
         }
         span {
             position: absolute; bottom: 10px; left: 5px; background-color: transparent;
-            border: solid 1px white;
-            color: white;
+            //border: solid 1px white;
+            color: $ardoise;
             padding: 2px 15px;
             border-radius: 2px;
             font-size: 0.8em;
+            background-color: $sable;
         }
     }
     .card_desc {
@@ -67,11 +68,29 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        h2 {font-size: 1.2em;}
-        .card_flex {font-size: 0.9em;}
+        padding: 18px 20px 20px;
+        background-color: $creme;
+        h2 {font-size: 1.4em; font-weight: 600;}
+        .card_flex {font-size: 0.9em; align-items: center;}
+        .card_flex.last {
+            border-top: solid 1px #F0E7DA;
+            padding-top: 0.5em;
+            margin-top: 1em;
+        }
+        .card_price {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: $terre_cuite;
+            font-family: $headers-font;
+        }
     }
     &:hover {
         border: solid 1px lightgray;
+    }
+    .card_localisation {
+        display: flex;
+        align-items: center;
+        gap: 5px;
     }
 }
 

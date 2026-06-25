@@ -35,7 +35,8 @@
     }
 }
 .titre.styling {
-    font-family: "Nothing you could do";
+    //font-family: "Nothing you could do";
+    font-family: $headers-font;
     text-align: center;
     font-size: 2rem;
 }
@@ -45,7 +46,7 @@
     list-style: none;
     gap:1em;
     .prestation h3 {
-        font-family: "Inter";
+        font-family: $headers-font;
         font-weight: 500;
     }
 }
