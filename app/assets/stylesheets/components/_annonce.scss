@@ -71,6 +71,11 @@
         }
         .annonce_card__statut {position: absolute;top: 0;left:0;}
     }
+    .card_img{
+        position: relative;
+        .card_header_float{
+        }
+    }
 }
 .annonce_card_composants {
     list-style: none;
