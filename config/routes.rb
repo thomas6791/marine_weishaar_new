@@ -66,9 +66,10 @@ Rails.application.routes.draw do
     get "/haut-rhin", to: "achats#haut_rhin"
     get "/strasbourg", to: "achats#strasbourg"
     get "/test", to: "achats#test"
-    scope "strasbourg" do
-      get '/:quartier', to: "achats#strasbourg_quartier", as: :strasbourg_quartier
-    end
+  end
+
+  scope "strasbourg" do
+    get '/:quartier', to: "achats#strasbourg_quartier", as: :strasbourg_quartier
   end
 
   post "full_list", to: "pages#full_list"

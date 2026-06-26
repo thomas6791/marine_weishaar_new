@@ -76,6 +76,10 @@
             border-top: solid 1px #F0E7DA;
             padding-top: 0.5em;
             margin-top: 1em;
+            p{
+                display: flex;
+                align-items: center;
+            }
         }
         .card_price {
             font-size: 1.5em;

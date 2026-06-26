@@ -11,12 +11,12 @@
         </div>
         <div class="card_flex grey">
             <p class="card_localisation"><%= image_tag "pictos/terracotta/localisation.png", class: "",width: "20px", height: "20px" %> <%= annonce.zipcode %> <%= annonce.city %></p>
-            <p><%=annonce.price_metre %> €/m<sup>2</sup></p>
+            <p><%= humanized_money annonce.price_metre %> €/m<sup>2</sup></p>
         </div>
         <div class="card_flex last">
-            <p><%= annonce.surface.to_i %>m<sup>2</sup></p>
-            <p>6 pièces</p>
-            <p>3 ch.</p>
+            <p><%= image_tag "pictos/terracotta/surface.png", class: "",width: "20px", height: "20px" %><%= annonce.surface.to_i %>m<sup>2</sup></p>
+            <p><%= image_tag "pictos/terracotta/pieces.png", class: "",width: "20px", height: "20px" %><%= annonce.nb_pieces %> pièces</p>
+            <p><%= image_tag "pictos/terracotta/chambres.png", class: "",width: "20px", height: "20px" %><%= annonce.nb_chambres %> ch.</p>
         </div>
     </div>
 </div>
