@@ -39,6 +39,6 @@ class AnnoncesController < ApplicationController
   end
 
   def annonce_params
-    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:description,:surface,:dpe,:ges,:type_bien,:price,:ref_annonce,:nb_pieces,:nb_etage,:chauffage,:chauffage_mode,:etat_general,:annee_construction,:ascenseur,:copropriete,:cuisine_equipee,:jardin,:balcon,:terrasse,:garage ,photos:[])
+    params.require(:annonce).permit(:titre, :city,:address,:zipcode,:latitude,:longitude,:quartier,:country,:description,:surface,:dpe,:ges,:type_bien,:price,:ref_annonce,:nb_pieces,:nb_etage,:nb_chambres,:chauffage,:chauffage_mode,:etat_general,:annee_construction,:ascenseur,:copropriete,:cuisine_equipee,:jardin,:balcon,:terrasse,:garage ,photos:[])
   end
 end
