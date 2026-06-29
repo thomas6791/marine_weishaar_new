@@ -98,7 +98,7 @@
         gap: 2px;
         font-family: $body-font;
         background-color: $ardoise;
-        border-radius: 2px 2px 0 0;
+        border-radius: 7px 7px 0 0;
         padding: 4px;
         input,label {cursor: pointer;}
         .input.boolean.optional, a{
@@ -135,6 +135,17 @@
         background-color: $creme;
         display: flex;
         align-items: center;
+    }
+}
+.form_select_address{
+    justify-content: space-between;
+    padding: 15px;
+    .input {display: flex; flex-direction:column;}
+    input[type="submit"]{
+        cursor: pointer;
+        border: none;
+        background-color: $terre_cuite;
+        font-family: $body-font;
     }
 }
 

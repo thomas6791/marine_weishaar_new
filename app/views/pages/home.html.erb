@@ -11,12 +11,12 @@
                 </div>
                 <div class="form_select_address">
                 <%= f.input :address,
-                    input_html: {data: {address_autocomplete_target: "address"}}, label: false,
+                    input_html: {data: {address_autocomplete_target: "address"}}, label: "Localisation", required: false,
                     wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]},class: "d-none"} 
                 %>
-                <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max",as: :integer,step: 1000 %>
-                <%= f.input :surface, placeholder:"min m2",class:"surface",as: :integer %>
-                <%= f.input :nb_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
+                <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max",as: :integer,step: 1000, required: false %>
+                <%= f.input :surface, placeholder:"min m2",class:"surface",as: :integer, required: false %>
+                <%= f.input :nb_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces", required: false %>
                 
                 <%= f.submit "Rechercher", class: "btn btn-primary" %>
                 </div>
