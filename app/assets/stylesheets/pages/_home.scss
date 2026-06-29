@@ -83,6 +83,42 @@
     margin-bottom: 3em;
 }
 
+#new_banner_home{
+    height: 100vh;
+    background: no-repeat url("https://media.istockphoto.com/id/1479197740/fr/photo/vue-panoramique-pittoresque-de-strasbourg-dans-le-quartier-historique-de-la-petite-france.jpg?s=2048x2048&w=is&k=20&c=NrG8jqArHZ94umXw6kX05e2HYbe-D9Sl7s3zi6xPZok=");
+    background-size: cover;
+    background-position: center;
+}
+.searchbar_home{
+    .form_select_action{
+        background-color: $ardoise;
+        display: flex;
+        align-items: baseline;
+        width: fit-content;
+        font-family: $body-font;
+        .input.boolean.optional{
+            height: 100%;
+            display: flex;
+        }
+        .boolean.optional.checkbox, a{
+            text-decoration: none;
+            color: $sable;
+            font-size: 15px;
+            padding: 11px 28px;
+            input{visibility: hidden; width: 0; height: 0;}
+            //document.querySelector(".form_select_action").querySelectorAll('input[type="checkbox"]')[0].checked
+        }
+        .boolean.optional.checkbox:checked{
+            color: red;
+        }
+    }
+    .form_select_address {
+        display: flex;
+        align-items: center;
+        background-color: $creme;
+    }
+}
+
 @media only screen and (max-width: 40em) {
     .search_home {
         flex-direction: column;
