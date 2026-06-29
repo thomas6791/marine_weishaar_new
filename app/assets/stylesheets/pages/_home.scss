@@ -156,9 +156,12 @@
         }
     }
 }
+.form_select_boxes{
+    background-color: $white;
+    padding: 15px;
+}
 .form_select_address{
     justify-content: space-between;
-    padding: 15px;
     gap: 8px;
     .input {display: flex; flex-direction:column;}
     input[type="submit"]{
@@ -198,6 +201,8 @@
 }
 .select_types_biens{
     padding: 15px;
+    border-top: solid 1px #f0e7da;
+    margin-top: 20px;
 }
 .form_submit{
     min-height: 5em;

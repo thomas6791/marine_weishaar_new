@@ -16,7 +16,7 @@ class AchatsController < ApplicationController
         @annonces = Annonce.all
       end
 
-      fail
+   
       case params[:query][:action]
       when "Louer"
         redirect_to locations_path()
