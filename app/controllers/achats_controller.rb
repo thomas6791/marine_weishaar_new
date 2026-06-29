@@ -101,7 +101,17 @@ class AchatsController < ApplicationController
         end
         add_breadcrumb "Nos annonces immobilières", annonces_path
       end
-    else params[:query][:action] == nil
+    else
+      @annonces = Annonce.all
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
+      end
+      add_breadcrumb "Nos annonces immobilières", annonces_path
       
     end
     
