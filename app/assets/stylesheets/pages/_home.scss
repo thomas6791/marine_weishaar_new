@@ -133,28 +133,84 @@
     }
     .form_select_address {
         display: flex;
-        align-items: center;
-        background-color: $creme;
+        align-items: end;
+        background-color: $white;
+        .query_address{min-width: 35%;}
+        input, .input.select {
+            background-color: $creme; border: none; font-family: $body-font;
+            border-radius: 6px;
+            height: 50px;
+            border: solid 1px $sable;
+            padding: 0px 10px;
+        }
     }
     .select_types_biens{
-        background-color: $creme;
+        background-color: $white;
         display: flex;
-        align-items: center;
+        align-items: baseline;
+        input {background-color: $creme; border: none; font-family: $body-font;
+            border-radius: 6px;
+            height: 50px;
+            border: solid 1px $sable;
+            padding: 0px 10px;
+        }
     }
 }
 .form_select_address{
     justify-content: space-between;
     padding: 15px;
+    gap: 8px;
     .input {display: flex; flex-direction:column;}
     input[type="submit"]{
         cursor: pointer;
         border: none;
         background-color: $terre_cuite;
         font-family: $body-font;
+        color: $white;
     }
+
+    .input.optional{
+        width: 15%;
+    }
+    ::placeholder {
+        text-align: left; 
+    }
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+   text-align: left;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: left;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: left;  
+}
+
+:-ms-input-placeholder {  
+   text-align: left; 
+}
+
+
 }
 .select_types_biens{
     padding: 15px;
+}
+.form_submit{
+    min-height: 5em;
+    display: flex;
+    align-items: end;
+    width: 20%;
+    input[type="submit"]{
+        width: 100%;
+    }
+}
+.mapboxgl-ctrl-geocoder {
+    margin: 0;
+    svg{display: none;}
 }
 
 @media only screen and (max-width: 40em) {
