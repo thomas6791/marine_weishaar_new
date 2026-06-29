@@ -3,8 +3,8 @@ class AchatsController < ApplicationController
     @page_title = "Achat immobilier | Marine Weishaar Immobilier"
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
 
-    params[:query][:action] = "Acheter" if params[:query][:acheter] == "1"
-    params[:query][:action] = "Louer" if params[:query][:louer] == "1"
+    params[:query][:action] = "Acheter" if params[:acheter] == "1"
+    params[:query][:action] = "Louer" if params[:louer] == "1"
 
     if params[:query].present? && params[:query]["address"] != ""
       @address = params[:query][:address]

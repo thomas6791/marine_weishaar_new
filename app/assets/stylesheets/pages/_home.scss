@@ -90,15 +90,32 @@
     background-position: center;
 }
 .searchbar_home{
+    .simple_form {border: none;}
     .form_select_action{
-        background-color: $ardoise;
         display: flex;
         align-items: baseline;
         width: fit-content;
+        gap: 2px;
         font-family: $body-font;
-        .input.boolean.optional{
+        background-color: $ardoise;
+        border-radius: 2px 2px 0 0;
+        padding: 4px;
+        input,label {cursor: pointer;}
+        .input.boolean.optional, a{
             height: 100%;
             display: flex;
+            background-color: $ardoise;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: $terre_cuite; a{color: $creme;}
+                label {color: creme;}
+            }
+        }
+        .boolean.optional.checked{
+            background-color: $terre_cuite;
+            border-radius: 5px;
+            label {color: creme;}
         }
         .boolean.optional.checkbox, a{
             text-decoration: none;
@@ -107,9 +124,6 @@
             padding: 11px 28px;
             input{visibility: hidden; width: 0; height: 0;}
             //document.querySelector(".form_select_action").querySelectorAll('input[type="checkbox"]')[0].checked
-        }
-        .boolean.optional.checkbox:checked{
-            color: red;
         }
     }
     .form_select_address {

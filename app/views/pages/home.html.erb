@@ -4,9 +4,9 @@
         </div>
         <div class="searchbar_home inside">
             <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
-                <div class="form_select_action">
-                    <%= f.input :acheter, as: :boolean, label: "Acheter" %>
-                    <%= f.input :louer, as: :boolean, label: "Louer" %>
+                <div class="form_select_action" data-controller="searchhome">
+                    <%= f.input :acheter, as: :boolean, label: "Acheter",input_html: { data: { searchhome_target: "type_action",action: "click->searchhome#selectAction"},name:"acheter"} %>
+                    <%= f.input :louer, as: :boolean, label: "Louer",input_html: { data: { searchhome_target: "type_action",action: "click->searchhome#selectAction"},name:"louer"} %>
                     <a href="#">Estimer</a>
                 </div>
                 <div class="form_select_address">
