@@ -5,7 +5,7 @@ class AchatsController < ApplicationController
 
     params[:query][:action] = "Acheter" if params[:acheter] == "1"
     params[:query][:action] = "Louer" if params[:louer] == "1"
-
+ 
     if params[:query].present? && params[:query]["address"] != ""
       @address = params[:query][:address]
       coordinates = Geocoder.search(@address).first.coordinates if @address != ""
@@ -80,8 +80,7 @@ class AchatsController < ApplicationController
           marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
         }
       end
-
-    else
+    elsif params[:query].present? && params[:query]["address"] == ""
       case params[:query][:action]
       when "Louer"
         @annonces = Location.all
@@ -99,6 +98,16 @@ class AchatsController < ApplicationController
         }
         end
         add_breadcrumb "Nos annonces immobilières", annonces_path
+      end
+    else params[:query][:action] == nil
+      @annonces = Annonce.all
+      @markers = @annonces.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude,
+          info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
+          marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
+        }
       end
     end
     
