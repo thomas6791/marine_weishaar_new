@@ -203,6 +203,10 @@
     padding: 15px;
     border-top: solid 1px #f0e7da;
     margin-top: 20px;
+    label{
+        display: flex;
+        align-items: center;
+    }
 }
 .form_submit{
     min-height: 5em;
