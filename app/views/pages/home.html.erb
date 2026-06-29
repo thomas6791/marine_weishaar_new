@@ -5,8 +5,8 @@
         <div class="searchbar_home inside">
             <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
                 <div class="form_select_action">
-                    <%= f.input :option_1, as: :boolean, label: "Acheter" %>
-                    <%= f.input :option_2, as: :boolean, label: "Louer" %>
+                    <%= f.input :acheter, as: :boolean, label: "Acheter" %>
+                    <%= f.input :louer, as: :boolean, label: "Louer" %>
                     <a href="#">Estimer</a>
                 </div>
                 <div class="form_select_address">
@@ -17,8 +17,17 @@
                 <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max",as: :integer,step: 1000 %>
                 <%= f.input :surface, placeholder:"min m2",class:"surface",as: :integer %>
                 <%= f.input :nb_pieces, collection:["1","2","3","4","5 et +"],class:"pieces",prompt: "Nbre de pièces" %>
-                </div>
+                
                 <%= f.submit "Rechercher", class: "btn btn-primary" %>
+                </div>
+                <div class="select_types_biens">
+                    <%= f.input :option_1, as: :boolean, label: "Appartement" %>
+                    <%= f.input :option_2, as: :boolean, label: "Maison" %>   
+                    <%= f.input :option_3, as: :boolean, label: "Commerce" %>  
+                    <%= f.input :option_4, as: :boolean, label: "Immeuble" %>
+                    <%= f.input :option_5, as: :boolean, label: "Terrain" %> 
+                    <%= f.input :option_6, as: :boolean, label: "Parking/Box" %>           
+                </div>
             <% end %>
         </div>
 </section>
