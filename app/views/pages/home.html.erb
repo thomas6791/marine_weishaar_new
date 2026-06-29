@@ -1,8 +1,8 @@
 <section id="new_banner_home">  
-        <div class="inside">
-            <h2 class="titre_search">Trouver votre<br> prochain chez-vous</h2>
-        </div>
-        <div class="searchbar_home inside">
+    <div class="inside">
+        <h2 class="titre_search">Trouver votre<br> prochain chez-vous</h2>
+
+        <div class="searchbar_home">
             <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
                 <div class="form_select_action" data-controller="searchhome">
                     <%= f.input :acheter, as: :boolean, label: "Acheter",input_html: { data: { searchhome_target: "type_action",action: "click->searchhome#selectAction"},name:"acheter"} %>
@@ -33,6 +33,7 @@
                 </div>
             <% end %>
         </div>
+    </div>
 </section>
 <section class="search_home new inside">
     

@@ -88,6 +88,9 @@
     background: no-repeat url("https://media.istockphoto.com/id/1479197740/fr/photo/vue-panoramique-pittoresque-de-strasbourg-dans-le-quartier-historique-de-la-petite-france.jpg?s=2048x2048&w=is&k=20&c=NrG8jqArHZ94umXw6kX05e2HYbe-D9Sl7s3zi6xPZok=");
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .titre_search{
         color: $creme;
         text-transform: uppercase;
@@ -200,12 +203,15 @@
 
 }
 .select_types_biens{
-    padding: 15px;
+    padding: 5px 0px;
+    gap: 15px;
     border-top: solid 1px #f0e7da;
     margin-top: 20px;
     label{
         display: flex;
         align-items: center;
+        gap: 9px;
+        input{width: 15px; height: 15px;}
     }
 }
 .form_submit{
