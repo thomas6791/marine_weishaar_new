@@ -2,6 +2,12 @@ class AchatsController < ApplicationController
   def index
     @page_title = "Achat immobilier | Marine Weishaar Immobilier"
     @cover = "https://as2.ftcdn.net/v2/jpg/06/59/15/57/1000_F_659155771_tZmCC9cXPhBTqhS5DQIaruhiSmj6rMBK.jpg"
+
+    params[:query][:action] = "Acheter" if params[:acheter] == "1"
+    params[:query][:action] = "Louer" if params[:louer] == "1"
+
+    @annonces = Annonce.all
+ 
     if params[:query].present? && params[:query]["address"] != ""
       @address = params[:query][:address]
       coordinates = Geocoder.search(@address).first.coordinates if @address != ""
@@ -12,6 +18,7 @@ class AchatsController < ApplicationController
         @annonces = Annonce.all
       end
 
+   
       case params[:query][:action]
       when "Louer"
         redirect_to locations_path()
@@ -75,18 +82,27 @@ class AchatsController < ApplicationController
           marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
         }
       end
+    elsif params[:query].present? && params[:query]["address"] == ""
+      case params[:query][:action]
+      when "Louer"
+        @annonces = Location.all
+        redirect_to locations_path()
+        add_breadcrumb "Nos offres de locations", locations_path
+      when "Acheter"
+        @annonces = Annonce.all
 
-    else
-      @annonces = Annonce.all
-      @markers = @annonces.geocoded.map do |flat|
+        @markers = @annonces.geocoded.map do |flat|
         {
           lat: flat.latitude,
           lng: flat.longitude,
           info_window_html: render_to_string(partial: "shared/info_window", locals: {flat: flat}),
           marker_html: render_to_string(partial: "shared/marker", locals: {flat: flat})
         }
+        end
+        add_breadcrumb "Nos annonces immobilières", annonces_path
       end
-      add_breadcrumb "Nos annonces immobilières", annonces_path
+    else params[:query][:action] == nil
+      
     end
     
     #if params[:query].present?

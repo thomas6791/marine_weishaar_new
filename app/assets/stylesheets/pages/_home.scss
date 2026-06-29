@@ -83,6 +83,151 @@
     margin-bottom: 3em;
 }
 
+#new_banner_home{
+    height: 100vh;
+    background: no-repeat url("https://media.istockphoto.com/id/1479197740/fr/photo/vue-panoramique-pittoresque-de-strasbourg-dans-le-quartier-historique-de-la-petite-france.jpg?s=2048x2048&w=is&k=20&c=NrG8jqArHZ94umXw6kX05e2HYbe-D9Sl7s3zi6xPZok=");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .titre_search{
+        color: $creme;
+        text-transform: uppercase;
+        font-size: 3em;
+    }
+}
+.searchbar_home{
+    .simple_form {border: none;}
+    .form_select_action{
+        display: flex;
+        align-items: baseline;
+        width: fit-content;
+        gap: 2px;
+        font-family: $body-font;
+        background-color: $ardoise;
+        border-radius: 7px 7px 0 0;
+        padding: 4px;
+        input,label {cursor: pointer;}
+        .input.boolean.optional, a{
+            height: 100%;
+            display: flex;
+            background-color: $ardoise;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: $terre_cuite; a{color: $creme;}
+                label {color: creme;}
+            }
+        }
+        .boolean.optional.checked{
+            background-color: $terre_cuite;
+            border-radius: 5px;
+            label {color: creme;}
+        }
+        .boolean.optional.checkbox, a{
+            text-decoration: none;
+            color: $sable;
+            font-size: 15px;
+            padding: 11px 28px;
+            input{visibility: hidden; width: 0; height: 0;}
+            //document.querySelector(".form_select_action").querySelectorAll('input[type="checkbox"]')[0].checked
+        }
+    }
+    .form_select_address {
+        display: flex;
+        align-items: end;
+        background-color: $white;
+        .query_address{min-width: 35%;}
+        input, .input.select {
+            background-color: $creme; border: none; font-family: $body-font;
+            border-radius: 6px;
+            height: 50px;
+            border: solid 1px $sable;
+            padding: 0px 10px;
+        }
+    }
+    .select_types_biens{
+        background-color: $white;
+        display: flex;
+        align-items: baseline;
+        input {background-color: $creme; border: none; font-family: $body-font;
+            border-radius: 6px;
+            height: 50px;
+            border: solid 1px $sable;
+            padding: 0px 10px;
+        }
+    }
+}
+.form_select_boxes{
+    background-color: $white;
+    padding: 15px;
+}
+.form_select_address{
+    justify-content: space-between;
+    gap: 8px;
+    .input {display: flex; flex-direction:column;}
+    input[type="submit"]{
+        cursor: pointer;
+        border: none;
+        background-color: $terre_cuite;
+        font-family: $body-font;
+        color: $white;
+    }
+
+    .input.optional{
+        width: 15%;
+    }
+    ::placeholder {
+        text-align: left; 
+    }
+
+/* or, for legacy browsers */
+
+::-webkit-input-placeholder {
+   text-align: left;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: left;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: left;  
+}
+
+:-ms-input-placeholder {  
+   text-align: left; 
+}
+
+
+}
+.select_types_biens{
+    padding: 5px 0px;
+    gap: 15px;
+    border-top: solid 1px #f0e7da;
+    margin-top: 20px;
+    label{
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        input{width: 15px; height: 15px;}
+    }
+}
+.form_submit{
+    min-height: 5em;
+    display: flex;
+    align-items: end;
+    width: 20%;
+    input[type="submit"]{
+        width: 100%;
+    }
+}
+.mapboxgl-ctrl-geocoder {
+    margin: 0;
+    svg{display: none;}
+}
+
 @media only screen and (max-width: 40em) {
     .search_home {
         flex-direction: column;

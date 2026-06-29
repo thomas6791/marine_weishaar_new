@@ -1,4 +1,42 @@
+<section id="new_banner_home">  
+    <div class="inside">
+        <h2 class="titre_search">Trouver votre<br> prochain chez-vous</h2>
+
+        <div class="searchbar_home">
+            <%= simple_form_for :query, :url => annonces_path, method: :get do |f| %>
+                <div class="form_select_action" data-controller="searchhome">
+                    <%= f.input :acheter, as: :boolean, label: "Acheter",input_html: { data: { searchhome_target: "type_action",action: "click->searchhome#selectAction"},name:"acheter"} %>
+                    <%= f.input :louer, as: :boolean, label: "Louer",input_html: { data: { searchhome_target: "type_action",action: "click->searchhome#selectAction"},name:"louer"} %>
+                    <a href="#">Estimer</a>
+                </div>
+                <div class="form_select_boxes">
+                    <div class="form_select_address">
+                    <%= f.input :address,
+                        input_html: {data: {address_autocomplete_target: "address"}}, label: "Localisation", required: false,
+                        wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]},class: "d-none"} 
+                    %>
+                    <%= f.input :budget_max,class:"max_budg",placeholder:"Budget max",as: :integer,step: 1000, required: false %>
+                    <%= f.input :surface, placeholder:"min m2",class:"surface",as: :integer, required: false %>
+                    <%= f.input :nb_pieces,as: :integer,class:"pieces",prompt: "Nbre de pièces", required: false %>
+                    <div class="form_submit">
+                        <%= f.submit "Rechercher", class: "btn btn-primary" %>
+                    </div>
+                    </div>
+                    <div class="select_types_biens">
+                        <%= f.input :option_1, as: :boolean, label: "Appartement" %>
+                        <%= f.input :option_2, as: :boolean, label: "Maison" %>   
+                        <%= f.input :option_3, as: :boolean, label: "Commerce" %>  
+                        <%= f.input :option_4, as: :boolean, label: "Immeuble" %>
+                        <%= f.input :option_5, as: :boolean, label: "Terrain" %> 
+                        <%= f.input :option_6, as: :boolean, label: "Parking/Box" %>           
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>
 <section class="search_home new inside">
+    
     <div class="search_home_intro">
         <%= image_tag "home/canape-yellow copy.png", width: 650%>
         <h2 class="titre_search">Trouver votre<br>bien immobilier</h2>
