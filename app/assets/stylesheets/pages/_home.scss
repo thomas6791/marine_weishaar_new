@@ -91,6 +91,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .inside {max-width: 90%;}
     .titre_search{
         color: $creme;
         text-transform: uppercase;
@@ -138,6 +139,7 @@
         display: flex;
         align-items: end;
         background-color: $white;
+        flex-wrap: wrap;
         .query_address{min-width: 35%;}
         input, .input.select {
             background-color: $creme; border: none; font-family: $body-font;
@@ -162,10 +164,12 @@
 .form_select_boxes{
     background-color: $white;
     padding: 15px;
+    border-radius: 0 7px 7px 7px;
 }
 .form_select_address{
     justify-content: space-between;
     gap: 8px;
+    flex-wrap: nowrap !important;
     .input {display: flex; flex-direction:column;}
     input[type="submit"]{
         cursor: pointer;
@@ -255,4 +259,19 @@
     .list_video {
         display: none;
     }
+
+    #new_banner_home{
+        height: 100%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .inside{}
+        .form_select_address{
+            flex-wrap: wrap !important;
+            div{width: 100%;}
+        }
+        .select_types_biens{
+            flex-wrap: wrap;
+        }
+    }
+    .search_home.new.inside{display: none;}
 }
