@@ -67,13 +67,14 @@
     display: flex;
     width: 100%;
     gap: 40px;
-    height: 100Vh;
+    min-height: 100Vh;
     justify-content: space-between;
     position: relative;
     border: solid 2px red;
     .main_annonce_infos{
         border: solid 1px;
         width: 64%;
+        height: auto;
     }
     #cartouche_vendeur{
         border: solid 1px;
@@ -86,9 +87,13 @@
         padding: 28px 26px;
         background-color: $white;
         .boutons_vente{
-            gap: 5px;
+            gap: 10px;
             display: flex;
             flex-direction: column;
+            padding-top: 25px;
+            border-bottom: solid 1px #EFE4D6;
+            border-top: solid 1px #EFE4D6;
+            padding-bottom: 25px;
         }
         .price_annonce{
             color: $terre_cuite;
@@ -96,9 +101,29 @@
             font-weight: bold;
         }
         .contact_vendeur{
-            .photo_vendeur{}
+            display: flex;
+            gap:15px;
+            padding-top: 25px;
+            .photo_vendeur{
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+            }
+            .vendeur_infos{
+                p:first-of-type{color: $ardoise; font-size: 1em; font-weight: 500;}
+                p:last-of-type{font-size: 0.8em;}
+            }
+        }
+        .cartouche_price{
+            padding-bottom: 20px;
         }
     }
+    .annonce_description{
+        
+    }
+}
+.section_energie{
+    background-color: $white;
 }
 
 

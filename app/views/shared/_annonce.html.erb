@@ -16,21 +16,114 @@
 
 <div class="annonce_show_flex_column inside">
     <section class="main_annonce_infos">
-        Main
+        <p>À VENDRE - EXCLUSIVITÉ</p>
+        <h1><%= annonce.titre %></h1>
+        <div class="annonce_infos_main">
+            <ul>
+                <li>SURFACE <span><%= annonce.surface %>m<sup>2</sup></span></li>
+                <li>PIÈCES <span><%= annonce.nb_pieces %></span></li>
+                <li>CHAMBRES <span><%= annonce.nb_chambres %></span></li>
+                <li>ÉTAGE <span></span></li>
+            </ul>
+        </div>
+        <div class="annonce_address">
+            <%= image_tag "pictos/terracotta/localisation.png"%><%= annonce.zipcode %> <%= annonce.city %>
+        </div>
+        <div class="performances_energetiques">
+            <h2>Performance énergétique</h2>
+            <div class="section_energie dpe">
+                <h3>DPE - Consommation</h3>
+                <div class="energetique_barre dpe">
+                <% ["a","b","c","d","e","f","g"].each do |letter| %>
+                    <% if letter == @annonce.dpe.downcase %>
+                        <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
+                    <% else %>
+                        <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% end %>
+                <% end %>
+                </div>
+            </div>
+            <div class="section_energie ges">
+                <h3>GES - Émissions</h3>
+                <div class="energetique_barre ges">
+                <% ["a","b","c","d","e","f","g"].each do |letter| %>
+                    <% if letter == @annonce.ges.downcase %>
+                        <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
+                    <% else %>
+                        <span class="note <%= letter %>"><%= letter.capitalize %></span>
+                    <% end %>
+                <% end %>
+                </div>
+            </div>
+            
+        </div>
+        <div class="annonce_description">
+            <h3>Description</h3>
+            <p>
+                <%= annonce.description %>
+            </p>
+        </div>
+        <div class="annonce_caracteristiques">
+            <h3>Caractéristiques & équipements</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>LE BIEN</th>
+                        <th>COPROPRIÉTÉ & CHAMBRES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
     <section id="cartouche_vendeur"> 
-        <p>PRIX DE VENTE</p>
-        <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
-        <p>Soit <%=  humanized_money annonce.price %>/m<sup>2</sup> honoraires inclus</p>
+        <div class="cartouche_price">
+            <p>PRIX DE VENTE</p>
+            <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
+            <p>Soit <%=  humanized_money annonce.price %>/m<sup>2</sup> honoraires inclus</p>
+        </div>
         <div class="boutons_vente">
             <%= link_to "Demander une visite", "#", class:"btn_annonce brique" %>
             <%= link_to "Poser une question","#", class:"btn_annonce" %>
         </div>
         <div class="contact_vendeur">
-            <%= image_tag "",class:"photo_vendeur" %>
-            <div>
-                <p>Nom du vendeur</p>
-                <p>Fonction</p>
+            <%= image_tag "marine-weishaar-photo-agent-immobilier.jpg",class:"photo_vendeur" %>
+            <div class="vendeur_infos">
+                <p>Marine Weishaar</p>
+                <p>Agent & conseillère immobilière</p>
             </div>
         </div>
     </section>
