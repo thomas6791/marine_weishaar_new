@@ -74,7 +74,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
+                        <td>Type</td>
                         <td>2</td>
                     </tr>
                     <tr>
@@ -113,7 +113,7 @@
         <div class="cartouche_price">
             <p>PRIX DE VENTE</p>
             <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
-            <p>Soit <%=  humanized_money annonce.price %>/m<sup>2</sup> honoraires inclus</p>
+            <p>Soit <%=  humanized_money annonce.price %> <%= currency_symbol %>/m<sup>2</sup> honoraires inclus</p>
         </div>
         <div class="boutons_vente">
             <%= link_to "Demander une visite", "#", class:"btn_annonce brique" %>

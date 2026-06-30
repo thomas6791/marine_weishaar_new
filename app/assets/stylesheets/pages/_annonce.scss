@@ -70,11 +70,39 @@
     min-height: 100Vh;
     justify-content: space-between;
     position: relative;
-    border: solid 2px red;
+    //border: solid 2px red;
     .main_annonce_infos{
-        border: solid 1px;
+        //border: solid 1px;
         width: 64%;
         height: auto;
+        p:first-of-type {
+            font-size: 0.8em;
+            color: $terre_cuite;
+            font-weight: 600;
+        }
+        h1 {font-family: $headers-font;}
+        .annonce_infos_main {
+            ul {
+            display: flex;
+            height: 90px;
+            gap: 0px;
+            width: 100%;
+            li {
+                width: 100%; background-color: $white;
+                border: solid 1px $sable;
+                list-style: none;
+                padding: 0;
+            }
+            }
+        }
+        table{
+            width: 100%;
+            thead{
+                background-color: transparent;color:$terre_cuite;
+            }
+            tbody{background-color: $white;}
+            td{width: 50%;border: solid 1px $sable;}
+        }
     }
     #cartouche_vendeur{
         border: solid 1px;
@@ -116,10 +144,13 @@
         }
         .cartouche_price{
             padding-bottom: 20px;
+            p:first-of-type{
+                font-size: 0.8em;
+            }
         }
     }
     .annonce_description{
-        
+
     }
 }
 .section_energie{
