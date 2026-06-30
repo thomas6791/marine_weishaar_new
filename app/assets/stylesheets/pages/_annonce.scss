@@ -62,6 +62,46 @@
     .mapboxgl-ctrl-geocoder.mapboxgl-ctrl{margin: 0;}
 }
 
+
+.annonce_show_flex_column{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    height: 100Vh;
+    justify-content: space-between;
+    position: relative;
+    border: solid 2px red;
+    .main_annonce_infos{
+        border: solid 1px;
+        width: 64%;
+    }
+    #cartouche_vendeur{
+        border: solid 1px;
+        width: 36%;
+        height: fit-content;
+        position: sticky;
+        top: 8rem;
+        border: #EFE4D6;
+        color: $color_cartouche;
+        padding: 28px 26px;
+        background-color: $white;
+        .boutons_vente{
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+        .price_annonce{
+            color: $terre_cuite;
+            font-size: 38px;
+            font-weight: bold;
+        }
+        .contact_vendeur{
+            .photo_vendeur{}
+        }
+    }
+}
+
+
 @media only screen and (max-width: 40em) {
     #map {display: none;}
     .filtre_tags {overflow-x: scroll;}

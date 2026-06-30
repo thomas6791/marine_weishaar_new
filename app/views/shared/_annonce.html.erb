@@ -13,6 +13,29 @@
     </div>
 
 </section>
+
+<div class="annonce_show_flex_column inside">
+    <section class="main_annonce_infos">
+        Main
+    </section>
+    <section id="cartouche_vendeur"> 
+        <p>PRIX DE VENTE</p>
+        <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
+        <p>Soit <%=  humanized_money annonce.price %>/m<sup>2</sup> honoraires inclus</p>
+        <div class="boutons_vente">
+            <%= link_to "Demander une visite", "#", class:"btn_annonce brique" %>
+            <%= link_to "Poser une question","#", class:"btn_annonce" %>
+        </div>
+        <div class="contact_vendeur">
+            <%= image_tag "",class:"photo_vendeur" %>
+            <div>
+                <p>Nom du vendeur</p>
+                <p>Fonction</p>
+            </div>
+        </div>
+    </section>
+</div>
+
 <section class="inside">
     <div class="">
         <div class="annonce_entete">

@@ -1,0 +1,16 @@
+.btn_annonce{
+    border: solid 1px #D4C3B0;
+    color: $ardoise;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    padding: 15px;
+    box-sizing: border-box;
+    justify-content: center;
+    text-decoration: none;
+    &.brique {
+        border: solid 1px $terre_cuite;
+        background-color: $terre_cuite;
+        color: $white;
+    }
+}
