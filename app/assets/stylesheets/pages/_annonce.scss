@@ -206,4 +206,17 @@
         .list_annonces {margin: 0;}
         #annonces_list_index {grid-template-columns: 1fr;}
     }
+    .annonce_show_flex_column{
+        flex-direction: column;
+    }
+    .performances_energetiques{
+            flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    }
+    #cartouche_vendeur{
+        width: 100% !important;
+    box-sizing: border-box;
+    position: inherit;
+    }
 }
