@@ -15,7 +15,7 @@
 </section>
 
 <div class="annonce_show_flex_column inside">
-    <section class="main_annonce_infos">
+    <div class="main_annonce_infos">
         <p>À VENDRE - EXCLUSIVITÉ</p>
         <h1><%= annonce.titre %></h1>
         <div class="annonce_infos_main">
@@ -27,9 +27,9 @@
             </ul>
         </div>
         <div class="annonce_address">
-            <%= image_tag "pictos/terracotta/localisation.png"%><%= annonce.zipcode %> <%= annonce.city %>
+            <%= image_tag "pictos/terracotta/localisation.png", widht:25, height:25 %><%= annonce.zipcode %> <%= annonce.city %>
         </div>
-        <div class="performances_energetiques">
+        <section class="performances_energetiques">
             <h2>Performance énergétique</h2>
             <div class="section_energie dpe">
                 <h3>DPE - Consommation</h3>
@@ -56,15 +56,15 @@
                 </div>
             </div>
             
-        </div>
-        <div class="annonce_description">
-            <h3>Description</h3>
+        </section>
+        <section class="annonce_description">
+            <h2>Description</h2>
             <p>
                 <%= annonce.description %>
             </p>
-        </div>
-        <div class="annonce_caracteristiques">
-            <h3>Caractéristiques & équipements</h3>
+        </section>
+        <section class="annonce_caracteristiques">
+            <h2>Caractéristiques & équipements</h2>
             <table>
                 <thead>
                     <tr>
@@ -75,41 +75,46 @@
                 <tbody>
                     <tr>
                         <td>Type</td>
-                        <td>2</td>
+                        <td>Lots copropriété</td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td>4</td>
+                        <td>Surface habitable</td>
+                        <td>Charges annuelles</td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td>6</td>
+                        <td>Pièces / Chambres</td>
+                        <td>Taxe foncière</td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td>8</td>
+                        <td>Étage</td>
+                        <td>Procédure en cours</td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td>10</td>
+                        <td>Année</td>
+                        <td>Disponibilité</td>
                     </tr>
                     <tr>
-                        <td>11</td>
-                        <td>12</td>
+                        <td>Exposition</td>
+                        <td>Honoraires</td>
                     </tr>
                     <tr>
-                        <td>13</td>
-                        <td>14</td>
+                        <td>Chauffage</td>
+                        <td>Réf. mandat</td>
                     </tr>
                     <tr>
-                        <td>15</td>
-                        <td>16</td>
+                        <td>État</td>
+                        <td>Type de mandat</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </section>
-    <section id="cartouche_vendeur"> 
+        </section>
+        <section class="equipemets">
+            <h2>Équipements & Options</h2>
+            <ul>
+            </ul>
+        </section>
+    </div>
+    <aside id="cartouche_vendeur"> 
         <div class="cartouche_price">
             <p>PRIX DE VENTE</p>
             <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
@@ -126,7 +131,7 @@
                 <p>Agent & conseillère immobilière</p>
             </div>
         </div>
-    </section>
+    </aside>
 </div>
 
 <section class="inside">
