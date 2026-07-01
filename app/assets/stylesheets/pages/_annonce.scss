@@ -207,7 +207,7 @@
         #annonces_list_index {grid-template-columns: 1fr;}
     }
     .annonce_show_flex_column{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .performances_energetiques{
             flex-wrap: wrap;
