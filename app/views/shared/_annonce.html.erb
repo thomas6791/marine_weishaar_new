@@ -13,18 +13,27 @@
     </div>
 
 </section>
-<section class="inside">
-    <div class="">
-        <div class="annonce_entete">
-            <h1 class="annonce_show_titre"><%= @annonce.titre %>|Titre</h1>
-            <p><%= @annonce.surface.to_i %>m<sup>2</sup></p>
-            <p><%= @annonce.price %>€</p>
+
+<div class="annonce_show_flex_column inside">
+    <div class="main_annonce_infos">
+        <p>À VENDRE - EXCLUSIVITÉ</p>
+        <h1><%= annonce.titre %></h1>
+        <div class="annonce_infos_main">
+            <ul>
+                <li>SURFACE <span><%= annonce.surface %>m<sup>2</sup></span></li>
+                <li>PIÈCES <span><%= annonce.nb_pieces %></span></li>
+                <li>CHAMBRES <span><%= annonce.nb_chambres %></span></li>
+                <li>ÉTAGE <span></span></li>
+            </ul>
         </div>
-        <div class="ville">
-            <p><%= @annonce.city %></p>
+        <div class="annonce_address">
+            <%= image_tag "pictos/terracotta/localisation.png", widht:25, height:25 %><%= annonce.zipcode %> <%= annonce.city %>
         </div>
-        <div class="inside">
-            <div class="energetique_barre dpe">
+        <section class="performances_energetiques">
+            <h2>Performance énergétique</h2>
+            <div class="section_energie dpe">
+                <h3>DPE - Consommation</h3>
+                <div class="energetique_barre dpe">
                 <% ["a","b","c","d","e","f","g"].each do |letter| %>
                     <% if letter == @annonce.dpe.downcase %>
                         <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
@@ -32,8 +41,11 @@
                         <span class="note <%= letter %>"><%= letter.capitalize %></span>
                     <% end %>
                 <% end %>
+                </div>
             </div>
-            <div class="energetique_barre ges">
+            <div class="section_energie ges">
+                <h3>GES - Émissions</h3>
+                <div class="energetique_barre ges">
                 <% ["a","b","c","d","e","f","g"].each do |letter| %>
                     <% if letter == @annonce.ges.downcase %>
                         <span class="note <%= letter %> selected"><%= letter.capitalize %></span>
@@ -41,32 +53,90 @@
                         <span class="note <%= letter %>"><%= letter.capitalize %></span>
                     <% end %>
                 <% end %>
+                </div>
+            </div>
+            
+        </section>
+        <section class="annonce_description">
+            <h2>Description</h2>
+            <p>
+                <%= annonce.description %>
+            </p>
+        </section>
+        <section class="annonce_caracteristiques">
+            <h2>Caractéristiques & équipements</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>LE BIEN</th>
+                        <th>COPROPRIÉTÉ & CHAMBRES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><p>Type</p></td>
+                        <td><p>Lots copropriété</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Surface habitable <span><%= @annonce.surface %> m<sup>2</sup></span></p></td>
+                        <td><p>Charges annuelles <span></span></p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Pièces / Chambres <span></span></p></td>
+                        <td><p>Taxe foncière</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Étage</p></td>
+                        <td><p>Procédure en cours</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Année</p></td>
+                        <td><p>Disponibilité</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Exposition</p></td>
+                        <td><p>Honoraires</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Chauffage <span><%= @annonce.chauffage_mode %></span></p></td>
+                        <td><p>Réf. mandat</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>État <span><%= @annonce.etat_general %></span></p></td>
+                        <td><p>Type de mandat</p></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="equipemets">
+            <h2>Équipements & Options</h2>
+            <ul>
+            </ul>
+        </section>
+    </div>
+
+    
+    <aside id="cartouche_vendeur"> 
+        <div class="cartouche_price">
+            <p>PRIX DE VENTE</p>
+            <p class="price_annonce"><%= humanized_money annonce.price %> <%= currency_symbol %></p>
+            <p>Soit <%=  humanized_money annonce.price %> <%= currency_symbol %>/m<sup>2</sup> honoraires inclus</p>
+        </div>
+        <div class="boutons_vente">
+            <%= link_to "Demander une visite", "#", class:"btn_annonce brique" %>
+            <%= link_to "Poser une question","#", class:"btn_annonce" %>
+        </div>
+        <div class="contact_vendeur">
+            <%= image_tag "marine-weishaar-photo-agent-immobilier.jpg",class:"photo_vendeur" %>
+            <div class="vendeur_infos">
+                <p>Marine Weishaar</p>
+                <p>Agent & conseillère immobilière</p>
             </div>
         </div>
-    </div>
-    <p class="annonce_show_description"><%= @annonce.description %></p>
-</section>
-<section class="inside">
-    <h2 class="titre styling">Descriptif</h2>
-    
-    <div class="table_description_annonce">
-        <div><p>Surface: <%= @annonce.surface %> m<sup>2</sup></p></div>
-        <div><p>Nombre de pièces: <%= @annonce.nb_pieces %></p></div>
-        <div><p>Nombre d'étages: <%= @annonce.nb_etage %></p></div>
-        <div><p>Chauffage: <%= @annonce.chauffage %></p></div>
-        <div><p>Mode de chauffage: <%= @annonce.chauffage_mode %></p></div>
-        <div><p>Etat général: <%= @annonce.etat_general %></p></div>
-        <div><p>Année de construction: <%= @annonce.annee_construction.strftime("%Y") %></p></div>
-        <div><p>Cave: <%= @annonce.cave == true ? "Oui": "Non" %></p></div>
-        <div><p>Ascenseur: <%= @annonce.ascenseur == true ? "Oui": "Non" %></p></div>
-        <div><p>Copropriété: <%= @annonce.copropriete == true ? "Oui" : "Non" %></p></div>
-         <div><p>Cuisine équipée: <%= @annonce.cuisine_equipee == true ? "Oui" : "Non" %></p></div>
-        <div><p>Jardin: <%= @annonce.jardin == true ? "Oui" : "Non" %></p></div>
-        <div><p>Balcon: <%= @annonce.balcon == true ? "Oui" : "Non" %></p></div>
-        <div><p>Terrasse: <%= @annonce.terrasse == true ? "Oui" : "Non" %></p></div>
-         <div><p>Garage: <%= @annonce.garage == true ? "Oui" : "Non" %></p></div>
-    </div>
-</section>
+    </aside>
+</div>
+
+
 
 <section class="inside">
     <div id="map" class="map_annonce"
@@ -77,15 +147,4 @@
 </section>
 <section class="inside">
     <h2 class="titre styling">Autres annonces dans le secteur</h2>
-</section>
-<section class="inside">
-    <turbo-frame id="first_frame">
-        <%= button_to "View all", full_list_path, data:{turbo_frame:"second_frame"}, params:"click" %>
-    </turbo-frame>
-    <br>
-    <hr>
-    <div>
-        <turbo-frame id="second_frame">
-        </turbo-frame>
-    </div>
 </section>

@@ -62,6 +62,141 @@
     .mapboxgl-ctrl-geocoder.mapboxgl-ctrl{margin: 0;}
 }
 
+
+.annonce_show_flex_column{
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    min-height: 100Vh;
+    justify-content: space-between;
+    position: relative;
+    //border: solid 2px red;
+    .main_annonce_infos{
+        //border: solid 1px;
+        width: 64%;
+        height: auto;
+        p:first-of-type {
+            font-size: 0.8em;
+            color: $terre_cuite;
+            font-weight: 600;
+        }
+        h1 {font-family: $headers-font; margin-top: 0.5em;}
+        .annonce_address{display: flex; gap: 5px; align-items:center; color: #5C5249; font-size: 1em; font-weight: 400;margin-top:1em;}
+        .annonce_infos_main {
+            margin-top: 1.5em;
+            ul {
+            display: flex;
+            height: 90px;
+            gap: 0px;
+            width: 100%;
+            li {
+                width: 100%; background-color: $white;
+                border: solid 1px $sable;
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: $color_cartouche;
+                font-size: 0.8em;
+                gap: 5px;
+                span {
+                    font-size: 1.8em; font-weight: 600; color: $ardoise;
+                }
+            }
+            }
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            thead{
+                background-color: transparent;color:$terre_cuite;
+            }
+            tbody{background-color: $white;}
+            td, th{
+                height: 3em;padding-left: 15px;padding-right: 15px;
+                width: 50%;border: solid 1px $sable;
+                text-align: left;
+                font-weight: 400;
+            }
+            td {
+                p {
+                    font-size: 0.9em !important;
+                    color: #7A6E64 !important;
+                    font-weight: 400 !important;
+                    display: flex; align-items: center;justify-content: space-between;
+                    span{color:$ardoise;}
+                }
+            }
+        }
+        .performances_energetiques{
+            margin-top: 2em;
+            display: grid;
+            grid-template-areas:
+            "a a"
+            "b c";
+            gap: 20px;
+            h2 {grid-area: a;}
+            .section_energie{padding:20px;}
+            .section_energie.dpe{grid-area: b;}
+            .section_energie.ges{grid-area: c;}
+        }
+    }
+    #cartouche_vendeur{
+        border: solid 1px;
+        width: 36%;
+        height: fit-content;
+        position: sticky;
+        top: 8rem;
+        border: #EFE4D6;
+        color: $color_cartouche;
+        padding: 28px 26px;
+        background-color: $white;
+        .boutons_vente{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+            border-bottom: solid 1px #EFE4D6;
+            border-top: solid 1px #EFE4D6;
+            padding-bottom: 25px;
+        }
+        .price_annonce{
+            color: $terre_cuite;
+            font-size: 38px;
+            font-weight: bold;
+        }
+        .contact_vendeur{
+            display: flex;
+            gap:15px;
+            padding-top: 25px;
+            .photo_vendeur{
+                width: 42px;
+                height: 42px;
+                border-radius: 50%;
+            }
+            .vendeur_infos{
+                p:first-of-type{color: $ardoise; font-size: 1em; font-weight: 500;}
+                p:last-of-type{font-size: 0.8em;}
+            }
+        }
+        .cartouche_price{
+            padding-bottom: 20px;
+            p:first-of-type{
+                font-size: 0.8em;
+            }
+        }
+    }
+    .annonce_description{
+
+    }
+}
+.section_energie{
+    background-color: $white;
+}
+
+
 @media only screen and (max-width: 40em) {
     #map {display: none;}
     .filtre_tags {overflow-x: scroll;}
@@ -70,5 +205,18 @@
         .carte_fixed {display: none;}
         .list_annonces {margin: 0;}
         #annonces_list_index {grid-template-columns: 1fr;}
+    }
+    .annonce_show_flex_column{
+        flex-direction: column;
+    }
+    .performances_energetiques{
+            flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    }
+    #cartouche_vendeur{
+        width: 100% !important;
+    box-sizing: border-box;
+    position: inherit;
     }
 }
