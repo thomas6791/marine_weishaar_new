@@ -67,7 +67,7 @@
     display: flex;
     width: 100%;
     gap: 40px;
-    min-height: 100Vh;
+    min-height: 100vh;
     justify-content: space-between;
     position: relative;
     //border: solid 2px red;
@@ -208,10 +208,14 @@
     }
     .annonce_show_flex_column{
         flex-direction: column-reverse;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 20px;
+        .main_annonce_infos{width: 100% !important; box-sizing: border-box;}
     }
     .performances_energetiques{
             flex-wrap: wrap;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     }
     #cartouche_vendeur{
