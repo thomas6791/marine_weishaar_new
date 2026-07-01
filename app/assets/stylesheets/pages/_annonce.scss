@@ -115,10 +115,19 @@
             }
             tbody{background-color: $white;}
             td, th{
-                height: 3em;padding-left: 15px;
+                height: 3em;padding-left: 15px;padding-right: 15px;
                 width: 50%;border: solid 1px $sable;
                 text-align: left;
                 font-weight: 400;
+            }
+            td {
+                p {
+                    font-size: 0.9em !important;
+                    color: #7A6E64 !important;
+                    font-weight: 400 !important;
+                    display: flex; align-items: center;justify-content: space-between;
+                    span{color:$ardoise;}
+                }
             }
         }
         .performances_energetiques{
