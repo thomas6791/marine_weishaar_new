@@ -64,23 +64,32 @@
 
 
 .annonce_show_flex_column{
-    display: flex;
+    display: grid;
+    grid-template-areas:
+    "titre titre cartouche"
+    "infos infos cartouche"
+    "infos infos cartouche";
+    grid-template-columns: 1fr 1fr 36%;
     width: 100%;
     gap: 40px;
     min-height: 100vh;
     justify-content: space-between;
     position: relative;
     //border: solid 2px red;
-    .main_annonce_infos{
-        //border: solid 1px;
-        width: 64%;
-        height: auto;
+    .annonce_show_titre{
+        grid-area: titre;
+        h1 {font-family: $headers-font; margin-top: 0.5em;}
         p:first-of-type {
             font-size: 0.8em;
             color: $terre_cuite;
             font-weight: 600;
         }
-        h1 {font-family: $headers-font; margin-top: 0.5em;}
+    }
+    .main_annonce_infos{
+        //border: solid 1px;
+        //width: 64%;
+        grid-area: infos;
+        height: auto;
         .annonce_address{display: flex; gap: 5px; align-items:center; color: #5C5249; font-size: 1em; font-weight: 400;margin-top:1em;}
         .annonce_infos_main {
             margin-top: 1.5em;
@@ -144,8 +153,9 @@
         }
     }
     #cartouche_vendeur{
+        grid-area: cartouche;
         border: solid 1px;
-        width: 36%;
+        //width: 36%;
         height: fit-content;
         position: sticky;
         top: 8rem;
@@ -207,7 +217,13 @@
         #annonces_list_index {grid-template-columns: 1fr;}
     }
     .annonce_show_flex_column{
-        flex-direction: column-reverse;
+        //flex-direction: column-reverse;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "titre"
+        "cartouche"
+        "infos";
+
         width: 100%;
         box-sizing: border-box;
         gap: 20px;
